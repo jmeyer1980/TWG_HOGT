@@ -1,0 +1,41 @@
+# Contributing to Tiny Walnut Games Projects
+
+Thank you for your interest in contributing! Contributions are welcome and appreciated. Please follow these guidelines to help maintain a high-quality codebase and collaborative environment.
+
+## How to Contribute
+
+1. **Fork the Repository**  
+   Create your own fork and work from a feature branch.
+
+2. **Open an Issue**  
+   Before submitting a pull request, open an issue to discuss your proposed changes or bugfixes.
+
+3. **Coding Standards**  
+   - Use C# 9.0 features where appropriate.
+   - Follow Unity and .NET Framework 4.7.1 best practices.
+   - Keep code readable, well-documented, and consistent with the existing style.
+
+4. **Pull Requests**  
+   - Reference the related issue in your PR description.
+   - Keep PRs focused and minimal; avoid unrelated changes.
+   - Ensure your code builds and passes all tests.
+
+5. **Localization and Assets**  
+   - For localization, use the provided XLIFF workflow.
+   - Only include assets you have the right to distribute.
+
+6. **Review Process**  
+   - All PRs will be reviewed for code quality, clarity, and alignment with project goals.
+   - Be responsive to feedback and willing to make changes.
+
+## Reporting Issues
+
+- Use the issue tracker for bugs, feature requests, and questions.
+- Provide clear steps to reproduce bugs and include relevant logs or screenshots.
+
+## Community Standards
+
+- Be respectful and constructive in all communications.
+- See the [Code of Conduct](CODE_OF_CONDUCT.md) for more details.
+
+Thank you for helping make this project better!
