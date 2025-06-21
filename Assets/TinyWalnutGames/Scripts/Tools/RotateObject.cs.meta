@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d7e887b06289eb442a64d87b6702f8bc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294088
+  packageName: MCCustomizer
+  packageVersion: 0.2.6b
+  assetPath: Assets/Tiny Walnut Games/MCCustomizer/Scripts/Tools/RotateObject.cs
+  uploadId: 701697

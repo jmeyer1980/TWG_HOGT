@@ -1,0 +1,22 @@
+{
+    "name": "TinyWalnutGames",
+    "rootNamespace": "TinyWalnutGames",
+    "references": [
+        "GUID:eec0964c48f6f4e40bc3ec2257ccf8c5",
+        "GUID:84651a3751eca9349aac36a66bba901b",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:9e24947de15b9834991c9d8411ea37cf",
+        "GUID:d64dd4de4beec9849b3aa70d21368b10",
+        "GUID:c784256da70f9724daee6d75ba72055a",
+        "GUID:d74e00a8c1c1fa147b2ae96f5a1ff520"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

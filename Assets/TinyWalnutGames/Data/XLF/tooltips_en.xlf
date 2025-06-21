@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xliff xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" srcLang="en" trgLang="en" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="b158d92c905739a409e928381886f192" original="Assets/TinyWalnutGames/Data/Unity_Localization/Tooltips/tooltips_en.asset">
+    <group id="706fec6b02ebf7344954ca5eb78c5c90" name="tooltips">
+      <unit id="125917851648" name="play_tooltip" xml:space="preserve">
+        <segment>
+          <source>Find the matches first!</source>
+          <target>Find the matches first!</target>
+        </segment>
+      </unit>
+      <unit id="30411288342528" name="settings_tooltip" xml:space="preserve">
+        <segment>
+          <source>Click this button to open the settings panel.</source>
+          <target>Click this button to open the settings panel.</target>
+        </segment>
+      </unit>
+      <unit id="30454061854720" name="music_tooltip" xml:space="preserve">
+        <segment>
+          <source>Toggle music on or off.</source>
+          <target>Toggle music on or off.</target>
+        </segment>
+      </unit>
+      <unit id="30683033104384" name="sfx_tooltip" xml:space="preserve">
+        <segment>
+          <source>Toggle sound-effects on or off.</source>
+          <target>Toggle sound-effects on or off.</target>
+        </segment>
+      </unit>
+      <unit id="35151854301184" name="locale_menu_tooltip" xml:space="preserve">
+        <segment>
+          <source>Select language here.</source>
+          <target>Select language here.</target>
+        </segment>
+      </unit>
+      <unit id="71180778860544" name="reset_minigame_tooltip" xml:space="preserve">
+        <segment>
+          <source>This will reset the minigame, locking the play button again. This does not delete your save file. See: CorkBoardMiniGame.ResetMiniGame() for more info.</source>
+          <target>This will reset the minigame, locking the play button again. This does not delete your save file. See: CorkBoardMiniGame.ResetMiniGame() for more info.</target>
+        </segment>
+      </unit>
+    </group>
+  </file>
+</xliff>

@@ -1,0 +1,21 @@
+LICENSE INFORMATION & TERMS OF USE
+
+This sound pack, “Interface Sounds Starter Pack” by p0ss, is provided under a multi-license scheme. You may choose to use, modify, and redistribute it under any one of the following licenses:
+
+Creative Commons Attribution-ShareAlike 3.0 (CC BY-SA 3.0)
+
+GNU General Public License version 3 (GPLv3)
+
+GNU General Public License version 2 (GPLv2)
+
+Attribution: When using this asset, proper credit must be given to the original creator (p0ss). Include a reference to this notice and link to the full license text corresponding to the license you choose.
+
+License Inheritance (ShareAlike/Copyleft): If you modify or incorporate this asset into your own work, the resulting derivative work must be distributed under the same (or a compatible) license as the original asset. In other words, the license is inheritable – the freedoms and obligations of the original license continue to apply to any derivatives.
+
+By using any part of this sound pack, you agree to abide by the terms and conditions of your chosen license. For full details, please refer to the official license texts here:
+
+CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0/
+
+GPLv3 https://www.gnu.org/licenses/gpl-3.0.html
+
+GPLv2 https://www.gnu.org/licenses/old-licenses/gpl-2.0.html

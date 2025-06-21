@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<xliff xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0" srcLang="en" trgLang="en" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="7efd8aaa05c51dc40a9026493500aa40" original="Assets/TinyWalnutGames/Data/Unity_Localization/HOGT_UI_en.asset">
+    <group id="dcee2e8e5337f214a98a75b96c317f0c" name="HOGT_UI">
+      <unit id="2835162144768" name="btn_play_label" xml:space="preserve">
+        <segment>
+          <source>Play</source>
+          <target>Play</target>
+        </segment>
+      </unit>
+      <unit id="4101857996800" name="label_subtitle" xml:space="preserve">
+        <segment>
+          <source>A Unity UI Toolkit Game</source>
+          <target>A Unity UI Toolkit Game</target>
+        </segment>
+      </unit>
+      <unit id="5172114354176" name="label_title" xml:space="preserve">
+        <segment>
+          <source>Hidden Object Game Template</source>
+          <target>Hidden Object Game Template</target>
+        </segment>
+      </unit>
+      <unit id="5387819020288" name="title_twg" xml:space="preserve">
+        <segment>
+          <source>Tiny Walnut Games</source>
+          <target>Tiny Walnut Games</target>
+        </segment>
+      </unit>
+      <unit id="168528708968448" name="title_gather" xml:space="preserve">
+        <segment>
+          <source>Gather</source>
+          <target>Gather</target>
+        </segment>
+      </unit>
+      <unit id="168528797048832" name="title_craft" xml:space="preserve">
+        <segment>
+          <source>Craft</source>
+          <target>Craft</target>
+        </segment>
+      </unit>
+      <unit id="168528797048833" name="title_market" xml:space="preserve">
+        <segment>
+          <source>Market</source>
+          <target>Market</target>
+        </segment>
+      </unit>
+      <unit id="168528801243136" name="title_loop" xml:space="preserve">
+        <segment>
+          <source>Loop</source>
+          <target>Loop</target>
+        </segment>
+      </unit>
+      <unit id="168528805437440" name="btn_settings_label" xml:space="preserve">
+        <segment>
+          <source>Settings</source>
+          <target>Settings</target>
+        </segment>
+      </unit>
+      <unit id="168528805437441" name="btn_reset_minigame_label" xml:space="preserve">
+        <segment>
+          <source>Reset</source>
+          <target>Reset</target>
+        </segment>
+      </unit>
+      <unit id="168528805437442" name="label_language" xml:space="preserve">
+        <segment>
+          <source>Language</source>
+          <target>Language</target>
+        </segment>
+      </unit>
+      <unit id="168528805437443" name="label_music" xml:space="preserve">
+        <segment>
+          <source>Music</source>
+          <target>Music</target>
+        </segment>
+      </unit>
+      <unit id="168528805437444" name="label_sfx" xml:space="preserve">
+        <segment>
+          <source>SFX</source>
+          <target>SFX</target>
+        </segment>
+      </unit>
+      <unit id="168528805437445" name="label_settings_title" xml:space="preserve">
+        <segment>
+          <source>Settings</source>
+          <target>Settings</target>
+        </segment>
+      </unit>
+      <unit id="211528696799232" name="title_tiny" xml:space="preserve">
+        <segment>
+          <source>Tiny</source>
+          <target>Tiny</target>
+        </segment>
+      </unit>
+      <unit id="211594073415680" name="title_walnut" xml:space="preserve">
+        <segment>
+          <source>Walnut</source>
+          <target>Walnut</target>
+        </segment>
+      </unit>
+      <unit id="245176312918016" name="zh-Hans" xml:space="preserve">
+        <segment>
+          <source>Simplified Chinese</source>
+          <target>Simplified Chinese</target>
+        </segment>
+      </unit>
+      <unit id="245566882312192" name="en" xml:space="preserve">
+        <segment>
+          <source>English</source>
+          <target>English</target>
+        </segment>
+      </unit>
+      <unit id="312770327867392" name="tooltip_label" xml:space="preserve">
+        <segment>
+          <source />
+        </segment>
+      </unit>
+      <unit id="370622195167232" name="btn_close_settings_label" xml:space="preserve">
+        <segment>
+          <source>Close</source>
+          <target>Close</target>
+        </segment>
+      </unit>
+    </group>
+  </file>
+</xliff>

@@ -1,0 +1,544 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AddressableAssetSettings
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_DefaultGroup
+    value: bd5ac024e38c33b46985048f78babc19
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash
+    value: 00000000000000000000000000000000
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_OptimizeCatalogSize
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_BuildRemoteCatalog
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_CatalogRequestsTimeout
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_DisableCatalogUpdateOnStart
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_InternalIdNamingMode
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_InternalBundleIdMode
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_AssetLoadMode
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_BundledAssetProviderType.m_AssemblyName
+    value: Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_BundledAssetProviderType.m_ClassName
+    value: UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_AssetBundleProviderType.m_AssemblyName
+    value: Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_AssetBundleProviderType.m_ClassName
+    value: UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_IgnoreUnsupportedFilesInBuild
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_UniqueBundleIds
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EnableJsonCatalog
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_NonRecursiveBuilding
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_CCDEnabled
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_maxConcurrentWebRequests
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_UseUWRForLocalBundles
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_BundleTimeout
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_BundleRetryCount
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_BundleRedirectLimit
+    value: -1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_SharedBundleSettings
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_SharedBundleSettingsCustomGroupIndex
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ContiguousBundles
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_StripUnityVersionFromBundleBuild
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_DisableVisibleSubAssetRepresentations
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_BuiltInBundleNaming
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: mBuiltInBundleCustomNaming
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MonoScriptBundleNaming
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_CheckForContentUpdateRestrictionsOption
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MonoScriptBundleCustomNaming
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_RemoteCatalogBuildPath.m_Id
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_RemoteCatalogLoadPath.m_Id
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ContentStateBuildPathProfileVariableName
+    value: <default settings path>
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_CustomContentStateBuildPath
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ContentStateBuildPath
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_BuildAddressablesWithPlayerBuild
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_overridePlayerVersion
+    value: '[UnityEditor.PlayerSettings.bundleVersion]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_GroupAssets.Array.size
+    value: 20
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[0]'
+    value: 
+    objectReference: {fileID: 11400000, guid: c2c371f346bf39245b766341661a5d09, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[1]'
+    value: 
+    objectReference: {fileID: 11400000, guid: 611fdeb300d789745ba07841a19e807b, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[2]'
+    value: 
+    objectReference: {fileID: 11400000, guid: d2c93887ba21e174a993d9442ef25f30, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[3]'
+    value: 
+    objectReference: {fileID: 11400000, guid: 1b2f3e93209e66a4abe91062629eb644, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[4]'
+    value: 
+    objectReference: {fileID: 11400000, guid: 745c6539d8a5dbe458dce72e46ba83d1, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[5]'
+    value: 
+    objectReference: {fileID: 11400000, guid: 34587b0f01278b44ba71f3d47b117827, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[6]'
+    value: 
+    objectReference: {fileID: 11400000, guid: 36f19a5c8eb21014c8530f97293d7561, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[7]'
+    value: 
+    objectReference: {fileID: 11400000, guid: 51de4e2ff25cfcd42a9a37d0293cbef8, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[8]'
+    value: 
+    objectReference: {fileID: 11400000, guid: ffff3df40ef5eee4497609c076d28937, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[9]'
+    value: 
+    objectReference: {fileID: 11400000, guid: f729da1606568f6479c8356be0d9abc2, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[10]'
+    value: 
+    objectReference: {fileID: 11400000, guid: ce61a5581ce616547b4185633eca185f, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[11]'
+    value: 
+    objectReference: {fileID: 11400000, guid: 5ccf3d8e37628994f98b40d727992c91, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[12]'
+    value: 
+    objectReference: {fileID: 11400000, guid: 68bb43381abe69c4aaab304b5209950a, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[13]'
+    value: 
+    objectReference: {fileID: 11400000, guid: 762792d7804f42c4fa4b4873b235c9c5, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[14]'
+    value: 
+    objectReference: {fileID: 11400000, guid: 9010ac78492bdcf40a6d6ddbe9a309eb, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[15]'
+    value: 
+    objectReference: {fileID: 11400000, guid: 203d1d14110ee054ead5be17ad189aba, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[16]'
+    value: 
+    objectReference: {fileID: 11400000, guid: b9404f95a4fb8df4f81f9b86e1b549e0, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[17]'
+    value: 
+    objectReference: {fileID: 11400000, guid: 26f552fd0cb185b4c83e6169bf759aae, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[18]'
+    value: 
+    objectReference: {fileID: 11400000, guid: 6aeb30b047ed64c46937319408f9cda9, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupAssets.Array.data[19]'
+    value: 
+    objectReference: {fileID: 11400000, guid: e512b71306db9e84c866efb7de4a9403, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_BuildSettings.m_LogResourceManagerExceptions
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_BuildSettings.m_BundleBuildPath
+    value: Temp/com.unity.addressables/AssetBundles
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_InheritedParent
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Id
+    value: ce0d49148e774c242b5e749b4134d9ca
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_ProfileName
+    value: Default
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.size
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[0].m_Id
+    value: 162dba16557cd114abf67dbccd757ae3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[0].m_Value
+    value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[1].m_Id
+    value: 603fa957826e13e49ac81ff42a685309
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[1].m_Value
+    value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[2].m_Id
+    value: 60a0f371a3266454fbe29169c8143343
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[2].m_Value
+    value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[3].m_Id
+    value: 88738bd1e7a5ccb4c97fa0f1dd2d6c76
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[3].m_Value
+    value: <undefined>
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[4].m_Id
+    value: 8957345713f908f4fb804353451b2711
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[4].m_Value
+    value: 'ServerData/[BuildTarget]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.size
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[0].m_Id
+    value: 162dba16557cd114abf67dbccd757ae3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[0].m_Name
+    value: BuildTarget
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[0].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[1].m_Id
+    value: 603fa957826e13e49ac81ff42a685309
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[1].m_Name
+    value: Local.LoadPath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[1].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[2].m_Id
+    value: 60a0f371a3266454fbe29169c8143343
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[2].m_Name
+    value: Local.BuildPath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[2].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[3].m_Id
+    value: 88738bd1e7a5ccb4c97fa0f1dd2d6c76
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[3].m_Name
+    value: Remote.LoadPath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[3].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[4].m_Id
+    value: 8957345713f908f4fb804353451b2711
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[4].m_Name
+    value: Remote.BuildPath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[4].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileVersion
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_LabelTable.m_LabelNames.Array.size
+    value: 20
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[0]'
+    value: default
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[1]'
+    value: Locale
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[2]'
+    value: Locale-en-US
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[3]'
+    value: Locale-en
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[4]'
+    value: Locale-ja-JP
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[5]'
+    value: Locale-ja
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[6]'
+    value: Locale-zh-CN
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[7]'
+    value: Locale-zh-TW
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[8]'
+    value: Locale-zh-HK
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[9]'
+    value: Locale-nl
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[10]'
+    value: Locale-fr
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[11]'
+    value: Locale-de
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[12]'
+    value: Locale-ko
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[13]'
+    value: Locale-pt
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[14]'
+    value: Locale-ru
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[15]'
+    value: Locale-es
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[16]'
+    value: Locale-zh-Hans
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[17]'
+    value: Locale-it
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[18]'
+    value: Locale-vi
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_LabelTable.m_LabelNames.Array.data[19]'
+    value: Preload
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_SchemaTemplates.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_GroupTemplateObjects.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_GroupTemplateObjects.Array.data[0]'
+    value: 
+    objectReference: {fileID: 11400000, guid: 260e1f34fc2f2154386fd44d563d8044, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_InitializationObjects.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_CertificateHandlerType.m_AssemblyName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_CertificateHandlerType.m_ClassName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ActivePlayerDataBuilderIndex
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_DataBuilders.Array.size
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: 'm_DataBuilders.Array.data[0]'
+    value: 
+    objectReference: {fileID: 11400000, guid: a59fc1591b7c61840a9704ef0899d91a, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_DataBuilders.Array.data[1]'
+    value: 
+    objectReference: {fileID: 11400000, guid: 5f486c5d9a3f34a47be430530372b2f1, type: 2}
+  - target: {fileID: 0}
+    propertyPath: 'm_DataBuilders.Array.data[2]'
+    value: 
+    objectReference: {fileID: 11400000, guid: d8c005b54a8821340be5d6369b5ef0f1, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_ActiveProfileId
+    value: ce0d49148e774c242b5e749b4134d9ca
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []
+  m_CoupledType:
+    m_NativeTypeID: 0
+    m_ManagedTypePPtr: {fileID: 0}
+    m_ManagedTypeFallback: 
+  m_CoupledProperties: []

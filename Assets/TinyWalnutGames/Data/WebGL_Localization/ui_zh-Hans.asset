@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a92024fe71d8604fbee83b65ceb4aa1, type: 3}
+  m_Name: ui_zh-Hans
+  m_EditorClassIdentifier: TinyWalnutGames.Localization::TinyWalnutGames.Localization.LocalizationTable
+  entries:
+  - key: btn_play_label
+    sourceText: Play
+    targetText: "\u5F00\u59CB\u6E38\u620F"
+    localeCode: zh-Hans
+  - key: label_subtitle
+    sourceText: A Unity UI Toolkit Game
+    targetText: "\u4E00\u4E2AUnity UI\u5DE5\u5177\u5305\u6E38\u620F"
+    localeCode: zh-Hans
+  - key: label_title
+    sourceText: Hidden Object Game Template
+    targetText: "\u9690\u85CF\u7269\u54C1\u6E38\u620F\u6A21\u677F"
+    localeCode: zh-Hans
+  - key: title_twg
+    sourceText: Tiny Walnut Games
+    targetText: "\u5C0F\u80E1\u6843\u6E38\u620F"
+    localeCode: zh-Hans
+  - key: title_gather
+    sourceText: Gather
+    targetText: "\u6536\u96C6"
+    localeCode: zh-Hans
+  - key: title_craft
+    sourceText: Craft
+    targetText: "\u5236\u4F5C"
+    localeCode: zh-Hans
+  - key: title_market
+    sourceText: Market
+    targetText: "\u5E02\u573A"
+    localeCode: zh-Hans
+  - key: title_loop
+    sourceText: Loop
+    targetText: "\u5FAA\u73AF"
+    localeCode: zh-Hans
+  - key: btn_settings_label
+    sourceText: Settings
+    targetText: "\u8BBE\u7F6E"
+    localeCode: zh-Hans
+  - key: btn_reset_minigame_label
+    sourceText: Reset
+    targetText: "\u91CD \u542F"
+    localeCode: zh-Hans
+  - key: label_language
+    sourceText: Language
+    targetText: "\u8BED\u8A00"
+    localeCode: zh-Hans
+  - key: label_music
+    sourceText: Music
+    targetText: "\u97F3\u4E50"
+    localeCode: zh-Hans
+  - key: label_sfx
+    sourceText: SFX
+    targetText: "\u97F3\u6548"
+    localeCode: zh-Hans
+  - key: label_settings_title
+    sourceText: Settings
+    targetText: "\u8BBE\u7F6E"
+    localeCode: zh-Hans
+  - key: title_tiny
+    sourceText: Tiny
+    targetText: "\u5FAE\u578B"
+    localeCode: zh-Hans
+  - key: title_walnut
+    sourceText: Walnut
+    targetText: "\u6838\u6843"
+    localeCode: zh-Hans
+  - key: zh-Hans
+    sourceText: Simplified Chinese
+    targetText: "\u4E2D\u6587"
+    localeCode: zh-Hans
+  - key: en
+    sourceText: English
+    targetText: "\u82F1\u6587"
+    localeCode: zh-Hans
+  - key: tooltip_label
+    sourceText: 
+    targetText: 
+    localeCode: zh-Hans
+  - key: btn_close_settings_label
+    sourceText: Close
+    targetText: "\u5173\u4E0A"
+    localeCode: zh-Hans

@@ -1,0 +1,34 @@
+:root {
+}
+
+.unity-progress-bar {
+}
+
+#progressbar > #unity-progress-bar > .unity-progress-bar__background {
+    background-image: url("project://database/Assets/TinyWalnutGames/HiddenObjectGameTemplate/Art/Sprites/itemFoundToast.png?fileID=2800000&guid=fdaf2fbabac805e4aabf9d6b7c59fb7f&type=3#itemFoundToast");
+    -unity-slice-left: 64;
+    -unity-slice-top: 64;
+    -unity-slice-right: 64;
+    -unity-slice-bottom: 64;
+    background-color: rgba(0, 0, 0, 0);
+    -unity-slice-scale: 0.1px;
+    -unity-slice-type: sliced;
+}
+
+#progressbar > #unity-progress-bar > .unity-progress-bar__background > .unity-progress-bar__progress {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("project://database/Assets/TinyWalnutGames/HiddenObjectGameTemplate/Art/Sprites/itemFoundToast.png?fileID=2800000&guid=fdaf2fbabac805e4aabf9d6b7c59fb7f&type=3#itemFoundToast");
+    -unity-slice-left: 63;
+    -unity-slice-top: 63;
+    -unity-slice-right: 63;
+    -unity-slice-bottom: 63;
+    -unity-slice-scale: 0.1px;
+    -unity-slice-type: sliced;
+    -unity-background-image-tint-color: rgb(228, 134, 104);
+}
+
+#progressbar > #unity-progress-bar > .unity-progress-bar__background > .unity-progress-bar__title-container {
+}
+
+#progressbar > #unity-progress-bar > .unity-progress-bar__background > .unity-progress-bar__title-container > .unity-progress-bar__title {
+}

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6968de417afc2fb43819d91395085f36
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294088
+  packageName: MCCustomizer
+  packageVersion: 0.2.6b
+  assetPath: Assets/Tiny Walnut Games/MCCustomizer/Scripts/Tools/CameraController.cs
+  uploadId: 701697

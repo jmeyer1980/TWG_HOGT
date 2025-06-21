@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a92024fe71d8604fbee83b65ceb4aa1, type: 3}
+  m_Name: tooltips_en
+  m_EditorClassIdentifier: TinyWalnutGames.Localization::TinyWalnutGames.Localization.LocalizationTable
+  entries:
+  - key: play_tooltip
+    sourceText: Find the matches first!
+    targetText: Find the matches first!
+    localeCode: en
+  - key: settings_tooltip
+    sourceText: Click this button to open the settings panel.
+    targetText: Click this button to open the settings panel.
+    localeCode: en
+  - key: music_tooltip
+    sourceText: Toggle music on or off.
+    targetText: Toggle music on or off.
+    localeCode: en
+  - key: sfx_tooltip
+    sourceText: Toggle sound-effects on or off.
+    targetText: Toggle sound-effects on or off.
+    localeCode: en
+  - key: locale_menu_tooltip
+    sourceText: Select language here.
+    targetText: Select language here.
+    localeCode: en
+  - key: reset_minigame_tooltip
+    sourceText: 'This will reset the minigame, locking the play button again. This
+      does not delete your save file. See: CorkBoardMiniGame.ResetMiniGame() for
+      more info.'
+    targetText: 'This will reset the minigame, locking the play button again. This
+      does not delete your save file. See: CorkBoardMiniGame.ResetMiniGame() for
+      more info.'
+    localeCode: en

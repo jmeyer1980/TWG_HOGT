@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: HOGT_UI Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: HOGT_UI
+  m_TableCollectionNameGuidString: dcee2e8e5337f214a98a75b96c317f0c
+  m_Entries:
+  - m_Id: 2835162144768
+    m_Key: btn_play_label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168528708968448
+    m_Key: title_gather
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168528797048832
+    m_Key: title_craft
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168528797048833
+    m_Key: title_market
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168528801243136
+    m_Key: title_loop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168528805437440
+    m_Key: btn_settings_label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168528805437441
+    m_Key: btn_reset_minigame_label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168528805437442
+    m_Key: label_language
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168528805437443
+    m_Key: label_music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168528805437444
+    m_Key: label_sfx
+    m_Metadata:
+      m_Items: []
+  - m_Id: 168528805437445
+    m_Key: label_settings_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 211528696799232
+    m_Key: title_tiny
+    m_Metadata:
+      m_Items: []
+  - m_Id: 211594073415680
+    m_Key: title_walnut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4101857996800
+    m_Key: label_subtitle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5172114354176
+    m_Key: label_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5387819020288
+    m_Key: title_twg
+    m_Metadata:
+      m_Items: []
+  - m_Id: 245176312918016
+    m_Key: zh-Hans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 245566882312192
+    m_Key: en
+    m_Metadata:
+      m_Items: []
+  - m_Id: 312770327867392
+    m_Key: tooltip_label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 370622195167232
+    m_Key: btn_close_settings_label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1280580206063616
+    m_Key: preload_progress
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 7139812200733737359
+  references:
+    version: 2
+    RefIds:
+    - rid: 7139812200733737359
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1750201069918

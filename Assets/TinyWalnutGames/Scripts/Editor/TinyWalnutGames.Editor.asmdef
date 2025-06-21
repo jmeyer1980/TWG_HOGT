@@ -1,0 +1,21 @@
+{
+    "name": "TinyWalnutGames.Editor",
+    "rootNamespace": "TinyWalnutGames.Editor",
+    "references": [
+        "GUID:d74e00a8c1c1fa147b2ae96f5a1ff520",
+        "GUID:c784256da70f9724daee6d75ba72055a",
+        "GUID:eec0964c48f6f4e40bc3ec2257ccf8c5",
+        "GUID:2e77701fe0ceda44fb763f03ee704c37"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

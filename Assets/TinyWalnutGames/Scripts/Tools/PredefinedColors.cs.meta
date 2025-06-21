@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a0b57f91447f45641a94655e71cf1bbc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 294088
+  packageName: MCCustomizer
+  packageVersion: 0.2.6b
+  assetPath: Assets/Tiny Walnut Games/MCCustomizer/Scripts/Tools/PredefinedColors.cs
+  uploadId: 701697
