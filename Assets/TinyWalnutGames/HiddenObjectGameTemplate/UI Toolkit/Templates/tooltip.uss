@@ -1,0 +1,11 @@
+:root {
+    position: absolute;
+    align-items: auto;
+    align-content: auto;
+}
+
+#tooltip {
+    position: absolute;
+    align-items: auto;
+    align-content: auto;
+}

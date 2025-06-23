@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using TinyWalnutGames.Localization; // Use the existing LocalizationHelper
 
 namespace TinyWalnutGames.UI
 {
@@ -19,8 +20,8 @@ namespace TinyWalnutGames.UI
         private const float TooltipSafeBound = 8f;
 
         // Addressable key for the tooltip template
-        private const string TooltipUxmlAddress = "Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Templates/tooltip.uxml"; // Make sure this matches your Addressable key
-
+        private const string TooltipAddressablesDirectory = "tooltip_template"; // adderessables directory: "Assets\AddressableAssetsData\", streaming assets directory should be "StreamingAssets\aa\"? But I believe this should be set as the key in the addressables.
+        private const string TooltipLocalResourcesDirectory = "Assets/TinyWalnutGames/HiddenObjectGameTemplate/Resources"; 
         public event System.Action OnTooltipReady;
 
         /// <summary>
@@ -48,61 +49,60 @@ namespace TinyWalnutGames.UI
         {
             if (_sharedTooltipTemplate != null)
             {
-                Debug.Log("[Tooltip] Using already loaded Addressables template.");
-                _sharedTooltipTemplate.CloneTree(this);
-                _description = this.Q<Label>("tooltip_description");
-                OnTemplateLoaded();
+                Debug.Log("[Tooltip] Template already loaded. Initializing tooltip.");
+                Initialize(_sharedTooltipTemplate.CloneTree());
             }
-            else
+            else if (!_isLoadingTemplate)
             {
-                Debug.Log("[Tooltip] Addressables template not loaded yet. Queuing this Tooltip instance for load.");
-                _pendingTooltips.Add(this);
-                if (!_isLoadingTemplate)
-                {
-                    _isLoadingTemplate = true;
-                    Debug.Log("[Tooltip] Starting Addressables template load.");
-#if UNITY_WEBGL // && !UNITY_EDITOR
-                        LoadTooltipTemplateWebGL();
-#else
-                    _ = LoadTooltipTemplateAsync();
-#endif
-                }
+                _isLoadingTemplate = true;
             }
         }
 
-        private void OnTemplateLoaded()
+        public void SetSharedTemplate(VisualTreeAsset visualTreeAsset)
         {
-            Debug.Log($"[Tooltip] Tooltip template loaded successfully. IsTemplateReady: {IsTemplateReady}");
-            TooltipTemplateLoaded?.Invoke();
-            OnTooltipReady?.Invoke();
+            if (visualTreeAsset == null)
+            {
+                Debug.LogError("[Tooltip] Attempted to set a null VisualTreeAsset as the shared tooltip template.");
+                return;
+            }
+            _sharedTooltipTemplate = visualTreeAsset;
+            Debug.Log("[Tooltip] Shared tooltip template set successfully.");
+            // Initialize any pending tooltips
+            foreach (var tooltip in _pendingTooltips)
+            {
+                _sharedTooltipTemplate.CloneTree(tooltip);
+                tooltip._description = tooltip.Q<Label>("tooltip_description");
+                tooltip.OnTemplateLoaded();
+            }
+            _pendingTooltips.Clear();
         }
 
 #if UNITY_WEBGL // && !UNITY_EDITOR
             /// <summary>
             /// Loads the tooltip template from Addressables using a callback (WebGL safe).
             /// </summary>
-            public void LoadTooltipTemplateWebGL()
+        public void LoadTooltipTemplateWebGL()
+        {
+            Addressables.LoadAssetAsync<VisualTreeAsset>(TooltipAddressablesDirectory).Completed += handle =>
             {
-                Addressables.LoadAssetAsync<VisualTreeAsset>(TooltipUxmlAddress).Completed += handle =>
+                if (handle.Status == AsyncOperationStatus.Succeeded && handle.Result != null)
                 {
-                    if (handle.Status == AsyncOperationStatus.Succeeded && handle.Result != null)
+                    _sharedTooltipTemplate = handle.Result;
+                    foreach (var tooltip in _pendingTooltips)
                     {
-                        _sharedTooltipTemplate = handle.Result;
-                        foreach (var tooltip in _pendingTooltips)
-                        {
-                            _sharedTooltipTemplate.CloneTree(tooltip);
-                            tooltip._description = tooltip.Q<Label>("tooltip_description");
-                            tooltip.OnTemplateLoaded();
-                        }
-                        _pendingTooltips.Clear();
+                        _sharedTooltipTemplate.CloneTree(tooltip);
+                        tooltip._description = tooltip.Q<Label>("tooltip_description");
+                        tooltip.OnTemplateLoaded();
                     }
-                    else
-                    {
-                        Debug.LogError("Tooltip UXML template not found in Addressables (WebGL)!");
-                    }
-                    Addressables.Release(handle);
-                };
-            }
+                    _pendingTooltips.Clear();
+                }
+                else
+                {
+                    Debug.LogError("Tooltip UXML template not found in Addressables (WebGL)!");
+                }
+                Addressables.Release(handle);
+            };
+        }
 #else
         /// <summary>
         /// Loads the tooltip template from Addressables asynchronously (non-WebGL).
@@ -129,6 +129,14 @@ namespace TinyWalnutGames.UI
             Addressables.Release(handle);
         }
 #endif
+
+        // on template loaded, invoke the event and set up the tooltip
+        private void OnTemplateLoaded()
+        {
+            Debug.Log("[Tooltip] Template loaded successfully.");
+            OnTooltipReady?.Invoke();
+            TooltipTemplateLoaded?.Invoke();
+        }
 
         /// <summary>
         /// Initialize the Tooltip from a VisualElement (e.g., loaded from UXML template).
@@ -168,6 +176,19 @@ namespace TinyWalnutGames.UI
         /// <param name="text">The text to display in the tooltip. This should be provided directly from the UI document, not from a localization key.</param>
         public void SetText(string text)
         {
+#if UNITY_WEBGL
+            // In WebGL, treat 'text' as a localization key and fetch the localized string from the correct table
+            string localized = LocalizationHelper.GetLocalizedString("tooltips", text, text);
+            if (_description != null)
+            {
+                Debug.Log($"[Tooltip] SetText (WebGL): {localized}");
+                _description.text = localized;
+            }
+            else
+            {
+                Debug.LogWarning("[Tooltip] SetText called but _description is null.");
+            }
+#else
             if (_description != null)
             {
                 Debug.Log($"[Tooltip] SetText: {text}");
@@ -177,6 +198,7 @@ namespace TinyWalnutGames.UI
             {
                 Debug.LogWarning("[Tooltip] SetText called but _description is null.");
             }
+#endif
         }
 
         /// <summary>

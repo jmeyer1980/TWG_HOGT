@@ -1,7 +1,7 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI%20Toolkit/Init/init.uss?fileID=7433441132597879392&amp;guid=0b27c4b5e3198a84cb9776f4d6060683&amp;type=3#init" />
     <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/TinyWalnutGames/HiddenObjectGameTemplate/Art/Backgrounds/BedRoomJustWakingUp.png?fileID=2800000&amp;guid=8bca0f7baf26b0545b5a14325d262a8a&amp;type=3#BedRoomJustWakingUp&quot;); -unity-background-scale-mode: scale-and-crop;" />
-    <ui:ProgressBar value="22" title="Preloading assets" name="progressbar" style="bottom: 40px; align-self: stretch; justify-content: flex-end; align-content: stretch; align-items: stretch; position: absolute; top: auto; left: 40px; right: 40px; width: auto;">
+    <ui:ProgressBar value="2" title="Preloading assets" name="progressbar" style="bottom: 40px; align-self: stretch; justify-content: flex-end; align-content: stretch; align-items: stretch; position: absolute; top: auto; left: 40px; right: 40px; width: auto;">
         <Bindings>
             <UnityEngine.Localization.LocalizedString property="title" table="GUID:dcee2e8e5337f214a98a75b96c317f0c" entry="Id(1280580206063616)" />
         </Bindings>

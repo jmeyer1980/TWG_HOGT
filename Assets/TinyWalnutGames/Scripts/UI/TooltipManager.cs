@@ -1,17 +1,22 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.TextCore.Text;
+using TinyWalnutGames.Localization; // Add this for localization helper
 
 namespace TinyWalnutGames.UI
 {
     /// <summary>
-    /// Singleton MonoBehaviour manager for UI Toolkit tooltips.
+    /// Singleton MonoBehaviour manager for UI Toolkit tooltips. /fox
     /// </summary>
     public class TooltipManager : MonoBehaviour
     {
         public static TooltipManager Instance { get; private set; }
 
-        private Tooltip _tooltip;
+        [SerializeField]
+        private VisualTreeAsset _tooltipTemplate;
+
+        [Tooltip("The Tooltip instance used for displaying tooltips in the UI. Leave this blank")]
+        public Tooltip _tooltip;
         private VisualElement _root;
         private bool _templateReady = false;
         private bool _initialized = false;
@@ -28,21 +33,19 @@ namespace TinyWalnutGames.UI
             // Deparent the singleton so it is not a child of any other GameObject
             transform.SetParent(null);
             DontDestroyOnLoad(this.gameObject);
+
+            // Initialize the Tooltip system
+            if (_tooltipTemplate == null)
+            {
+                Debug.LogError("[TooltipManager] Tooltip template is not assigned. Please assign a valid VisualTreeAsset.");
+                return;
+            }
+            Tooltip tempTooltip = new Tooltip();
+            tempTooltip.SetSharedTemplate(_tooltipTemplate);
+
             Tooltip.TooltipTemplateLoaded += OnTooltipTemplateLoaded;
             _templateReady = Tooltip.IsTemplateReady;
             Debug.Log("[TooltipManager] Singleton instance created.");
-            // load the tooltip template if it is not already loaded by pulling it from addressables by directory
-            if (!Tooltip.IsTemplateReady)
-            {
-                var tempTooltip = new Tooltip();
-#if !UNITY_WEBGL // && !UNITY_EDITOR - Always use WebGL method, even in Editor WHEN WebGL testing
-                // Create a temporary Tooltip instance to trigger template loading
-                tempTooltip.ToString(); // This will trigger the loading of the template if not already done
-#else // && !UNITY_EDITOR - Always use WebGL method, even in Editor WHEN WebGL testing
-                // Create a temporary Tooltip instance to trigger template loading
-                tempTooltip.LoadTooltipTemplateWebGL();
-#endif
-            }
         }
 
         private void OnDestroy()
@@ -140,8 +143,14 @@ namespace TinyWalnutGames.UI
                 Debug.LogWarning("[TooltipManager] Template not ready, skipping tooltip display.");
                 return;
             }
+#if UNITY_WEBGL
+            string localized = LocalizationHelper.GetLocalizedString("tooltips", tooltipText, tooltipText);
+            string displayText = $"{localized}: {Mathf.RoundToInt(value * 100)}%";
+            _tooltip.SetText(displayText);
+#else
             string displayText = $"{tooltipText}: {Mathf.RoundToInt(value * 100)}%";
             _tooltip.SetText(displayText);
+#endif
             Debug.Log($"[TooltipManager] ShowWithValue called for text: {tooltipText} value: {value}");
             _tooltip.Show(mouseScreenPosition, _root.panel);
         }

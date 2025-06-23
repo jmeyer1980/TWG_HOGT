@@ -16,7 +16,7 @@ MonoBehaviour:
   m_GUID: bd5ac024e38c33b46985048f78babc19
   m_SerializeEntries:
   - m_GUID: 42fffa5961c74534d950d4e9a7b053c8
-    m_Address: Assets/TinyWalnutGames/Data/WebGL_Localization/ui_en.asset
+    m_Address: ui_en
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale
@@ -26,15 +26,14 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 55d33ad19e5038942af39e3000101f6b
-    m_Address: Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Main Menu/UITK
-      Text Settings.asset
+    m_Address: UITK_TextSettings
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 63cf68caed88d504b9f38fa217299304
-    m_Address: Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Main Menu/MainMenu.uxml
+    m_Address: MainMenuUxml
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale
@@ -42,7 +41,7 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6783d41c91acec74b9c1f0e3d89bd4bd
-    m_Address: Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Templates/LevelCardTemplate.uxml
+    m_Address: LevelCardTemplate
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale
@@ -50,14 +49,14 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 681886c5eb7344803b6206f758bf0b1c
-    m_Address: Assets/TinyWalnutGames/HiddenObjectGameTemplate/Settings/UniversalRP.asset
+    m_Address: UniversalRP
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6be377f3d5fda864cbe3cc42a03dfc7d
-    m_Address: Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Templates/item_container.uxml
+    m_Address: item_container
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale
@@ -65,7 +64,7 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6eaa63b3b078d6040918f33a566632de
-    m_Address: Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Templates/h_listview.uxml
+    m_Address: h_listview
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale
@@ -73,7 +72,7 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 77820e294d2dbb745b8910a61a867c2c
-    m_Address: Assets/TinyWalnutGames/Data/Unity_Localization/Localization Settings.asset
+    m_Address: LocalizationSettings
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale
@@ -81,7 +80,7 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7e741fb8d4c1eb7479f143b08e1ce108
-    m_Address: Assets/TinyWalnutGames/Data/WebGL_Localization/ui_zh-Hans.asset
+    m_Address: ui_zh-Hans
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale
@@ -90,7 +89,7 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8840605f5579bc44baf23112c4a4a205
-    m_Address: Assets/TinyWalnutGames/Data/WebGL_Localization/tooltips_en.asset
+    m_Address: tooltips_en
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale
@@ -100,7 +99,7 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 902724e92dbecbc4e8699c65b773755c
-    m_Address: Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Templates/v_listview.uxml
+    m_Address: v_listview
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale
@@ -108,7 +107,7 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9cb608a2ca6b9a246881575cd89a55dc
-    m_Address: Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Templates/tooltip.uxml
+    m_Address: tooltip_template
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale
@@ -116,7 +115,7 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9ed9698c07c19a2419061bcfdefc63ac
-    m_Address: Assets/TinyWalnutGames/Data/WebGL_Localization/tooltips_zh-Hans.asset
+    m_Address: tooltips_zh-Hans
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale
@@ -125,15 +124,14 @@ MonoBehaviour:
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cc3826bf3baf7a94a99d3638649ee1fa
-    m_Address: Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Main Menu/MainMenu.uss
+    m_Address: MainMenuUss
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale
     - default
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dcb199564cf76c840b79e9bfbb18b89f
-    m_Address: Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Main Menu/Main
-      Menu Panel Settings.asset
+    m_Address: MainMenuPanelSettings
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload

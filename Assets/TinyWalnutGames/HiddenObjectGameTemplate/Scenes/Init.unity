@@ -1019,25 +1019,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: TinyWalnutGames::TinyWalnutGames.PreloadAssets
   uiDocument: {fileID: 1586959749}
-  addressableKeysToPreload:
-  - Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Templates/v_listview.uxml
-  - Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Templates/tooltip.uxml
-  - Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Templates/LevelCardTemplate.uxml
-  - Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Templates/item_container.uxml
-  - Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Templates/h_listview.uxml
-  - Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Main Menu/UITK Text
-    Settings.asset
-  - Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Main Menu/MainMenu.uxml
-  - Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Main Menu/MainMenu.uss
-  - Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI Toolkit/Main Menu/Main Menu
-    Panel Settings.asset
-  - Assets/TinyWalnutGames/HiddenObjectGameTemplate/Settings/UniversalRP.asset
-  - Assets/TinyWalnutGames/Data/WebGL_Localization/ui_zh-Hans.asset
-  - Assets/TinyWalnutGames/Data/WebGL_Localization/ui_en.asset
-  - Assets/TinyWalnutGames/Data/WebGL_Localization/tooltips_zh-Hans.asset
-  - Assets/TinyWalnutGames/Data/WebGL_Localization/tooltips_en.asset
-  - Assets/TinyWalnutGames/Data/Unity_Localization/Localization Settings.asset
-  nextSceneName: 
+  tooltipTemplate: {fileID: 9197481963319205126, guid: 9cb608a2ca6b9a246881575cd89a55dc, type: 3}
+  nextSceneName: MainMenu
   nextSceneIndex: 1
 --- !u!114 &1372207072
 MonoBehaviour:
@@ -1051,6 +1034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22817155769c21347b179a0c18b7de4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: TinyWalnutGames.UI::TinyWalnutGames.UI.TooltipManager
+  _tooltipTemplate: {fileID: 9197481963319205126, guid: 9cb608a2ca6b9a246881575cd89a55dc, type: 3}
 --- !u!1 &1375688273
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: b1bdc44c0b3209e418d0bc73874f0604
+  productGUID: 09cb9d5fe0b62034eb68d272729aee77
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -12,11 +12,11 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Tiny Walnut Games
-  productName: TWG_HOGT
+  companyName: DefaultCompany
+  productName: CandyBarParodyIdle
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.39, g: 0.34542853, b: 0.35657144, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
@@ -44,8 +44,8 @@ PlayerSettings:
     duration: 3
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
-  defaultScreenWidth: 1024
-  defaultScreenHeight: 768
+  defaultScreenWidth: 1920
+  defaultScreenHeight: 1080
   defaultScreenWidthWeb: 1366
   defaultScreenHeightWeb: 768
   m_StereoRenderingPath: 0
@@ -57,7 +57,7 @@ PlayerSettings:
   mipStripping: 0
   numberOfMipsStripped: 0
   numberOfMipsStrippedPerMipmapLimitGroup: {}
-  m_StackTraceTypes: 020000000100000002000000010000000100000001000000
+  m_StackTraceTypes: 020000000100000002000000010000000200000001000000
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
   iosUseCustomAppBackgroundBehavior: 0
@@ -71,7 +71,7 @@ PlayerSettings:
   disableDepthAndStencilBuffers: 0
   androidStartInFullscreen: 1
   androidRenderOutsideSafeArea: 1
-  androidUseSwappy: 0
+  androidUseSwappy: 1
   androidBlitType: 0
   androidResizeableActivity: 1
   androidDefaultWindowWidth: 1920
@@ -80,7 +80,7 @@ PlayerSettings:
   androidMinimumWindowHeight: 300
   androidFullscreenMode: 1
   androidAutoRotationBehavior: 1
-  androidPredictiveBackSupport: 1
+  androidPredictiveBackSupport: 0
   androidApplicationEntry: 2
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
@@ -94,13 +94,13 @@ PlayerSettings:
   usePlayerLog: 1
   dedicatedServerOptimizations: 1
   bakeCollisionMeshes: 0
-  forceSingleInstance: 1
+  forceSingleInstance: 0
   useFlipModelSwapchain: 1
-  resizableWindow: 1
+  resizableWindow: 0
   useMacAppStoreValidation: 0
   macAppStoreCategory: public.app-category.games
-  gpuSkinning: 1
-  meshDeformation: 2
+  gpuSkinning: 0
+  meshDeformation: 0
   xboxPIXTextureCapture: 0
   xboxEnableAvatar: 0
   xboxEnableKinect: 0
@@ -137,14 +137,22 @@ PlayerSettings:
   switchGraphicsJobsSyncAfterKick: 1
   vulkanNumSwapchainBuffers: 3
   vulkanEnableSetSRGBWrite: 0
-  vulkanEnablePreTransform: 1
+  vulkanEnablePreTransform: 0
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.1.0
-  preloadedAssets: []
+  bundleVersion: 1.0
+  preloadedAssets:
+  - {fileID: 11400000, guid: 77820e294d2dbb745b8910a61a867c2c, type: 2}
+  - {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  - {fileID: 9197481963319205126, guid: 9cb608a2ca6b9a246881575cd89a55dc, type: 3}
+  - {fileID: 11400000, guid: 8840605f5579bc44baf23112c4a4a205, type: 2}
+  - {fileID: 11400000, guid: 9ed9698c07c19a2419061bcfdefc63ac, type: 2}
+  - {fileID: 11400000, guid: 42fffa5961c74534d950d4e9a7b053c8, type: 2}
+  - {fileID: 11400000, guid: 7e741fb8d4c1eb7479f143b08e1ce108, type: 2}
+  - {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -166,9 +174,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.UnityTechnologies.com.unity.template.urpblank
-    Standalone: com.Unity-Technologies.com.unity.template.urp-blank
-    iPhone: com.Unity-Technologies.com.unity.template.urp-blank
+    Standalone: com.DefaultCompany.2D-URP
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -255,8 +261,8 @@ PlayerSettings:
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
   shaderPrecisionModel: 0
-  clonedFromGUID: 3c72c65a16f0acb438eed22b8b16c24a
-  templatePackageId: com.unity.template.urp-blank@17.0.14
+  clonedFromGUID: c19f32bac17ee4170b3bf8a6a0333fb9
+  templatePackageId: com.unity.template.universal-2d@6.1.1
   templateDefaultScene: Assets/Scenes/SampleScene.unity
   useCustomMainManifest: 0
   useCustomLauncherManifest: 0
@@ -482,80 +488,31 @@ PlayerSettings:
       m_Height: 36
       m_Kind: 0
       m_SubKind: 
-  - m_BuildTarget: tvOS
-    m_Icons:
-    - m_Textures: []
-      m_Width: 1280
-      m_Height: 768
-      m_Kind: 0
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 800
-      m_Height: 480
-      m_Kind: 0
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 400
-      m_Height: 240
-      m_Kind: 0
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 4640
-      m_Height: 1440
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 2320
-      m_Height: 720
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 3840
-      m_Height: 1440
-      m_Kind: 1
-      m_SubKind: 
-    - m_Textures: []
-      m_Width: 1920
-      m_Height: 720
-      m_Kind: 1
-      m_SubKind: 
-  m_BuildTargetBatching: []
+  m_BuildTargetBatching:
+  - m_BuildTarget: WebGL
+    m_StaticBatching: 0
+    m_DynamicBatching: 0
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []
-  m_BuildTargetGraphicsAPIs:
-  - m_BuildTarget: iOSSupport
-    m_APIs: 10000000
-    m_Automatic: 1
-  - m_BuildTarget: AndroidPlayer
-    m_APIs: 150000000b000000
-    m_Automatic: 0
+  m_BuildTargetGraphicsAPIs: []
   m_BuildTargetVRSettings: []
   m_DefaultShaderChunkSizeInMB: 16
   m_DefaultShaderChunkCount: 0
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
-  m_TemplateCustomTags:
-    PRODUCT_DESCRIPTION: 
+  m_TemplateCustomTags: {}
   mobileMTRendering:
     Android: 1
     iPhone: 1
     tvOS: 1
-  m_BuildTargetGroupLightmapEncodingQuality:
-  - serializedVersion: 2
-    m_BuildTarget: Android
-    m_EncodingQuality: 1
+  m_BuildTargetGroupLightmapEncodingQuality: []
   m_BuildTargetGroupHDRCubemapEncodingQuality: []
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetGroupLoadStoreDebugModeSettings: []
-  m_BuildTargetNormalMapEncoding:
-  - m_BuildTarget: Android
-    m_Encoding: 1
+  m_BuildTargetNormalMapEncoding: []
   m_BuildTargetDefaultTextureCompressionFormat:
-  - serializedVersion: 3
-    m_BuildTarget: Android
-    m_Formats: 03000000
   - serializedVersion: 3
     m_BuildTarget: WebGL
     m_Formats: 05000000
@@ -807,7 +764,7 @@ PlayerSettings:
   webGLTemplate: APPLICATION:Minimal
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
-  webGLCompressionFormat: 0
+  webGLCompressionFormat: 2
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
@@ -825,10 +782,20 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
+    Android: 
+    EmbeddedLinux: 
+    LinuxHeadlessSimulation: 
+    Nintendo Switch: 
+    PS4: 
+    QNX: 
+    Server: 
     Standalone: UNITY_LOCALIZATION
     WebGL: UNITY_WEBGL
-  additionalCompilerArguments:
-    Standalone: []
+    Windows Store Apps: 
+    XboxOne: 
+    iPhone: 
+    tvOS: 
+  additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
     Android: 1
@@ -848,16 +815,16 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: TWGHOGT
+  metroPackageName: CandyBarParodyIdle
   metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: TWG_HOGT
+  metroApplicationDescription: CandyBarParodyIdle
   wsaImages: {}
-  metroTileShortName: TWG_HOGT
+  metroTileShortName: CandyBarParodyIdle
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
@@ -926,11 +893,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: 1cae4675-f7dc-4fe9-b52c-3886a7d8509c
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: TWG_HOGT
-  organizationId: c0c1a5b-1568-4e84-a842-f3705c3706d6
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

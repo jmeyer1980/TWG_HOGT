@@ -17,6 +17,11 @@ namespace TinyWalnutGames.UI
     {
         public UIDocument uiDocument;
 
+        // scene to load on play
+        [Tooltip("Scene to load when the player clicks the Play button. Defaults to the next scene in build settings.")]
+        [SerializeField]
+        private string nextSceneName = "";
+
         // Event to allow other scripts to refresh UI
         public static event System.Action LocalizedUIRefreshRequested;
 
@@ -236,9 +241,8 @@ namespace TinyWalnutGames.UI
             });
 
             RegisterButtonWithSound(playButton, () =>
-            {
-                int nextScene = (SceneManager.GetActiveScene().buildIndex + 1) % SceneManager.sceneCountInBuildSettings;
-                SceneManager.LoadScene(nextScene);
+            {                
+                SceneManager.LoadScene(nextSceneName);
                 PlayUISound("pick"); // Play 'pick' sound when starting the game
             });
 

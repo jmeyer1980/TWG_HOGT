@@ -1,5 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="tooltip" class="mainmenu-tooltip" style="position: absolute; display: flex; left: auto; top: auto; z-index: 1000; pointer-events: none; width: auto; height: auto; max-width: 320px; max-height: 200px; overflow-y: auto; background-color: rgba(215, 134, 42, 0.8); border-width: 3px; border-color: rgba(69, 22, 0, 0.8); flex-direction: row; justify-content: center; align-items: flex-start; padding: 5px;">
+    <Style src="project://database/Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI%20Toolkit/Templates/tooltip.uss?fileID=7433441132597879392&amp;guid=cc69e3ff06bdde740a9debd5b4a56833&amp;type=3#tooltip" />
+    <ui:VisualElement name="tooltip" class="mainmenu-tooltip" style="position: absolute; display: flex; left: auto; top: auto; z-index: 1000; pointer-events: none; width: auto; height: auto; max-width: 320px; max-height: 200px; overflow-y: auto; background-color: rgba(215, 134, 42, 0.8); border-width: 3px; border-color: rgba(69, 22, 0, 0.8); flex-direction: row; justify-content: center; align-items: auto; padding: 5px; align-content: auto;">
         <ui:Label text="Label" name="tooltip_description" style="white-space: pre-wrap; word-break: break-word; flex-shrink: 1; flex-grow: 0; align-self: flex-start; width: auto; min-width: 0;" />
     </ui:VisualElement>
 </ui:UXML>

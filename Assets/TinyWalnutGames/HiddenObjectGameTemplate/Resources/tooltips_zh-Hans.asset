@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a92024fe71d8604fbee83b65ceb4aa1, type: 3}
+  m_Name: tooltips_zh-Hans
+  m_EditorClassIdentifier: TinyWalnutGames.Localization::TinyWalnutGames.Localization.LocalizationTable
+  entries:
+  - key: play_tooltip
+    sourceText: Find the matches first!
+    targetText: "\u62A2\u5148\u627E\u51FA\u5339\u914D\u9879!"
+    localeCode: zh-Hans
+  - key: settings_tooltip
+    sourceText: Click this button to open the settings panel.
+    targetText: "\u70B9\u51FB\u6B64\u6309\u94AE\u4EE5\u6253\u5F00\u8BBE\u7F6E\u9762\u677F\u3002"
+    localeCode: zh-Hans
+  - key: music_tooltip
+    sourceText: Toggle music on or off.
+    targetText: "\u5207\u6362\u97F3\u4E50\u5F00\u6216\u5173\u3002"
+    localeCode: zh-Hans
+  - key: sfx_tooltip
+    sourceText: Toggle sound-effects on or off.
+    targetText: "\u6253\u5F00\u6216\u5173\u95ED\u97F3\u6548\u3002"
+    localeCode: zh-Hans
+  - key: language_tooltip
+    sourceText: Select language here.
+    targetText: "\u5728\u8FD9\u91CC\u9009\u62E9\u8BED\u8A00\u3002"
+    localeCode: zh-Hans
+  - key: reset_minigame_tooltip
+    sourceText: 'This will reset the minigame, locking the play button again. This
+      does not delete your save file. See: CorkBoardMiniGame.ResetMiniGame() for
+      more info.'
+    targetText: "\u8FD9\u5C06\u91CD\u7F6E\u8FF7\u4F60\u6E38\u620F\uFF0C\u518D\u6B21\u9501\u5B9A\u64AD\u653E\u6309\u94AE\u3002\u8FD9\u4E0D\u4F1A\u5220\u9664\u60A8\u7684\u4FDD\u5B58\u6587\u4EF6\u3002\u8BF7\u53C2\u9605\uFF1ACorkBoardMiniGame.ResetMiniGame()
+      \u83B7\u53D6\u66F4\u591A\u4FE1\u606F\u3002"
+    localeCode: zh-Hans

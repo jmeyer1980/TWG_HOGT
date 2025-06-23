@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a92024fe71d8604fbee83b65ceb4aa1, type: 3}
+  m_Name: ui_en
+  m_EditorClassIdentifier: TinyWalnutGames.Localization::TinyWalnutGames.Localization.LocalizationTable
+  entries:
+  - key: btn_play_label
+    sourceText: Play
+    targetText: Play
+    localeCode: en
+  - key: label_subtitle
+    sourceText: A Unity UI Toolkit Game
+    targetText: A Unity UI Toolkit Game
+    localeCode: en
+  - key: label_title
+    sourceText: Hidden Object Game Template
+    targetText: Hidden Object Game Template
+    localeCode: en
+  - key: title_twg
+    sourceText: Tiny Walnut Games
+    targetText: Tiny Walnut Games
+    localeCode: en
+  - key: title_gather
+    sourceText: Gather
+    targetText: Gather
+    localeCode: en
+  - key: title_craft
+    sourceText: Craft
+    targetText: Craft
+    localeCode: en
+  - key: title_market
+    sourceText: Market
+    targetText: Market
+    localeCode: en
+  - key: title_loop
+    sourceText: Loop
+    targetText: Loop
+    localeCode: en
+  - key: btn_settings_label
+    sourceText: Settings
+    targetText: Settings
+    localeCode: en
+  - key: btn_reset_minigame_label
+    sourceText: Reset
+    targetText: Reset
+    localeCode: en
+  - key: label_language
+    sourceText: Language
+    targetText: Language
+    localeCode: en
+  - key: label_music
+    sourceText: Music
+    targetText: Music
+    localeCode: en
+  - key: label_sfx
+    sourceText: SFX
+    targetText: SFX
+    localeCode: en
+  - key: label_settings_title
+    sourceText: Settings
+    targetText: Settings
+    localeCode: en
+  - key: title_tiny
+    sourceText: Tiny
+    targetText: Tiny
+    localeCode: en
+  - key: title_walnut
+    sourceText: Walnut
+    targetText: Walnut
+    localeCode: en
+  - key: zh-Hans
+    sourceText: Simplified Chinese
+    targetText: Simplified Chinese
+    localeCode: en
+  - key: en
+    sourceText: English
+    targetText: English
+    localeCode: en
+  - key: tooltip_label
+    sourceText: 
+    targetText: 
+    localeCode: en
+  - key: btn_close_settings_label
+    sourceText: Close
+    targetText: Close
+    localeCode: en

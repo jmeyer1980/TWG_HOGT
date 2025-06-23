@@ -41,7 +41,9 @@ MonoBehaviour:
     - com.cysharp.messagepipe
     - com.cysharp.messagepipe.vcontainer
     - com.cysharp.unitask
+    - com.demigiant.dotween
     - com.domybest.mybox
+    - com.fungusgames.fungus
     - com.ges.tinyutilities
     - com.github.siccity.xnode
     - com.harumak.unityscreennavigator
@@ -49,15 +51,14 @@ MonoBehaviour:
     - com.jonagill.autofill
     - com.kwanjoong.screensystem
     - com.kwanjoong.unityuistoryboard
+    - com.linuxsenpai.multitargetbuilder
     - com.mischief.markdownviewer
+    - com.modesttree.zenject
+    - com.neuecc.unirx
     - com.sabresaurus
+    - com.siccity.reorderablelist
     - com.textus-games.serialized-reference-ui
     - jp.hadashikick.vcontainer
-    - com.neuecc.unirx
-    - com.modesttree.zenject
-    - com.demigiant.dotween
-    - com.fungusgames.fungus
-    - com.siccity.reorderablelist
     m_IsDefault: 0
     m_Capabilities: 0
     m_ConfigSource: 4
