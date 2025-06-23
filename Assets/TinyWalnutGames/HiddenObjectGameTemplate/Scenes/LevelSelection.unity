@@ -790,7 +790,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1078746953}
-  - {fileID: 1806352819}
   - {fileID: 1586959748}
   - {fileID: 337982610}
   - {fileID: 2137433054}
@@ -1022,6 +1021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22817155769c21347b179a0c18b7de4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: TinyWalnutGames.UI::TinyWalnutGames.UI.TooltipManager
+  _tooltipTemplate: {fileID: 0}
 --- !u!1 &1375688273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,52 +1237,6 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
---- !u!1 &1806352818
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1806352819}
-  - component: {fileID: 1806352820}
-  m_Layer: 0
-  m_Name: CorkboardMinigame
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1806352819
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1806352818}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.29348, y: -0.00772, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 706262821}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1806352820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1806352818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 166f1eeff05027e4590e5ee9c6fb3e3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: TinyWalnutGames.HOGT.UI::TinyWalnutGames.HOGT.UI.CorkBoardMiniGame
-  uiDocument: {fileID: 1586959749}
-  playButtonName: button_play
 --- !u!1 &2055119545
 GameObject:
   m_ObjectHideFlags: 0

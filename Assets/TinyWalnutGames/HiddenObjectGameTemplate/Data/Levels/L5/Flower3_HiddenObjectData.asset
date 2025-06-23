@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb99cf0dee01474aa28df99f2491233, type: 3}
+  m_Name: Flower3_HiddenObjectData
+  m_EditorClassIdentifier: TinyWalnutGames.HOGT::TinyWalnutGames.HOGT.HiddenObjectData
+  objectName: Flower3
+  objectSprite: {fileID: -2189018045966057055, guid: 7a25ba73b16ad124381a24dae59faee7, type: 3}
+  objectID: e1990aa9-baa4-4fb8-84d5-fe8744f5cf05
+  position: {x: 0, y: 0}
+  size: {x: 102, y: 139}
+  description: 
+  tags: []
+  isDraggable: 0
+  isSecret: 0
+  objectPrefab: {fileID: 0}
+  templateElement: {fileID: 0}

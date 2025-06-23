@@ -18,8 +18,18 @@ namespace TinyWalnutGames.HOGT
         {
             // TODO: Check if clicked area is correct, then trigger found event
             Debug.Log("Object clicked!");
-            animator?.SetTrigger("Reveal");
-            // Possibly call DialogManager to show a message
+            // reveal the object, but avoid null propogation just in case it is a game object and not a visual element
+            if (animator != null)
+            {
+                animator.SetTrigger("Found");
+            }
+            else
+            {
+                Debug.LogWarning("Animator not found on HiddenObjectController.");
+            }
+            // Todo: implement a dialog manager 
+            // possibly call DialogManager to show a message.
+            // This could be a reaction for finding secret hidden objects
         }
 
         // For drag and drop: start dragging

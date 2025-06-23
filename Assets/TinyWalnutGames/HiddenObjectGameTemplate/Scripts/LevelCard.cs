@@ -14,13 +14,13 @@ namespace TinyWalnutGames.HOGT
         public bool isUnlocked; // Is the level unlocked?
         public bool isCompleted; // Is the level completed?
 
+        public string sceneName; // Name of the scene to load for this level
+
         void OnEnable()
         {
             // Initialize the level card properties
-            levelName = "Level " + levelIndex;
-            levelTooltip = "Description for " + levelName;
-            isUnlocked = false;
-            isCompleted = false;
+            if (string.IsNullOrEmpty(levelName))
+                levelName = "Level " + levelIndex;            
         }
     }
 }

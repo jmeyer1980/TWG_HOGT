@@ -245,7 +245,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: OutdoorProps_0
+      name: Cloud1
       rect:
         serializedVersion: 2
         x: 32
@@ -253,7 +253,7 @@ TextureImporter:
         width: 285
         height: 148
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -267,7 +267,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_1
+      name: plane
       rect:
         serializedVersion: 2
         x: 362
@@ -275,7 +275,7 @@ TextureImporter:
         width: 205
         height: 102
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -289,7 +289,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_2
+      name: SilverCoin
       rect:
         serializedVersion: 2
         x: 641
@@ -297,7 +297,7 @@ TextureImporter:
         width: 53
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -311,7 +311,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_4
+      name: Cloud2
       rect:
         serializedVersion: 2
         x: 34
@@ -319,7 +319,7 @@ TextureImporter:
         width: 254
         height: 131
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -333,7 +333,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_5
+      name: Bird2
       rect:
         serializedVersion: 2
         x: 351
@@ -341,7 +341,7 @@ TextureImporter:
         width: 161
         height: 177
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -355,7 +355,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_6
+      name: NekokittieKat
       rect:
         serializedVersion: 2
         x: 552
@@ -363,7 +363,7 @@ TextureImporter:
         width: 180
         height: 181
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -377,7 +377,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_7
+      name: Bird1
       rect:
         serializedVersion: 2
         x: 47
@@ -385,7 +385,7 @@ TextureImporter:
         width: 207
         height: 118
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -399,15 +399,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_8
+      name: cabbage
       rect:
         serializedVersion: 2
-        x: 304
-        y: 956
+        x: 421
+        y: 954
         width: 152
         height: 126
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -424,12 +424,12 @@ TextureImporter:
       name: OutdoorProps_9
       rect:
         serializedVersion: 2
-        x: 523
-        y: 952
+        x: 640
+        y: 951
         width: 224
         height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -443,7 +443,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_10
+      name: rock1
       rect:
         serializedVersion: 2
         x: 47
@@ -451,7 +451,7 @@ TextureImporter:
         width: 127
         height: 85
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -465,15 +465,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_11
+      name: rock2
       rect:
         serializedVersion: 2
-        x: 158
-        y: 856
+        x: 242
+        y: 843
         width: 122
         height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -487,15 +487,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_12
+      name: grass1
       rect:
         serializedVersion: 2
-        x: 328
-        y: 833
+        x: 412
+        y: 831
         width: 157
         height: 105
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -509,15 +509,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_13
+      name: grass2
       rect:
         serializedVersion: 2
-        x: 523
-        y: 832
+        x: 604
+        y: 831
         width: 101
         height: 75
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -531,37 +531,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_14
+      name: flower1
       rect:
         serializedVersion: 2
-        x: 793
-        y: 802
-        width: 63
-        height: 104
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 207a3c100cd6eadf0800000000000000
-      internalID: -167075464735381758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OutdoorProps_15
-      rect:
-        serializedVersion: 2
-        x: 826
-        y: 800
-        width: 127
+        x: 875
+        y: 799
+        width: 161
         height: 149
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -575,15 +553,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_16
+      name: grass3
       rect:
         serializedVersion: 2
-        x: 640
-        y: 832
+        x: 725
+        y: 829
         width: 85
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -597,37 +575,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_17
-      rect:
-        serializedVersion: 2
-        x: 728
-        y: 832
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5244ce058bbf89740800000000000000
-      internalID: 5159150142203118629
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OutdoorProps_18
+      name: Flower2
       rect:
         serializedVersion: 2
         x: 51
         y: 611
-        width: 141
+        width: 161
         height: 187
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -641,37 +597,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_19
+      name: Flower3
       rect:
         serializedVersion: 2
-        x: 157
-        y: 696
-        width: 43
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0fcd5afa5eb8f76b0800000000000000
-      internalID: -5296360818153759504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OutdoorProps_20
-      rect:
-        serializedVersion: 2
-        x: 229
-        y: 636
+        x: 378
+        y: 643
         width: 102
         height: 139
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -685,15 +619,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_21
+      name: Grass4
       rect:
         serializedVersion: 2
-        x: 357
-        y: 656
+        x: 507
+        y: 659
         width: 192
         height: 113
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -707,15 +641,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_22
+      name: Flower4
       rect:
         serializedVersion: 2
-        x: 602
-        y: 656
+        x: 752
+        y: 660
         width: 101
         height: 110
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -729,7 +663,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_23
+      name: Bush1
       rect:
         serializedVersion: 2
         x: 797
@@ -737,7 +671,7 @@ TextureImporter:
         width: 209
         height: 173
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -751,7 +685,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_24
+      name: Fence
       rect:
         serializedVersion: 2
         x: 45
@@ -759,7 +693,7 @@ TextureImporter:
         width: 291
         height: 153
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -773,7 +707,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_25
+      name: UtilityPole
       rect:
         serializedVersion: 2
         x: 507
@@ -781,7 +715,7 @@ TextureImporter:
         width: 234
         height: 588
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -795,7 +729,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_26
+      name: Bridge
       rect:
         serializedVersion: 2
         x: 29
@@ -803,7 +737,7 @@ TextureImporter:
         width: 379
         height: 142
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -817,7 +751,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_29
+      name: Cloud3
       rect:
         serializedVersion: 2
         x: 36
@@ -825,7 +759,7 @@ TextureImporter:
         width: 388
         height: 165
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -839,7 +773,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_31
+      name: Bush2
       rect:
         serializedVersion: 2
         x: 863
@@ -847,7 +781,7 @@ TextureImporter:
         width: 165
         height: 130
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -861,7 +795,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_32
+      name: SchoolGirl
       rect:
         serializedVersion: 2
         x: 1262
@@ -869,7 +803,7 @@ TextureImporter:
         width: 152
         height: 522
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -883,7 +817,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_33
+      name: Tree1
       rect:
         serializedVersion: 2
         x: 1083
@@ -891,7 +825,7 @@ TextureImporter:
         width: 322
         height: 443
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -905,7 +839,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: OutdoorProps_34
+      name: Tree2
       rect:
         serializedVersion: 2
         x: 1122
@@ -913,7 +847,7 @@ TextureImporter:
         width: 244
         height: 231
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -942,41 +876,41 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      OutdoorProps_0: -7721625284498881622
-      OutdoorProps_1: -1661349499229088764
-      OutdoorProps_10: -1794850716131117352
-      OutdoorProps_11: -4611810982566777924
-      OutdoorProps_12: 8099286651740152605
-      OutdoorProps_13: 3691095654647808645
+      Bird1: -1962593302387406896
+      Bird2: 2417374940530561386
+      Bridge: 8702310095696587447
+      Bush1: 3969400135198368798
+      Bush2: 8656883343866047381
+      Cloud1: -7721625284498881622
+      Cloud2: -6131929992184114111
+      Cloud3: -5073557009791666304
+      Fence: -3283368555324553418
+      Flower2: -2820632550655869805
+      Flower3: -2189018045966057055
+      Flower4: 7245910668142820713
+      Grass4: 2363420809183995761
+      NekokittieKat: -4812308655125874528
       OutdoorProps_14: -167075464735381758
-      OutdoorProps_15: -5828894930323096593
-      OutdoorProps_16: -4118316916333010272
       OutdoorProps_17: 5159150142203118629
-      OutdoorProps_18: -2820632550655869805
       OutdoorProps_19: -5296360818153759504
-      OutdoorProps_2: -3448798260468818477
-      OutdoorProps_20: -2189018045966057055
-      OutdoorProps_21: 2363420809183995761
-      OutdoorProps_22: 7245910668142820713
-      OutdoorProps_23: 3969400135198368798
-      OutdoorProps_24: -3283368555324553418
-      OutdoorProps_25: -1052768384941153318
-      OutdoorProps_26: 8702310095696587447
       OutdoorProps_27: 5105994444602180707
       OutdoorProps_28: 1863157953219035864
-      OutdoorProps_29: -5073557009791666304
       OutdoorProps_3: -1498703439566555479
       OutdoorProps_30: -2640319957833502216
-      OutdoorProps_31: 8656883343866047381
-      OutdoorProps_32: -630624453
-      OutdoorProps_33: -1184924787
-      OutdoorProps_34: -304206251
-      OutdoorProps_4: -6131929992184114111
-      OutdoorProps_5: 2417374940530561386
-      OutdoorProps_6: -4812308655125874528
-      OutdoorProps_7: -1962593302387406896
-      OutdoorProps_8: -5371109751118300429
       OutdoorProps_9: -77359223616551877
+      SchoolGirl: -630624453
+      SilverCoin: -3448798260468818477
+      Tree1: -1184924787
+      Tree2: -304206251
+      UtilityPole: -1052768384941153318
+      cabbage: -5371109751118300429
+      flower1: -5828894930323096593
+      grass1: 8099286651740152605
+      grass2: 3691095654647808645
+      grass3: -4118316916333010272
+      plane: -1661349499229088764
+      rock1: -1794850716131117352
+      rock2: -4611810982566777924
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

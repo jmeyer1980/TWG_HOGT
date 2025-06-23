@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb99cf0dee01474aa28df99f2491233, type: 3}
+  m_Name: KittyPlush_HiddenObjectData
+  m_EditorClassIdentifier: TinyWalnutGames.HOGT::TinyWalnutGames.HOGT.HiddenObjectData
+  objectName: KittyPlush
+  objectSprite: {fileID: -6754574481993468884, guid: 34cde8e04bc5ea447aeab494c9ddc8eb, type: 3}
+  objectID: 5e4e25a2-6fba-449d-b418-8aaa39104420
+  position: {x: 0, y: 0}
+  size: {x: 157, y: 199}
+  description: 
+  tags: []
+  isDraggable: 0
+  isSecret: 0
+  objectPrefab: {fileID: 0}
+  templateElement: {fileID: 0}
