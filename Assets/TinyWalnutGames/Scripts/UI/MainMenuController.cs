@@ -20,7 +20,7 @@ namespace TinyWalnutGames.UI
         // scene to load on play
         [Tooltip("Scene to load when the player clicks the Play button. Defaults to the next scene in build settings.")]
         [SerializeField]
-        private string nextSceneName = "";
+        private string nextSceneName = "LevelSelection";
 
         // Event to allow other scripts to refresh UI
         public static event System.Action LocalizedUIRefreshRequested;

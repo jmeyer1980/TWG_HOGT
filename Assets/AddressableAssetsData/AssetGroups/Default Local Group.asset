@@ -55,22 +55,6 @@ MonoBehaviour:
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6be377f3d5fda864cbe3cc42a03dfc7d
-    m_Address: item_container
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale
-    - Preload
-    - default
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6eaa63b3b078d6040918f33a566632de
-    m_Address: h_listview
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale
-    - Preload
-    - default
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 77820e294d2dbb745b8910a61a867c2c
     m_Address: LocalizationSettings
     m_ReadOnly: 0
@@ -95,14 +79,6 @@ MonoBehaviour:
     - Locale
     - Locale-en
     - Locale-en-US
-    - Preload
-    - default
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 902724e92dbecbc4e8699c65b773755c
-    m_Address: v_listview
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0

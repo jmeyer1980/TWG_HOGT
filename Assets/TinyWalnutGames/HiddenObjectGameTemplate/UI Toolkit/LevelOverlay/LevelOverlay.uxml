@@ -1,0 +1,25 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="h_listview" src="project://database/Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI%20Toolkit/Templates/h_listview.uxml?fileID=9197481963319205126&amp;guid=6eaa63b3b078d6040918f33a566632de&amp;type=3#h_listview" />
+    <ui:Template name="v_listview" src="project://database/Assets/TinyWalnutGames/HiddenObjectGameTemplate/UI%20Toolkit/Templates/v_listview.uxml?fileID=9197481963319205126&amp;guid=902724e92dbecbc4e8699c65b773755c&amp;type=3#v_listview" />
+    <ui:ScrollView horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" touch-scroll-type="Elastic" name="game-field" style="position: absolute; top: 0%; left: 0%; right: 0%; bottom: 0%; flex-grow: 1;">
+        <ui:VisualElement name="lvl_background" data-source="project://database/Assets/TinyWalnutGames/HiddenObjectGameTemplate/Data/Levels/L1/LD01.asset?fileID=11400000&amp;guid=2c7b092886e2f694695190b3200c8760&amp;type=2#LD01" data-source-path="levelBackground" style="flex-grow: 1; position: absolute; top: 0%; left: 0%; right: 0%; bottom: 0%; flex-wrap: wrap; align-content: auto; align-items: auto; background-image: url(&quot;project://database/Assets/TinyWalnutGames/HiddenObjectGameTemplate/Art/Backgrounds/Copilot_20250619_224734.png?fileID=2800000&amp;guid=87bc55ae050c4f447a7963aded3a3ab4&amp;type=3#Copilot_20250619_224734&quot;); -unity-slice-left: 259; -unity-slice-top: 254; -unity-slice-right: 259; -unity-slice-bottom: -29; -unity-slice-scale: 0.7px; width: 1366px; height: 1366px; min-width: 1366px; min-height: 1366px; max-width: 2000px; max-height: 2000px; -unity-background-scale-mode: scale-to-fit;">
+            <ui:GroupBox name="playarea" data-source="project://database/Assets/TinyWalnutGames/HiddenObjectGameTemplate/Data/Levels/L1/LD01.asset?fileID=11400000&amp;guid=2c7b092886e2f694695190b3200c8760&amp;type=2#LD01" data-source-path="objectsToFind" style="position: absolute; flex-shrink: 1; flex-grow: 1; width: 1366px; height: 1366px; min-width: 1366px; min-height: 1366px; max-width: 2000px; max-height: 2000px; top: 0%; left: 0%; right: 0%; bottom: 0%;" />
+            <Bindings>
+                <ui:DataBinding property="style.backgroundImage" data-source-path="levelBackground" data-source="project://database/Assets/TinyWalnutGames/HiddenObjectGameTemplate/Data/Levels/L1/LD01.asset?fileID=11400000&amp;guid=2c7b092886e2f694695190b3200c8760&amp;type=2#LD01" binding-mode="ToTarget" />
+            </Bindings>
+        </ui:VisualElement>
+    </ui:ScrollView>
+    <ui:VisualElement name="lvl_foreground" data-source="project://database/Assets/TinyWalnutGames/HiddenObjectGameTemplate/Data/Levels/L1/LD01.asset?fileID=11400000&amp;guid=2c7b092886e2f694695190b3200c8760&amp;type=2#LD01" data-source-path="levelForeground" enabled="true" picking-mode="Ignore" style="flex-grow: 1; position: absolute; top: 0%; left: 0%; right: 0%; bottom: 0%; flex-wrap: wrap; align-content: auto; align-items: auto; background-image: url(&quot;project://database/Assets/TinyWalnutGames/HiddenObjectGameTemplate/Art/Backgrounds/Copilot_20250619_224734.png?fileID=2800000&amp;guid=87bc55ae050c4f447a7963aded3a3ab4&amp;type=3#Copilot_20250619_224734&quot;); -unity-slice-left: 259; -unity-slice-top: 254; -unity-slice-right: 259; -unity-slice-bottom: -29; -unity-slice-scale: 0.7px;">
+        <Bindings>
+            <ui:DataBinding property="style.backgroundImage" data-source-path="levelForeground" data-source="project://database/Assets/TinyWalnutGames/HiddenObjectGameTemplate/Data/Levels/L1/LD01.asset?fileID=11400000&amp;guid=2c7b092886e2f694695190b3200c8760&amp;type=2#LD01" binding-mode="ToTarget" />
+        </Bindings>
+    </ui:VisualElement>
+    <ui:Instance template="h_listview" name="h-listview-container" style="position: absolute; top: auto; left: 0%; right: 0%; bottom: 0%; flex-grow: 1; flex-direction: row; width: 100%; display: flex; align-self: flex-end; align-items: stretch; height: 20%; align-content: auto; justify-content: center;">
+        <AttributeOverrides element-name="h_listview" enabled="true" />
+    </ui:Instance>
+    <ui:Instance template="v_listview" name="v-listview-container" style="align-self: stretch; flex-grow: 1; justify-content: center; right: 1.5%;" />
+    <ui:VisualElement style="flex-grow: 1; width: 100%; height: 150px; position: absolute; top: 0%; left: 0%; right: 0%; align-self: center; align-items: center; justify-content: center;">
+        <ui:Label text="Label" name="level_name" />
+        <ui:Label text="Label" name="level_timer" />
+    </ui:VisualElement>
+</ui:UXML>

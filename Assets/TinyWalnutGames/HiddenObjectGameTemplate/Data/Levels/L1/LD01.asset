@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138478ebdd0948a429b5799d2a382b52, type: 3}
+  m_Name: LD01
+  m_EditorClassIdentifier: TinyWalnutGames.HOGT::TinyWalnutGames.HOGT.LevelData
+  levelName: Good Morning
+  levelIndex: 0
+  isUnlocked: 1
+  levelBackground: {fileID: 2800000, guid: 8bca0f7baf26b0545b5a14325d262a8a, type: 3}
+  levelForeground: {fileID: 2800000, guid: 87bc55ae050c4f447a7963aded3a3ab4, type: 3}
+  hasTimeLimit: 0
+  timeLimit: 0
+  objectsToFind:
+  - {fileID: 11400000, guid: 041d6c7a3075eff4f9b96217271fc224, type: 2}
+  - {fileID: 11400000, guid: 1aca66b868ab2b240b19e5f7e9354e00, type: 2}
+  - {fileID: 11400000, guid: 17f52a57a349f96478be1e3301dfd162, type: 2}
+  - {fileID: 11400000, guid: c65bf45c840dfa5479d7f696072a93ed, type: 2}
+  - {fileID: 11400000, guid: 9546be2ecc810e340aa90dd0641541ef, type: 2}
+  - {fileID: 11400000, guid: 3b02a507259651242a568c0570f2031a, type: 2}
+  - {fileID: 11400000, guid: 3b6c866ce0c22d04d972887cba03ad27, type: 2}
+  - {fileID: 11400000, guid: 25dd99879fe3f5d418e3b6c95a374a36, type: 2}
+  - {fileID: 11400000, guid: b842ce35f28fb1e47b7e8929b6c129ae, type: 2}
+  - {fileID: 11400000, guid: a56eec71f4c20084d8f714a8938987b3, type: 2}
+  - {fileID: 11400000, guid: d66cb6a80f5d96b438144df66748de3b, type: 2}
+  - {fileID: 11400000, guid: 305167afbae0c554bb6821e6b61dcf5c, type: 2}
+  - {fileID: 11400000, guid: 3df0d95f8094464419ff31edf88cc48f, type: 2}
+  - {fileID: 11400000, guid: eb026395fcc55ab4a9b7e3e0b465fcdc, type: 2}
+  - {fileID: 11400000, guid: 2fb3e48e47ad5754d9cfb22fd9c9789c, type: 2}
+  - {fileID: 11400000, guid: fb5c4301e93714f45905927322699cdc, type: 2}
+  - {fileID: 11400000, guid: c90f707b08dc4b74ca3e9f483e1429f1, type: 2}
+  - {fileID: 11400000, guid: 17a401e023f9bc043b96ec1c4911537f, type: 2}
+  - {fileID: 11400000, guid: 3575e1f22bbb3de429e81d4b2f229bd0, type: 2}
+  - {fileID: 11400000, guid: 916caeb350e8d964eb862a986230b183, type: 2}
+  - {fileID: 11400000, guid: 2b92dd47700e77d4d8ab0a794cbb9b50, type: 2}
+  - {fileID: 11400000, guid: dfd48a02977ee3843be25dfae191f031, type: 2}
+  - {fileID: 11400000, guid: 3abe24e68256b7e4488aa2a8508a27fc, type: 2}
+  - {fileID: 11400000, guid: 86d6a8fc4f22dc64a9047e609716ec62, type: 2}
+  - {fileID: 11400000, guid: f1ba88c57fd9841488dda9d5df300a08, type: 2}
+  - {fileID: 11400000, guid: 0abba573b93921940ab6e3d285eb1f29, type: 2}
+  - {fileID: 11400000, guid: cc7b1a35ad4933d44984a325807d6adc, type: 2}
+  sceneName: Level01
+  uiDocument: {fileID: 9197481963319205126, guid: cddb3b15b4f66594e8a85d162c81c7b2, type: 3}

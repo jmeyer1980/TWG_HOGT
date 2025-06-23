@@ -409,7 +409,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BedroomProps_8
+      name: BookStack
       rect:
         serializedVersion: 2
         x: 779
@@ -846,8 +846,8 @@ TextureImporter:
     nameFileIdTable:
       Backpack: -4506168703481550748
       BedroomProps_14: -1569653591852141085
-      BedroomProps_8: 1536115359
       BlackParade: 1124587471
+      BookStack: 1536115359
       BunnyHead: 229087698
       BunnyPlush: 3073513390253523027
       CD: 644759396
