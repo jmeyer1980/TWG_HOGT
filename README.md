@@ -18,10 +18,15 @@ This project is currently under active development. Major systems are scaffolded
 
 ### Current Milestone
 
-**Populating the Level Selection Screen with Level Data**
+**Level Selection and First Playable Level**
 
-- The immediate focus is on dynamically generating the level selection UI using data from `LevelCard` assets.
-- The `LevelManager` script is being refined to correctly instantiate and populate level cards, including level names, thumbnails, tooltips, and unlock states.
+- The level selection UI now displays all level cards and allows entering the first level.
+- The first level spawns hidden objects in both the play area and the list of items to find.
+- **Known Issues:**
+  - Spawned hidden objects have correct locations, but their size and rotation are incorrect.
+  - Clicking items in the "to find" list incorrectly logs them as found (should only respond to play area clicks).
+  - Level selection and play area support mouse wheel scrolling, but dragging/swiping does not work yet.
+  - The settings menu is not positioning itself correctly.
 
 ### Roadblock
 
@@ -50,5 +55,6 @@ All code is provided under the MIT License. Font assets are included under their
 ---
 
 **Status:** 🚧 Work In Progress  
-**Next Milestone:** Level selection screen population and integration
-
+**Finished Milestone:** Level selection screen population and integration
+**Next Steps:** Finalize level selection logic, fix known issues, and polish first playable level.
+**Next Milestone:** Complete core gameplay loop with level selection and first level interaction, unlocking the next level.
