@@ -1,0 +1,6 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="item_container" src="project://database/Assets/TinyWalnutGames/UITKTemplates/HiddenObjectGameTemplate/uiDocuments/Templates/item_container.uxml?fileID=9197481963319205126&amp;guid=6be377f3d5fda864cbe3cc42a03dfc7d&amp;type=3#item_container" />
+    <ui:GroupBox style="flex-direction: column; align-items: center; align-content: auto; position: relative; top: 0; left: 0; right: 0; bottom: 0; align-self: flex-end; flex-shrink: 1; flex-grow: 1; background-image: url(&quot;project://database/Assets/TinyWalnutGames/UITKTemplates/HiddenObjectGameTemplate/Art/Sprites/itemFoundToast.png?fileID=2800000&amp;guid=fdaf2fbabac805e4aabf9d6b7c59fb7f&amp;type=3#itemFoundToast&quot;); -unity-slice-left: 64; -unity-slice-top: 64; -unity-slice-right: 64; -unity-slice-bottom: 64; -unity-slice-scale: 0.5px; justify-content: flex-start; width: 150px;">
+        <ui:Instance template="item_container" style="translate: -50px 0; align-self: center; margin-top: 16px;" />
+    </ui:GroupBox>
+</ui:UXML>

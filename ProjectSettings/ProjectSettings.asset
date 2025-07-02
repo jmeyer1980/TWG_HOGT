@@ -790,7 +790,7 @@ PlayerSettings:
     QNX: 
     Server: 
     Standalone: UNITY_LOCALIZATION
-    WebGL: UNITY_WEBGL
+    WebGL: UNITY_WEBGL;UITK_TEMPLATES_MAINMENU_PRESENT
     Windows Store Apps: 
     XboxOne: 
     iPhone: 

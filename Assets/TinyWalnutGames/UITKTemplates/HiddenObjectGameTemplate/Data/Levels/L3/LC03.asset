@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f4cdfa275a2634b8e799f1af51795c, type: 3}
+  m_Name: LC03
+  m_EditorClassIdentifier: TinyWalnutGames.HOGT:TinyWalnutGames.HOGT:LevelCard
+  levelName: Bento
+  levelIndex: 2
+  levelTooltip: Time for lunch.
+  thumbnail: {fileID: 2800000, guid: a256318127ba7c142bc01577d76e3d4a, type: 3}
+  isUnlocked: 0
+  isCompleted: 0
+  sceneName: Level03
