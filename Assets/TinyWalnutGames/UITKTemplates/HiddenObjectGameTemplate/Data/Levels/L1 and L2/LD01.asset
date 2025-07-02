@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138478ebdd0948a429b5799d2a382b52, type: 3}
+  m_Name: LD01
+  m_EditorClassIdentifier: TinyWalnutGames.HOGT::TinyWalnutGames.HOGT.LevelData
+  levelName: Good Morning
+  levelNumber: 0
+  isUnlocked: 1
+  levelBackground: {fileID: 2800000, guid: 8bca0f7baf26b0545b5a14325d262a8a, type: 3}
+  levelForeground: {fileID: 2800000, guid: 87bc55ae050c4f447a7963aded3a3ab4, type: 3}
+  hasTimeLimit: 0
+  timeLimit: 0
+  objectsToFind:
+  - {fileID: 11400000, guid: 041d6c7a3075eff4f9b96217271fc224, type: 2}
+  - {fileID: 11400000, guid: 1aca66b868ab2b240b19e5f7e9354e00, type: 2}
+  - {fileID: 11400000, guid: 17f52a57a349f96478be1e3301dfd162, type: 2}
+  - {fileID: 11400000, guid: c65bf45c840dfa5479d7f696072a93ed, type: 2}
+  - {fileID: 11400000, guid: 9546be2ecc810e340aa90dd0641541ef, type: 2}
+  - {fileID: 11400000, guid: 3b02a507259651242a568c0570f2031a, type: 2}
+  - {fileID: 11400000, guid: 3b6c866ce0c22d04d972887cba03ad27, type: 2}
+  - {fileID: 11400000, guid: 25dd99879fe3f5d418e3b6c95a374a36, type: 2}
+  - {fileID: 11400000, guid: b842ce35f28fb1e47b7e8929b6c129ae, type: 2}
+  - {fileID: 11400000, guid: 305167afbae0c554bb6821e6b61dcf5c, type: 2}
+  objectsFound: []
+  sceneName: Level01
+  uiDocument: {fileID: 9197481963319205126, guid: cddb3b15b4f66594e8a85d162c81c7b2, type: 3}

@@ -1,0 +1,252 @@
+#Background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#twg_logo {
+    margin-top: 32px;
+    margin-right: 32px;
+    width: 185px;
+    height: 185px;
+    background-repeat: no-repeat;
+}
+
+#GameTitleContainer {
+}
+
+#GameTitleContainer > #label_title {
+}
+
+#GameTitleContainer > #label_subtitle {
+}
+
+#draggables {
+}
+
+#draggables > #Signup {
+}
+
+#draggables > #SchoolBingo {
+}
+
+#draggables > #Schoolgirls {
+}
+
+#draggables > #Music2 {
+}
+
+#draggables > #SunnyDayActivities {
+}
+
+#draggables > #AnotherSignup {
+}
+
+#draggables > #SchoolPicture {
+}
+
+#draggables > #Music {
+}
+
+#draggables > #Notes {
+}
+
+#draggables > #ThePath {
+}
+
+#PlayButtonStickyNote {
+}
+
+#button_play {
+    width: 185px;
+    height: 185px;
+    color: rgb(217, 217, 217);
+    -unity-text-outline-width: 2px;
+    font-size: 40px;
+    background-color: rgba(188, 188, 188, 0);
+    -unity-font-style: bold;
+    -unity-text-outline-color: rgb(0, 0, 0);
+    text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+#SettingsButtonStickyNote {
+}
+
+#button_open_settings {
+    width: 185px;
+    height: 185px;
+    margin-right: 32px;
+    color: rgb(217, 217, 217);
+    -unity-text-outline-width: 2px;
+    font-size: 40px;
+    background-color: rgba(188, 188, 188, 0);
+    -unity-font-style: bold;
+    -unity-text-outline-color: rgb(0, 0, 0);
+    text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+#settings_panel {
+    flex-grow: 1;
+}
+
+#organize_panel {
+    width: auto;
+    min-height: 300px;
+    background-color: rgb(34, 34, 34);
+    border-radius: 16px;
+    padding: 32px;
+    flex-direction: column;
+    align-items: auto;
+    position: relative;
+    top: 20%;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    align-self: center;
+    flex-grow: 0;
+    align-content: auto;
+}
+
+#label_settings {
+    -unity-font-style: bold;
+    font-size: 32px;
+    color: white;
+    margin-bottom: 24px;
+}
+
+#dropdown_language {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 16px;
+    background-color: rgb(50, 50, 50);
+    color: white;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+TemplateContainer > #settingsbackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-grow: 1;
+    align-self: stretch;
+    align-content: stretch;
+    width: 100%;
+    height: 100%;
+}
+
+TemplateContainer > #settingsbackground > #settings_panel {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 0;
+    bottom: 0;
+    flex-grow: 1;
+    width: 400px;
+    height: 400px;
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #label_settings {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #organize_options {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #organize_options > #language_dropdown {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #organize_options > #language_dropdown > #label_language {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #organize_options > #language_dropdown > #dropdown_language {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #organize_options > #music_group {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #organize_options > #music_group > #toggle_music {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #organize_options > #music_group > #m_vol {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #organize_options > #sfx_group {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #organize_options > #sfx_group > #toggle_sfx {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #organize_options > #sfx_group > #sfx_vol {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #settings_buttons_organizer {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #settings_buttons_organizer > #button_reset_minigame {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #settings_buttons_organizer > #button_reset_minigame > .unity-button__image {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #settings_buttons_organizer > #button_reset_minigame > .unity-text-element {
+}
+
+TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #settings_buttons_organizer > #button_close_settings {
+}
+
+#game-field > #lvl_background > #playarea {
+}
+
+#h-listview-container {
+}
+
+#v-listview-container {
+}
+
+#game-field > #lvl_background > #playarea > TemplateContainer > #item_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-grow: 1;
+}
+
+#game-field > #lvl_background > #playarea > #Backpack {
+}
+
+#game-field > #lvl_background > #playarea > #BlackParade {
+}
+
+#game-field > #lvl_background > #playarea > #BookStack {
+}
+
+#game-field > #lvl_background > #playarea > #Bunnybun {
+}
+
+#game-field > #lvl_background > #playarea > #BunnyPlush {
+}
+
+#game-field > #lvl_background > #playarea > #CD {
+}
+
+#game-field > #lvl_background > #playarea > #Clock {
+}
+
+#game-field > #lvl_background > #playarea > #DarkWave {
+}
+
+#game-field > #lvl_background > #playarea > #Glass {
+}
+
+#game-field > #lvl_background > #playarea > #Guitar {
+}

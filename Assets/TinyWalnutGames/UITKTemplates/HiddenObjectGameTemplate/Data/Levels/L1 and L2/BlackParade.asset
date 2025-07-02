@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb99cf0dee01474aa28df99f2491233, type: 3}
+  m_Name: BlackParade
+  m_EditorClassIdentifier: TinyWalnutGames.UITKTemplates.HOGT::TinyWalnutGames.UITKTemplates.HOGT.HiddenObjectData
+  objectName: BlackParade
+  objectSprite: {fileID: 2800000, guid: 45179a21152a6a342bbf7810e97c218b, type: 2}
+  objectID: e98deac9-3b28-4595-ae66-dc035ea7937d
+  position: {x: 889, y: 110}
+  size: {x: 316, y: 363}
+  description: This is a hidden object.
+  tags:
+  - hiddenclickable
+  isDraggable: 0
+  isSecret: 0
+  templateElement: {fileID: 9197481963319205126, guid: 6be377f3d5fda864cbe3cc42a03dfc7d, type: 3}
+  foundToastSprite: {fileID: 2800000, guid: fdaf2fbabac805e4aabf9d6b7c59fb7f, type: 3}

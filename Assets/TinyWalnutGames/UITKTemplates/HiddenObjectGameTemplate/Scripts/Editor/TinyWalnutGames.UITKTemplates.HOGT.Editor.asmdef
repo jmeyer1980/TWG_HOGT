@@ -1,0 +1,30 @@
+{
+    "name": "TinyWalnutGames.UITKTemplates.HOGT.Editor",
+    "rootNamespace": "TinyWalnutGames.UITKTemplates.HOGT.Editor",
+    "references": [
+        "TinyWalnutGames.UITKTemplates.HOGT",
+        "TinyWalnutGames.UITKTemplates.Tools",
+        "UnityEngine.UI",
+        "UnityEditor.UI",
+        "Unity.Collections",
+        "Unity.Localization",
+        "Unity.Addressables",
+        "Unity.InputSystem",
+        "Unity.RenderPipelines.Universal.2D.Runtime",
+        "Unity.RenderPipelines.Universal.Config.Runtime",
+        "Unity.Timeline",
+        "Unity.ResourceManager",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

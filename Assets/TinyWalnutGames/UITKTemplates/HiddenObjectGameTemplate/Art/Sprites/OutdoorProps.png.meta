@@ -1,0 +1,918 @@
+fileFormatVersion: 2
+guid: 7a25ba73b16ad124381a24dae59faee7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7721625284498881622
+    second: OutdoorProps_0
+  - first:
+      213: -1661349499229088764
+    second: OutdoorProps_1
+  - first:
+      213: -3448798260468818477
+    second: OutdoorProps_2
+  - first:
+      213: -1498703439566555479
+    second: OutdoorProps_3
+  - first:
+      213: -6131929992184114111
+    second: OutdoorProps_4
+  - first:
+      213: 2417374940530561386
+    second: OutdoorProps_5
+  - first:
+      213: -4812308655125874528
+    second: OutdoorProps_6
+  - first:
+      213: -1962593302387406896
+    second: OutdoorProps_7
+  - first:
+      213: -5371109751118300429
+    second: OutdoorProps_8
+  - first:
+      213: -77359223616551877
+    second: OutdoorProps_9
+  - first:
+      213: -1794850716131117352
+    second: OutdoorProps_10
+  - first:
+      213: -4611810982566777924
+    second: OutdoorProps_11
+  - first:
+      213: 8099286651740152605
+    second: OutdoorProps_12
+  - first:
+      213: 3691095654647808645
+    second: OutdoorProps_13
+  - first:
+      213: -167075464735381758
+    second: OutdoorProps_14
+  - first:
+      213: -5828894930323096593
+    second: OutdoorProps_15
+  - first:
+      213: -4118316916333010272
+    second: OutdoorProps_16
+  - first:
+      213: 5159150142203118629
+    second: OutdoorProps_17
+  - first:
+      213: -2820632550655869805
+    second: OutdoorProps_18
+  - first:
+      213: -5296360818153759504
+    second: OutdoorProps_19
+  - first:
+      213: -2189018045966057055
+    second: OutdoorProps_20
+  - first:
+      213: 2363420809183995761
+    second: OutdoorProps_21
+  - first:
+      213: 7245910668142820713
+    second: OutdoorProps_22
+  - first:
+      213: 3969400135198368798
+    second: OutdoorProps_23
+  - first:
+      213: -3283368555324553418
+    second: OutdoorProps_24
+  - first:
+      213: -1052768384941153318
+    second: OutdoorProps_25
+  - first:
+      213: 8702310095696587447
+    second: OutdoorProps_26
+  - first:
+      213: 5105994444602180707
+    second: OutdoorProps_27
+  - first:
+      213: 1863157953219035864
+    second: OutdoorProps_28
+  - first:
+      213: -5073557009791666304
+    second: OutdoorProps_29
+  - first:
+      213: -2640319957833502216
+    second: OutdoorProps_30
+  - first:
+      213: 8656883343866047381
+    second: OutdoorProps_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cloud1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1367
+        width: 285
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa305c4f6b647d490800000000000000
+      internalID: -7721625284498881622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: plane
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 1383
+        width: 205
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4045da2ce63b1f8e0800000000000000
+      internalID: -1661349499229088764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SilverCoin
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 1381
+        width: 53
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd55ce21486320d0800000000000000
+      internalID: -3448798260468818477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud2
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1200
+        width: 254
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1445d44192207eaa0800000000000000
+      internalID: -6131929992184114111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird2
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1119
+        width: 161
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61514b53bd3c8120800000000000000
+      internalID: 2417374940530561386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NekokittieKat
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1115
+        width: 180
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a83fad56ce373db0800000000000000
+      internalID: -4812308655125874528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bird1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1026
+        width: 207
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d743ac2ac773c4e0800000000000000
+      internalID: -1962593302387406896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cabbage
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 954
+        width: 152
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3faf4f2832cf575b0800000000000000
+      internalID: -5371109751118300429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OutdoorProps_9
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 951
+        width: 224
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b344c3c223a2deef0800000000000000
+      internalID: -77359223616551877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 891
+        width: 127
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d6362088c86717e0800000000000000
+      internalID: -1794850716131117352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rock2
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 843
+        width: 122
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbbacd4885e8fffb0800000000000000
+      internalID: -4611810982566777924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass1
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 831
+        width: 157
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d13e8034c42766070800000000000000
+      internalID: 8099286651740152605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass2
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 831
+        width: 101
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582454f01f7693330800000000000000
+      internalID: 3691095654647808645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flower1
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 799
+        width: 161
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb340591fa9b1fa0800000000000000
+      internalID: -5828894930323096593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass3
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 829
+        width: 85
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a22d79959cc8d6c0800000000000000
+      internalID: -4118316916333010272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower2
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 611
+        width: 161
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39cb048b3a91bd8d0800000000000000
+      internalID: -2820632550655869805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower3
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 643
+        width: 102
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a106436fab0f91e0800000000000000
+      internalID: -2189018045966057055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass4
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 659
+        width: 192
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 177ad2a34be8cc020800000000000000
+      internalID: 2363420809183995761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower4
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 660
+        width: 101
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96dbdd8bc55ae8460800000000000000
+      internalID: 7245910668142820713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush1
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 405
+        width: 209
+        height: 173
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e14e2e56464261730800000000000000
+      internalID: 3969400135198368798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fence
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 406
+        width: 291
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6374139e1b12f62d0800000000000000
+      internalID: -3283368555324553418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilityPole
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 27
+        width: 234
+        height: 588
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad322d05bb0d361f0800000000000000
+      internalID: -1052768384941153318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bridge
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 218
+        width: 379
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba6a4bdce0d4c870800000000000000
+      internalID: 8702310095696587447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cloud3
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 19
+        width: 388
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087bcabc7ca1799b0800000000000000
+      internalID: -5073557009791666304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bush2
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 75
+        width: 165
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ba12df88d632870800000000000000
+      internalID: 8656883343866047381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SchoolGirl
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 996
+        width: 152
+        height: 522
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f031c9905a1e89f4685507113378e964
+      internalID: -630624453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree1
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 375
+        width: 322
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735d27c7e27bc2449bf14ee35b8add81
+      internalID: -1184924787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tree2
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 31
+        width: 244
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a397af9815ee940b5f4a650b8931b4
+      internalID: -304206251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d4fce542b350af048b331fead262dbad
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Bird1: -1962593302387406896
+      Bird2: 2417374940530561386
+      Bridge: 8702310095696587447
+      Bush1: 3969400135198368798
+      Bush2: 8656883343866047381
+      Cloud1: -7721625284498881622
+      Cloud2: -6131929992184114111
+      Cloud3: -5073557009791666304
+      Fence: -3283368555324553418
+      Flower2: -2820632550655869805
+      Flower3: -2189018045966057055
+      Flower4: 7245910668142820713
+      Grass4: 2363420809183995761
+      NekokittieKat: -4812308655125874528
+      OutdoorProps_14: -167075464735381758
+      OutdoorProps_17: 5159150142203118629
+      OutdoorProps_19: -5296360818153759504
+      OutdoorProps_27: 5105994444602180707
+      OutdoorProps_28: 1863157953219035864
+      OutdoorProps_3: -1498703439566555479
+      OutdoorProps_30: -2640319957833502216
+      OutdoorProps_9: -77359223616551877
+      SchoolGirl: -630624453
+      SilverCoin: -3448798260468818477
+      Tree1: -1184924787
+      Tree2: -304206251
+      UtilityPole: -1052768384941153318
+      cabbage: -5371109751118300429
+      flower1: -5828894930323096593
+      grass1: 8099286651740152605
+      grass2: 3691095654647808645
+      grass3: -4118316916333010272
+      plane: -1661349499229088764
+      rock1: -1794850716131117352
+      rock2: -4611810982566777924
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

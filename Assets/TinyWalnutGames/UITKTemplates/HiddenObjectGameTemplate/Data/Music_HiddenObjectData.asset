@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb99cf0dee01474aa28df99f2491233, type: 3}
+  m_Name: Music_HiddenObjectData
+  m_EditorClassIdentifier: TinyWalnutGames.HOGT::TinyWalnutGames.HOGT.HiddenObjectData
+  objectName: Music
+  objectSprite: {fileID: -7725192557660321220, guid: 812a91d9fd4608043a38399a425e24ae, type: 3}
+  objectID: 46a3f25b-2692-48e2-a745-e13021960892
+  position: {x: 0, y: 0}
+  size: {x: 225, y: 240}
+  description: 
+  tags: []
+  isDraggable: 0
+  isSecret: 0
+  objectPrefab: {fileID: 0}
+  templateElement: {fileID: 0}
