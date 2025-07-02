@@ -1,0 +1,8 @@
+@import url("unity-theme://default");
+
+@import url("/Assets/TinyWalnutGames/UITKTemplates/HiddenObjectGameTemplate/uiDocuments/Init/init.uss");
+@import url("MainMenu.uss");
+@import url("/Assets/TinyWalnutGames/UITKTemplates/HiddenObjectGameTemplate/uiDocuments/LandingScene/LandingScene.uss");
+@import url("/Assets/TinyWalnutGames/UITKTemplates/HiddenObjectGameTemplate/uiDocuments/Templates/tooltip.uss");
+
+VisualElement {}

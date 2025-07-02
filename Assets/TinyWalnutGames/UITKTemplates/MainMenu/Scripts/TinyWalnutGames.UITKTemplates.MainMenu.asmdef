@@ -1,0 +1,24 @@
+{
+    "name": "TinyWalnutGames.UITKTemplates.MainMenu",
+    "rootNamespace": "TinyWalnutGames.UITKTemplates.MainMenu",
+    "references": [
+        "Unity.Localization",
+        "Unity.TextMeshPro",
+        "Unity.InputSystem",
+        "Unity.InputSystem.ForUI",
+        "Unity.Addressables",
+        "Unity.ResourceManager",
+        "UnityEngine.UI",
+        "TinyWalnutGames.UITKTemplates.Tools",
+        "UnityEngine.TestRunner"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,28 @@
+{
+    "name": "TinyWalnutGames.UITKTemplates.HOGT",
+    "rootNamespace": "TinyWalnutGames.UITKTemplates.HOGT",
+    "references": [
+        "TinyWalnutGames.UITKTemplates.Tools",
+        "Unity.Collections",
+        "Unity.Localization",
+        "Unity.Addressables",
+        "Unity.InputSystem",
+        "Unity.RenderPipelines.Universal.2D.Runtime",
+        "Unity.RenderPipelines.Universal.Config.Runtime",
+        "Unity.Timeline",
+        "Unity.ResourceManager",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "UnityEditor.UI",
+        "TinyWalnutGames.UITKTemplates.MainMenu"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
