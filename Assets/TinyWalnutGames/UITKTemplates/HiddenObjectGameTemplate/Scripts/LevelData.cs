@@ -14,11 +14,14 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
     /// This game uses the UI Toolkit, so this scriptable object can be used to store level-specific data such as:
     /// The level background image, the level name, the list of objects to find, and any other level-specific settings.
     /// </summary>
-    [CreateAssetMenu(fileName = "LevelData", menuName = "Scriptable Objects/LevelData")]
+    [CreateAssetMenu(fileName = "LevelData", menuName = "HOGT/Scriptable Objects/LevelData")]
     [Serializable]
     public class LevelData : ScriptableObject
     {
         public string levelName; // The name of the level
+        public string levelNameKey; // The localization key for the level name, used for localization purposes
+        public string levelDescription; // The description of the level, can be used for UI display or tooltips
+        public string levelDescriptionKey; // The localization key for the level description, used for localization purposes
         public int levelNumber; // The non-zero index of the level, used for sorting and identification
         public bool isUnlocked; // Whether the level is unlocked or not, used for UI display and logic
         public Texture2D levelBackground; // The background texture for the level
@@ -29,7 +32,7 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
         public float timeLimit; // The time limit for the level, in seconds
         private int numberOfObjectsToFind; // total number of objects in objectsToFind, used for UI display and logic
         public List<HiddenObjectData> objectsToFind = new();
-        public List<HiddenObjectData> objectsFound = new List<HiddenObjectData>();
+        public List<HiddenObjectData> objectsFound = new();
 
         // what if the level requires a 3d scene to be loaded?
         public string sceneName; // The name of the scene to load for this level, if applicable
@@ -48,11 +51,20 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
             numberOfObjectsToFind = objectsToFind.Count;
             // Optionally, you can preload assets here if they are addressables
             if (levelBackground == null)
-                levelBackground = PreloadAssets.Instance.Get<Texture2D>("LevelBackgroundKey");
+                levelBackground = AssetPreloader.Instance.Get<Texture2D>("LevelBackgroundKey");
             if (levelForeground == null)
-                levelForeground = PreloadAssets.Instance.Get<Texture2D>("LevelForegroundKey");
+                levelForeground = AssetPreloader.Instance.Get<Texture2D>("LevelForegroundKey");
             if (uiDocument == null)
-                uiDocument = PreloadAssets.Instance.Get<VisualTreeAsset>("LevelUIDocumentKey");
+                uiDocument = AssetPreloader.Instance.Get<VisualTreeAsset>("LevelUIDocumentKey");
         }
+
+        /// <Remarks>
+        /// While all textures and UI documents can be addressable assets, this scriptable object
+        /// is designed to be used as a data holder for the level. It can be used to store
+        /// level-specific data such as the level name, description, and background image.
+        /// While the keys are used for localization, the actual localization logic is within
+        /// The UI Controller and LocalizationHelper. The UI Controller requests the key
+        /// gives it to LocalizationHelper, which provides the localized text.
+        /// </Remarks>
     }
 }

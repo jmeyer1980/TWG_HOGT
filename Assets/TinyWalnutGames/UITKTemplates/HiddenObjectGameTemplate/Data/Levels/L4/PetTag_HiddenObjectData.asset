@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: PetTag_HiddenObjectData
   m_EditorClassIdentifier: TinyWalnutGames.UITKTemplates.HOGT::TinyWalnutGames.UITKTemplates.HOGT.HiddenObjectData
   objectName: PetTag
-  objectSprite: {fileID: 2800000, guid: 2ad4ec437ec16cd49a3e4cd4036c812c, type: 2}
-  objectID: f37a4146-8488-4b22-bd5f-91fc205f69aa
+  objectNameKey: 
+  objectID: 189b73cd-ae16-429c-a684-2bb02d2b1f3b
   position: {x: 0, y: 0}
   size: {x: 153, y: 206}
   description: 
+  descriptionKey: 
   tags: []
   isDraggable: 0
   isSecret: 0
-  templateElement: {fileID: 9197481963319205126, guid: 6be377f3d5fda864cbe3cc42a03dfc7d, type: 3}
-  foundToastSprite: {fileID: 2800000, guid: fdaf2fbabac805e4aabf9d6b7c59fb7f, type: 3}
+  templateElement: {fileID: 0}
+  objectSprites:
+  - {fileID: 2800000, guid: e4221ee04c5595c41a819708bb5bb552, type: 2}
+  objectSpriteVariants: []
+  toastBackgrounds: []
+  toastBackgroundVariants: []

@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: Kettle_HiddenObjectData
   m_EditorClassIdentifier: TinyWalnutGames.UITKTemplates.HOGT::TinyWalnutGames.UITKTemplates.HOGT.HiddenObjectData
   objectName: Kettle
-  objectSprite: {fileID: 2800000, guid: f12463732d8656345acf545642141c1f, type: 2}
-  objectID: a2aed814-b441-4828-a33c-0b40c474ab9b
+  objectNameKey: 
+  objectID: d45ff5ab-1ca1-4886-a3a5-b3333689fbed
   position: {x: 0, y: 0}
   size: {x: 200, y: 194}
   description: 
+  descriptionKey: 
   tags: []
   isDraggable: 0
   isSecret: 0
-  templateElement: {fileID: 9197481963319205126, guid: 6be377f3d5fda864cbe3cc42a03dfc7d, type: 3}
-  foundToastSprite: {fileID: 2800000, guid: fdaf2fbabac805e4aabf9d6b7c59fb7f, type: 3}
+  templateElement: {fileID: 0}
+  objectSprites:
+  - {fileID: 2800000, guid: c741182ed6e95fe46a6981fc251cc866, type: 2}
+  objectSpriteVariants: []
+  toastBackgrounds: []
+  toastBackgroundVariants: []

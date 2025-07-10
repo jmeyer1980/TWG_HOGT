@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: HOGT_Level_Cards_zh-Hans
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: zh-Hans
+  m_SharedData: {fileID: 11400000, guid: 773bfbad009c6ca489637fe0ca9f32ae, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 236840415232
+    m_Localized: "\u65E9\u4E0A\u597D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 407435341824
+    m_Localized: "\u7231\u7C89\u7EA2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 413164761088
+    m_Localized: "\u4FBF\u5F53"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 418294394880
+    m_Localized: "\u7F8E\u597D\u7684\u4E00\u5929"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 422409007104
+    m_Localized: "\u5F00\u59CB\u65B0\u7684\u4E00\u5929\u3002\u9633\u5149\u900F\u8FC7\u7A97\u5E18\uFF0C\u4E00\u5207\u7686\u6709\u53EF\u80FD\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3879794765824
+    m_Localized: "\u7384\u5173"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 664181272576
+    m_Localized: "\u5E26\u7740\u6DE1\u7C89\u8272\u7684\u4E16\u754C\uFF0C\u4E00\u5207\u90FD\u53D8\u5F97\u66F4\u52A0\u6E29\u67D4\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 667285057536
+    m_Localized: "\u7528\u5FC3\u51C6\u5907\uFF0C\u6BCF\u4E00\u683C\u90FD\u662F\u6E29\u6696\u7684\u5473\u9053\u3002\u5B89\u9759\u5730\u5403\u5B8C\uFF0C\u7136\u540E\u542F\u7A0B\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 669558370304
+    m_Localized: "\u8131\u4E0B\u978B\u5B50\uFF0C\u653E\u4E0B\u70E6\u607C\u3002\u8FD9\u662F\u73B0\u5B9E\u4E0E\u60F3\u8C61\u4E4B\u95F4\u7684\u5165\u53E3\u3002"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 671630356480
+    m_Localized: "\u6CA1\u6709\u5306\u5FD9\uFF0C\u53EA\u6709\u9E1F\u9E23\u3001\u6674\u7A7A\u548C\u505A\u81EA\u5DF1\u7684\u65F6\u95F4\u3002"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: HOGT_Level_Cards Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: HOGT_Level_Cards
+  m_TableCollectionNameGuidString: 773bfbad009c6ca489637fe0ca9f32ae
+  m_Entries:
+  - m_Id: 236840415232
+    m_Key: lvl_01_name_key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 407435341824
+    m_Key: lvl_02_name_key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 413164761088
+    m_Key: lvl_03_name_key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3879794765824
+    m_Key: lvl_04_name_key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 418294394880
+    m_Key: lvl_05_name_key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 422409007104
+    m_Key: lvl_01_description_key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 664181272576
+    m_Key: lvl_02_description_key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 667285057536
+    m_Key: lvl_03_description_key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 669558370304
+    m_Key: lvl_04_description_key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 671630356480
+    m_Key: lvl_05_description_key
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1087159881759457434
+  references:
+    version: 2
+    RefIds:
+    - rid: 1087159881759457434
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1751900290376

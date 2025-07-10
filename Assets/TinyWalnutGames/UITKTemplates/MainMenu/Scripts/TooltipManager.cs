@@ -21,6 +21,9 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
         private bool _templateReady = false;
         private bool _initialized = false;
 
+        // Add this public property to expose initialization state
+        public bool IsInitialized => _initialized;
+
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -34,7 +37,7 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
             transform.SetParent(null);
             DontDestroyOnLoad(this.gameObject);
 
-            // Initialize the Tooltip system
+            // Nullcheck the Tooltip template
             if (_tooltipTemplate == null)
             {
                 Debug.LogError("[TooltipManager] Tooltip template is not assigned. Please assign a valid VisualTreeAsset.");
@@ -45,6 +48,10 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
 
             Tooltip.TooltipTemplateLoaded += OnTooltipTemplateLoaded;
             _templateReady = Tooltip.IsTemplateReady;
+
+            // Subscribe to locale changes to update tooltip font
+            TinyWalnutGames.UITKTemplates.Tools.LocalizationHelper.LocaleChanged += OnLocaleChanged;
+
             Debug.Log("[TooltipManager] Singleton instance created.");
         }
 
@@ -53,6 +60,7 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
             if (Instance == this)
                 Instance = null;
             Tooltip.TooltipTemplateLoaded -= OnTooltipTemplateLoaded;
+            TinyWalnutGames.UITKTemplates.Tools.LocalizationHelper.LocaleChanged -= OnLocaleChanged;
         }
 
         /// <summary>
@@ -80,6 +88,18 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
             _tooltip.Hide();
             _initialized = true;
             Debug.Log("[TooltipManager] Initialized with root VisualElement and Tooltip created in code.");
+        }
+
+        private void EnsureTooltipInitialized()
+        {
+            if (_tooltip == null)
+                return;
+
+            // Defensive: If the template is ready and _description is null, re-initialize
+            if (Tooltip.IsTemplateReady && (_tooltip.childCount == 0 || _tooltip.Q<Label>("tooltip_description") == null))
+            {
+                _tooltip.Initialize(TooltipManager.Instance._tooltipTemplate.CloneTree());
+            }
         }
 
         private void OnTooltipTemplateLoaded()
@@ -119,8 +139,10 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
                 Debug.LogWarning("[TooltipManager] Template not ready, skipping tooltip display.");
                 return;
             }
-            Debug.Log($"[TooltipManager] Show called with text: {tooltipText} at {mouseScreenPosition}");
 
+            EnsureTooltipInitialized();
+
+            Debug.Log($"[TooltipManager] Show called with text: {tooltipText} at {mouseScreenPosition}");
             _tooltip.SetText(tooltipText);
             _tooltip.Show(mouseScreenPosition, _root.panel);
         }
@@ -143,6 +165,9 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
                 Debug.LogWarning("[TooltipManager] Template not ready, skipping tooltip display.");
                 return;
             }
+
+            EnsureTooltipInitialized();
+
 #if UNITY_WEBGL
             string localized = LocalizationHelper.GetLocalizedString("tooltips", tooltipText, tooltipText);
             string displayText = $"{localized}: {Mathf.RoundToInt(value * 100)}%";
@@ -158,15 +183,23 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
         public void Move(Vector2 mouseScreenPosition)
         {
             if (!_initialized) return;
-            Debug.Log($"[TooltipManager] Move called to {mouseScreenPosition}");
+            // Debug.Log($"[TooltipManager] Move called to {mouseScreenPosition}");
             _tooltip.PlaceTooltip(mouseScreenPosition, _tooltip.panel);
         }
 
         public void Hide()
         {
             if (!_initialized) return;
-            Debug.Log("[TooltipManager] Hide called.");
+            // Debug.Log("[TooltipManager] Hide called.");
             _tooltip.Hide();
+        }
+
+        /// <summary>
+        /// Respond to locale changes by updating tooltip font.
+        /// </summary>
+        private void OnLocaleChanged()
+        {
+            SetFontAsset(TinyWalnutGames.UITKTemplates.Tools.LocalizationHelper.GetFontForCurrentLocale());
         }
     }
 }

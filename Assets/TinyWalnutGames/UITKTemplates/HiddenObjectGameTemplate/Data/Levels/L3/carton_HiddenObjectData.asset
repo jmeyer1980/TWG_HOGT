@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: carton_HiddenObjectData
   m_EditorClassIdentifier: TinyWalnutGames.UITKTemplates.HOGT::TinyWalnutGames.UITKTemplates.HOGT.HiddenObjectData
   objectName: carton
-  objectSprite: {fileID: 2800000, guid: 0555312f6dd6bf049989537941f0baf0, type: 2}
-  objectID: 34847a11-f6e9-46a8-a5e8-5e2fb7d5a8aa
+  objectNameKey: 
+  objectID: b5598a9b-f1f4-4756-8b05-eb3cfc11d817
   position: {x: 0, y: 0}
   size: {x: 185, y: 98}
   description: 
+  descriptionKey: 
   tags: []
   isDraggable: 0
   isSecret: 0
-  templateElement: {fileID: 9197481963319205126, guid: 6be377f3d5fda864cbe3cc42a03dfc7d, type: 3}
-  foundToastSprite: {fileID: 2800000, guid: fdaf2fbabac805e4aabf9d6b7c59fb7f, type: 3}
+  templateElement: {fileID: 0}
+  objectSprites:
+  - {fileID: 2800000, guid: 8e03b0318fcc8914da71f1053282391d, type: 2}
+  objectSpriteVariants: []
+  toastBackgrounds: []
+  toastBackgroundVariants: []

@@ -2,7 +2,6 @@
     "name": "TinyWalnutGames.UITKTemplates.HOGT",
     "rootNamespace": "TinyWalnutGames.UITKTemplates.HOGT",
     "references": [
-        "TinyWalnutGames.UITKTemplates.Tools",
         "Unity.Collections",
         "Unity.Localization",
         "Unity.Addressables",
@@ -14,6 +13,7 @@
         "Unity.TextMeshPro",
         "UnityEngine.UI",
         "UnityEditor.UI",
+        "TinyWalnutGames.UITKTemplates.Tools",
         "TinyWalnutGames.UITKTemplates.MainMenu"
     ],
     "includePlatforms": [],

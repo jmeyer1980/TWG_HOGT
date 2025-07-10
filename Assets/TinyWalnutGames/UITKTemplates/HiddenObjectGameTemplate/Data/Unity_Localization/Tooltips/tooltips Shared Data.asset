@@ -39,6 +39,30 @@ MonoBehaviour:
     m_Key: reset_minigame_tooltip
     m_Metadata:
       m_Items: []
+  - m_Id: 6832654419357696
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6832686937796608
+    m_Key: New Entry 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6832688649072640
+    m_Key: New Entry 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6832690205159424
+    m_Key: New Entry 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6832692088401920
+    m_Key: New Entry 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7725872489033728
+    m_Key: button_return_to_menu
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

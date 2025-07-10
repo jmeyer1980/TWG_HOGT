@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb99cf0dee01474aa28df99f2491233, type: 3}
+  m_Name: SodaCan_HiddenObjectData
+  m_EditorClassIdentifier: TinyWalnutGames.UITKTemplates.HOGT::TinyWalnutGames.UITKTemplates.HOGT.HiddenObjectData
+  objectName: SodaCan
+  objectNameKey: 
+  objectID: a86bafbc-5ebc-4241-9169-07308bb1c005
+  position: {x: 0, y: 0}
+  size: {x: 87, y: 141}
+  description: 
+  descriptionKey: 
+  tags: []
+  isDraggable: 0
+  isSecret: 0
+  templateElement: {fileID: 0}
+  objectSprites:
+  - {fileID: 2800000, guid: a975302101665f64eade8881abe44896, type: 2}
+  objectSpriteVariants: []
+  toastBackgrounds: []
+  toastBackgroundVariants: []

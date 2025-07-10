@@ -17,6 +17,18 @@ MonoBehaviour:
     sourceText: Play
     targetText: Play
     localeCode: en
+  - key: btn_settings_label
+    sourceText: Settings
+    targetText: Settings
+    localeCode: en
+  - key: btn_reset_minigame_label
+    sourceText: Reset
+    targetText: Reset
+    localeCode: en
+  - key: button_close_settings
+    sourceText: Close
+    targetText: Close
+    localeCode: en
   - key: label_subtitle
     sourceText: A Unity UI Toolkit Game
     targetText: A Unity UI Toolkit Game
@@ -28,6 +40,10 @@ MonoBehaviour:
   - key: title_twg
     sourceText: Tiny Walnut Games
     targetText: Tiny Walnut Games
+    localeCode: en
+  - key: title_tiny
+    sourceText: Tiny
+    targetText: Tiny
     localeCode: en
   - key: title_gather
     sourceText: Gather
@@ -45,14 +61,6 @@ MonoBehaviour:
     sourceText: Loop
     targetText: Loop
     localeCode: en
-  - key: btn_settings_label
-    sourceText: Settings
-    targetText: Settings
-    localeCode: en
-  - key: btn_reset_minigame_label
-    sourceText: Reset
-    targetText: Reset
-    localeCode: en
   - key: label_language
     sourceText: Language
     targetText: Language
@@ -69,10 +77,6 @@ MonoBehaviour:
     sourceText: Settings
     targetText: Settings
     localeCode: en
-  - key: title_tiny
-    sourceText: Tiny
-    targetText: Tiny
-    localeCode: en
   - key: title_walnut
     sourceText: Walnut
     targetText: Walnut
@@ -88,8 +92,4 @@ MonoBehaviour:
   - key: tooltip_label
     sourceText: 
     targetText: 
-    localeCode: en
-  - key: btn_close_settings_label
-    sourceText: Close
-    targetText: Close
     localeCode: en

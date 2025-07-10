@@ -36,6 +36,20 @@ MonoBehaviour:
     - Locale
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f99bb1f6300e924aab4b35da0b61ae9
+    m_Address: Tiny Walnut Games
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 172521e2ebb1b2c468e0e8a94a76c500
+    m_Address: Copilot_20250618_135830
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 172c28c56c144c5458c12a696e881e19
     m_Address: LandingSceneVisualTree
     m_ReadOnly: 0
@@ -58,6 +72,13 @@ MonoBehaviour:
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 34cde8e04bc5ea447aeab494c9ddc8eb
+    m_Address: BedroomProps
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 352313034de74ac428b42bbfc3662195
     m_Address: LD03
     m_ReadOnly: 0
@@ -75,6 +96,20 @@ MonoBehaviour:
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 500c1c4d3f4325b41a2c69aa6c98bb8f
+    m_Address: Level03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 51f0f216c9086ce44a53ddc116c9abcf
+    m_Address: Partical
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 55d33ad19e5038942af39e3000101f6b
     m_Address: UITK_TextSettings
     m_ReadOnly: 0
@@ -87,6 +122,13 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63e195fd3ef9d1c438d197acc7cbc9e4
+    m_Address: LandingScene
+    m_ReadOnly: 0
+    m_SerializedLabels:
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0
@@ -121,8 +163,22 @@ MonoBehaviour:
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f1aa769a2867a84cbf1fcb4f419aaf4
+    m_Address: TWG_ProfileIcon
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 701bc594cb4ec1d478fd60b689f88242
     m_Address: LandingScenePanelSettings
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7025d27ec6b1b164498e9e1058c89c5c
+    m_Address: ItsABeautifulDay
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload
@@ -143,6 +199,20 @@ MonoBehaviour:
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 784f469f18f1f7d478bc0e26fd88ce09
+    m_Address: Level05
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a25ba73b16ad124381a24dae59faee7
+    m_Address: OutdoorProps
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7a8dc73f5f06e8a4480d87c6047cd2a6
     m_Address: init
     m_ReadOnly: 0
@@ -153,9 +223,7 @@ MonoBehaviour:
   - m_GUID: 7b39debf12dad5a42b07547130141536
     m_Address: LC02
     m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
-    - default
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7e741fb8d4c1eb7479f143b08e1ce108
     m_Address: ui_zh-Hans
@@ -166,6 +234,13 @@ MonoBehaviour:
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 812a91d9fd4608043a38399a425e24ae
+    m_Address: SchoolCorkboardProps
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8840605f5579bc44baf23112c4a4a205
     m_Address: tooltips_en
     m_ReadOnly: 0
@@ -173,6 +248,27 @@ MonoBehaviour:
     - Locale
     - Locale-en
     - Locale-en-US
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89d33ea1eb793de42b8e66b99eb7b841
+    m_Address: Init
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8bca0f7baf26b0545b5a14325d262a8a
+    m_Address: BedRoomJustWakingUp
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d98feee570c7064c85056cb2e2e8cf3
+    m_Address: MergeThem
+    m_ReadOnly: 0
+    m_SerializedLabels:
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0
@@ -198,6 +294,19 @@ MonoBehaviour:
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9170766300e41a84c8015634b8325533
+    m_Address: en
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Locale-en
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a521e0e4d3f8d84098bd814c918d98c
+    m_Address: MainMenu
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9ca3268b41d15754aa116f97a9a59447
     m_Address: UnityDefaultRuntimeTheme
     m_ReadOnly: 0
@@ -214,6 +323,13 @@ MonoBehaviour:
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e6756699b146d34e8bf154b0ba36938
+    m_Address: ReadyToLeave
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9ed9698c07c19a2419061bcfdefc63ac
     m_Address: tooltips_zh-Hans
     m_ReadOnly: 0
@@ -223,8 +339,57 @@ MonoBehaviour:
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a187c43bddc3be644a2c51b9b1c10932
+    m_Address: settingsbackground
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a256318127ba7c142bc01577d76e3d4a
+    m_Address: KitchenBento
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a4f1a2abd533a4f48bd83233b13f29ff
+    m_Address: SettingsIconGear
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8f174e004df6864aa875074a2e1b1fc
+    m_Address: Level02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ad59a095b23e1a04ca875db288608878
     m_Address: LC03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af8b69275bdd1af4a8e5fdb847440e0c
+    m_Address: BedroomViewOfBed
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b07a7a403c2564544b80ac4791843641
+    m_Address: KitchenProps
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b1eea389c3e836d4bab194443059b511
+    m_Address: Level04
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload
@@ -244,12 +409,37 @@ MonoBehaviour:
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c2682b4d5674fe74187801098d75d71f
-    m_Address: LC01
+  - m_GUID: bb827e5b2c5bd69498765fa908f755d5
+    m_Address: Copilot_20250618_205743
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload
     - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2682b4d5674fe74187801098d75d71f
+    m_Address: LC01
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c39b7a6b6c8ff654399654d3fd60a328
+    m_Address: ReturnToMenu
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6326fca5ea4a8c4bb22bbce941a68b6
+    m_Address: EntrywayProps
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c920b945797f154438c97b2d8504750d
+    m_Address: zh_hans
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Locale-zh-Hans
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cc69e3ff06bdde740a9debd5b4a56833
     m_Address: tooltip
@@ -266,6 +456,20 @@ MonoBehaviour:
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ce1ec17fcf439c14caddb13d952671d1
+    m_Address: EmptyCoarkboard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d738253b4953d6f45a8fedfe8584e66a
+    m_Address: StylizedPlayButton
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dcb199564cf76c840b79e9bfbb18b89f
     m_Address: MainMenuPanelSettings
     m_ReadOnly: 0
@@ -278,6 +482,34 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e76478e5f42b4d6498ecd3ca86ea9538
+    m_Address: CrazyFace
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: efbc7624460f94f4f80157e0e5622af3
+    m_Address: LevelOverlay
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fdaf2fbabac805e4aabf9d6b7c59fb7f
+    m_Address: FoundToastSpriteKey
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffcf5ad6d41e1a04e9f44eaac0de57d6
+    m_Address: ResetMinigame
+    m_ReadOnly: 0
+    m_SerializedLabels:
     - Preload
     - default
     FlaggedDuringContentUpdateRestriction: 0

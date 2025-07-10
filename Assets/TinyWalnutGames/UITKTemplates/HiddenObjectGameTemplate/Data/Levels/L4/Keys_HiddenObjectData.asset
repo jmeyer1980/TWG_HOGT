@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: Keys_HiddenObjectData
   m_EditorClassIdentifier: TinyWalnutGames.UITKTemplates.HOGT::TinyWalnutGames.UITKTemplates.HOGT.HiddenObjectData
   objectName: Keys
-  objectSprite: {fileID: 2800000, guid: 287a8f78d748dc24db26dd3b2cfe70e5, type: 2}
-  objectID: b6404345-433d-4b06-a1b3-bb2488901df7
+  objectNameKey: 
+  objectID: e3645e1b-0f30-437c-be34-1506e93829d9
   position: {x: 0, y: 0}
   size: {x: 165, y: 205}
   description: 
+  descriptionKey: 
   tags: []
   isDraggable: 0
   isSecret: 0
-  templateElement: {fileID: 9197481963319205126, guid: 6be377f3d5fda864cbe3cc42a03dfc7d, type: 3}
-  foundToastSprite: {fileID: 2800000, guid: fdaf2fbabac805e4aabf9d6b7c59fb7f, type: 3}
+  templateElement: {fileID: 0}
+  objectSprites:
+  - {fileID: 2800000, guid: 85312d4f053ffea4fb7ab3b43f61133b, type: 2}
+  objectSpriteVariants: []
+  toastBackgrounds: []
+  toastBackgroundVariants: []

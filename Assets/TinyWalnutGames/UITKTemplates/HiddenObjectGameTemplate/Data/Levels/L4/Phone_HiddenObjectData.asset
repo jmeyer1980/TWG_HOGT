@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: Phone_HiddenObjectData
   m_EditorClassIdentifier: TinyWalnutGames.UITKTemplates.HOGT::TinyWalnutGames.UITKTemplates.HOGT.HiddenObjectData
   objectName: Phone
-  objectSprite: {fileID: 2800000, guid: ae24e9773b534f44a9154ef8c85fa036, type: 2}
-  objectID: 5cf39ecd-f28f-4a5c-bb9f-0082f2229e05
+  objectNameKey: 
+  objectID: 2a41330c-521d-47bc-8905-2ad467bad0a0
   position: {x: 0, y: 0}
   size: {x: 142, y: 230}
   description: 
+  descriptionKey: 
   tags: []
   isDraggable: 0
   isSecret: 0
-  templateElement: {fileID: 9197481963319205126, guid: 6be377f3d5fda864cbe3cc42a03dfc7d, type: 3}
-  foundToastSprite: {fileID: 2800000, guid: fdaf2fbabac805e4aabf9d6b7c59fb7f, type: 3}
+  templateElement: {fileID: 0}
+  objectSprites:
+  - {fileID: 2800000, guid: c338b5f10327d1c42a0dcda013fa5659, type: 2}
+  objectSpriteVariants: []
+  toastBackgrounds: []
+  toastBackgroundVariants: []

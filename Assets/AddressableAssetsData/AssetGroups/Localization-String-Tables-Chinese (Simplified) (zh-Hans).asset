@@ -29,6 +29,13 @@ MonoBehaviour:
     - Locale-zh-Hans
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eca78c094a74caa459b3c55182005e9e
+    m_Address: HOGT_Level_Cards_zh-Hans
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-zh-Hans
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: a2b723b7f8beec74d9ad742cf6b2e339, type: 2}
   m_SchemaSet:

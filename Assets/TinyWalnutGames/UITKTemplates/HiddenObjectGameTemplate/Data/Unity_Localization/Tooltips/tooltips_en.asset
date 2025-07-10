@@ -44,6 +44,10 @@ MonoBehaviour:
       more info.'
     m_Metadata:
       m_Items: []
+  - m_Id: 7725872489033728
+    m_Localized: ' Return to the Main Menu.'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

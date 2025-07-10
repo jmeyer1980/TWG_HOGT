@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138478ebdd0948a429b5799d2a382b52, type: 3}
+  m_Name: LD05
+  m_EditorClassIdentifier: TinyWalnutGames.HOGT::TinyWalnutGames.HOGT.LevelData
+  levelName: Beautiful Day
+  levelNameKey: level5
+  levelDescription: It is such a nice, warm day today.
+  levelDescriptionKey: level5description
+  levelNumber: 4
+  isUnlocked: 1
+  levelBackground: {fileID: 2800000, guid: 7025d27ec6b1b164498e9e1058c89c5c, type: 3}
+  levelForeground: {fileID: 2800000, guid: 87bc55ae050c4f447a7963aded3a3ab4, type: 3}
+  hasTimeLimit: 1
+  timeLimit: 60
+  objectsToFind:
+  - {fileID: 11400000, guid: b769b2a88721d564f813a60b1be250e9, type: 2}
+  - {fileID: 11400000, guid: dfe32fc1d5979cd4cb39fc5ffb53c277, type: 2}
+  - {fileID: 11400000, guid: 05640160d7287b84b8acfdd6043e8a11, type: 2}
+  - {fileID: 11400000, guid: d2c9aa2a06fb92d4d9615099eaa4bab6, type: 2}
+  - {fileID: 11400000, guid: 43c133d19e9219b45814bae4465479ff, type: 2}
+  - {fileID: 11400000, guid: 2c875eb485fe6a84291ac48d8753b638, type: 2}
+  - {fileID: 11400000, guid: 79e3a56c08e4d0545a41b83fd31c8c9e, type: 2}
+  - {fileID: 11400000, guid: 6300a3a2600fbb749a650e42b95a887c, type: 2}
+  - {fileID: 11400000, guid: ded801ab394c4194ba6a2ececa57b9b7, type: 2}
+  - {fileID: 11400000, guid: 3ca6e2bb1e2713e41bef6205ec5cffe1, type: 2}
+  objectsFound: []
+  sceneName: Level05
+  uiDocument: {fileID: 9197481963319205126, guid: cddb3b15b4f66594e8a85d162c81c7b2, type: 3}

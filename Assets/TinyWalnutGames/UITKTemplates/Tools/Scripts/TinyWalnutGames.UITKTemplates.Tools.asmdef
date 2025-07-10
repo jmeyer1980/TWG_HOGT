@@ -4,7 +4,9 @@
     "references": [
         "Unity.Localization",
         "Unity.ResourceManager",
-        "Unity.Addressables"
+        "Unity.Addressables",
+        "UnityEngine.UI",
+        "UnityEditor.UI"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -250,3 +250,9 @@ TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #s
 
 #game-field > #lvl_background > #playarea > #Guitar {
 }
+
+#settingsbackground > #settings_panel > #organize_panel > #settings_buttons_organizer > #button_reset_minigame > .unity-button__image {
+}
+
+#settingsbackground > #settings_panel > #organize_panel > #settings_buttons_organizer > #button_reset_minigame > .unity-text-element {
+}

@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: KitchenClock_HiddenObjectData
   m_EditorClassIdentifier: TinyWalnutGames.UITKTemplates.HOGT::TinyWalnutGames.UITKTemplates.HOGT.HiddenObjectData
   objectName: KitchenClock
-  objectSprite: {fileID: 2800000, guid: 820d448d6b42ef141b516b8f07d806a9, type: 2}
-  objectID: 7dbd79d8-3d4c-4fa1-8121-7dcc950dc164
+  objectNameKey: 
+  objectID: eeb808c8-f489-4cae-a0a9-61d9b83c0717
   position: {x: 0, y: 0}
   size: {x: 195, y: 199}
   description: 
+  descriptionKey: 
   tags: []
   isDraggable: 0
   isSecret: 0
-  templateElement: {fileID: 9197481963319205126, guid: 6be377f3d5fda864cbe3cc42a03dfc7d, type: 3}
-  foundToastSprite: {fileID: 2800000, guid: fdaf2fbabac805e4aabf9d6b7c59fb7f, type: 3}
+  templateElement: {fileID: 0}
+  objectSprites:
+  - {fileID: 2800000, guid: 686e535259dc34540bfbe16a36b1f210, type: 2}
+  objectSpriteVariants: []
+  toastBackgrounds: []
+  toastBackgroundVariants: []

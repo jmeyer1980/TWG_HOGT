@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: HOGT_Level_Cards_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 773bfbad009c6ca489637fe0ca9f32ae, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 236840415232
+    m_Localized: Good Morning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 407435341824
+    m_Localized: Love Pink
+    m_Metadata:
+      m_Items: []
+  - m_Id: 413164761088
+    m_Localized: Bento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 418294394880
+    m_Localized: Beautiful Day
+    m_Metadata:
+      m_Items: []
+  - m_Id: 422409007104
+    m_Localized: Start fresh. The sun peeks through the curtains, the day holds endless
+      promise.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3879794765824
+    m_Localized: Landing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 664181272576
+    m_Localized: A world tinted in blush tones, where everything feels a little softer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 667285057536
+    m_Localized: Packed with care. Every piece in place. A quiet meal before the
+      journey begins.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 669558370304
+    m_Localized: The threshold between worlds. Take off your shoes and leave your
+      worries behind.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 671630356480
+    m_Localized: Nothing rushed. Just birdsong, open skies, and time to be yourself.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

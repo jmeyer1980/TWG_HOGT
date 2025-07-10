@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: Cloud3_HiddenObjectData
   m_EditorClassIdentifier: TinyWalnutGames.UITKTemplates.HOGT::TinyWalnutGames.UITKTemplates.HOGT.HiddenObjectData
   objectName: Cloud3
-  objectSprite: {fileID: 2800000, guid: 723ca90c00d9da74cb80aaae5e303cb8, type: 2}
-  objectID: 90a829c8-0bb8-403f-8153-0d30dca66e2e
+  objectNameKey: 
+  objectID: bf0e769c-98ef-46a7-9d83-69335da4b31f
   position: {x: 0, y: 0}
   size: {x: 388, y: 165}
   description: 
+  descriptionKey: 
   tags: []
   isDraggable: 0
   isSecret: 0
-  templateElement: {fileID: 9197481963319205126, guid: 6be377f3d5fda864cbe3cc42a03dfc7d, type: 3}
-  foundToastSprite: {fileID: 2800000, guid: fdaf2fbabac805e4aabf9d6b7c59fb7f, type: 3}
+  templateElement: {fileID: 0}
+  objectSprites:
+  - {fileID: 2800000, guid: d0d34c4a8ba5a744cac96da3f78aadcb, type: 2}
+  objectSpriteVariants: []
+  toastBackgrounds: []
+  toastBackgroundVariants: []

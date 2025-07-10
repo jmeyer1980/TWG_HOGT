@@ -92,7 +92,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 370622195167232
-    m_Key: btn_close_settings_label
+    m_Key: Button_Close_Settings
     m_Metadata:
       m_Items: []
   - m_Id: 1280580206063616

@@ -6,7 +6,8 @@ using UnityEngine.AddressableAssets;
 using System.Collections.Generic;
 using UnityEditor; 
 using TinyWalnutGames.UITKTemplates.MainMenu; 
-using System.Linq; 
+using TinyWalnutGames.UITKTemplates.Tools;
+using System.Linq;
 
 /// <summary>
 /// Controls the population of the LevelOverlay UI with data from a LevelData ScriptableObject.
@@ -27,6 +28,7 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
 
 
         [SerializeField] private UIDocument uiDocument;
+        public UIDocument expectedUIRoot;
         [SerializeField] private VisualTreeAsset uiVisualTreeAsset;
         [SerializeField] private GameObject sparkleEffectPrefab;
 
@@ -61,7 +63,9 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
                     uiDocument = gameObject.AddComponent<UIDocument>();
                     var testUxml = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Resources/TestRootVisualElement.uxml");
                     if (testUxml != null)
+                    {
                         uiDocument.visualTreeAsset = testUxml;
+                    }
 #endif
                 }
             }
@@ -79,6 +83,8 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
                 Debug.LogWarning("[LevelUIController] rootVisualElement is null. UI tests may fail.");
                 return;
             }
+
+            expectedUIRoot = uiDocument;
         }
 
         private void OnEnable()
@@ -87,6 +93,17 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
             {
                 TryPopulateUIInEditMode();
             }
+
+            // Subscribe to centralized locale change event
+            if (UIRootManager.Instance != null)
+                UIRootManager.Instance.LocaleChanged += RefreshLocalizedUI;
+        }
+
+        private void OnDisable()
+        {
+            // Unsubscribe from centralized locale change event
+            if (UIRootManager.Instance != null)
+                UIRootManager.Instance.LocaleChanged -= RefreshLocalizedUI;
         }
 
         private void OnValidate()
@@ -114,22 +131,25 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
 
         private void Start()
         {
-            if (PreloadAssets.Instance != null && !PreloadAssets.Instance.IsReady)
+            // Wait for PreloadAssets if needed, then attach UIDocument when ready
+            if (AssetPreloader.Instance != null && !AssetPreloader.Instance.IsReady)
             {
                 Debug.Log("[LevelUIController] Waiting for PreloadAssets to complete before initializing UI.");
-                PreloadAssets.PreloadComplete += OnPreloadComplete;
+                AssetPreloader.Instance.PreloadComplete += OnPreloadComplete; // FIX: Use instance, not static
                 _preloadSubscribed = true;
             }
             else
             {
                 OnPreloadComplete();
             }
+            // Start coroutine to attach UIDocument to UIRootManager when ready
+            StartCoroutine(AttachUIDocumentWhenReady());
         }
 
         private void OnDestroy()
         {
-            if (_preloadSubscribed)
-                PreloadAssets.PreloadComplete -= OnPreloadComplete;
+            if (_preloadSubscribed && AssetPreloader.Instance != null)
+                AssetPreloader.Instance.PreloadComplete -= OnPreloadComplete; // FIX: Use instance, not static
         }
 
         private void OnPreloadComplete()
@@ -138,16 +158,31 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
             Initialize();
             InitializeUIReferences();
             PopulateUI();
+            // Start coroutine to attach UIDocument after PreloadAssets is ready
+            StartCoroutine(AttachUIDocumentWhenReady());
         }
 
         private IEnumerator WaitForPreloadAndInit()
         {
-            while (PreloadAssets.Instance == null || !PreloadAssets.Instance.IsReady)
+            while (AssetPreloader.Instance == null || !AssetPreloader.Instance.IsReady)
                 yield return null;
 
             Initialize();
             InitializeUIReferences();
             PopulateUI();
+        }
+
+        // Add this coroutine to ensure UIDocument is attached only when ready
+        private IEnumerator AttachUIDocumentWhenReady()
+        {
+            while (UIRootManager.Instance == null ||
+                   uiDocument == null ||
+                   uiDocument.rootVisualElement == null)
+            {
+                yield return null;
+            }
+            Debug.Log("[LevelUIController] Assigning UIDocument to UIRootManager (no parenting, just assignment).");
+           // UIRootManager.Instance.AttachSceneUIDocument(uiDocument);
         }
 
         public void InjectDependencies(LevelData data, UIDocument document, VisualTreeAsset visualTree)
@@ -161,6 +196,10 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
             }
         }
 
+        /// <summary>
+        /// Initializes the LevelUIController by loading LevelData and VisualTreeAsset if not already assigned,
+        /// sets up the UIDocument, initializes hidden objects, and validates the UI and locale.
+        /// </summary>
         public void Initialize()
         {
             Debug.Log($"[LevelUIController] Initialize called. LevelData is {(LevelData == null ? "null" : "already assigned")}");
@@ -168,7 +207,7 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
             {
                 string key = LevelDataKey;
                 Debug.Log("[LevelUIController] Attempting to get LevelData from PreloadAssets with key: " + key);
-                LevelData = PreloadAssets.Instance.Get<LevelData>(key);
+                LevelData = AssetPreloader.Instance.Get<LevelData>(key);
                 if (LevelData == null)
                 {
                     Debug.LogError("[LevelUIController] LevelData not found in preloaded assets.");
@@ -181,7 +220,7 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
 
             if (uiVisualTreeAsset == null)
             {
-                uiVisualTreeAsset = PreloadAssets.Instance.Get<VisualTreeAsset>(VisualTreeKey);
+                uiVisualTreeAsset = AssetPreloader.Instance.Get<VisualTreeAsset>(VisualTreeKey);
                 if (uiVisualTreeAsset == null)
                 {
                     Debug.LogError("VisualTreeAsset not found in preloaded assets.");
@@ -194,6 +233,14 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
             if (uiDocument != null && uiVisualTreeAsset != null)
             {
                 uiDocument.visualTreeAsset = uiVisualTreeAsset;
+                if (uiDocument != null && uiVisualTreeAsset != null)
+                {
+                    uiDocument.visualTreeAsset = uiVisualTreeAsset;
+                    //if (UIRootManager.Instance != null)
+                    //    UIRootManager.Instance.AttachSceneUIDocument(uiDocument);
+                    Debug.Log($"UIDocument visual tree, {uiVisualTreeAsset}, asset set successfully.");
+                }
+
                 Debug.Log($"UIDocument visual tree, {uiVisualTreeAsset}, asset set successfully.");
             }
 
@@ -207,6 +254,17 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
                     }
                 }
             }
+
+            // Use shared validator for UIDocument and locale
+            UIDocumentValidationConfig config = new()
+            {
+                NamedElements = new Dictionary<string, System.Type>
+                {
+                    { "playarea", typeof(VisualElement) },
+                    { "objectsList", typeof(VisualElement) }
+                }
+            };
+            UIDocumentValidator.ValidateOrFixUIDocument(this, ref uiDocument, uiVisualTreeAsset, config, out _, out _, true);
         }
 
         public void InitializeUIReferences()
@@ -228,6 +286,9 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
             PopulateObjectsList();
             PopulatePlayArea();
             PopulateListViewContainers();
+            Debug.Log("[LevelUIController] UI populated with LevelData.");
+            // Start the coroutine to get and set the current locale code
+            StartCoroutine(GetAndSetCurrentLocaleCode());
         }
 
         public void SetLevelName()
@@ -267,7 +328,7 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
                 foreach (var child in playArea.Children().ToList())
                 {
                     // Hide any child that is not a TemplateContainer (i.e., pre-existing UXML reference)
-                    if (!(child is TemplateContainer))
+                    if (child is not TemplateContainer)
                         child.style.display = DisplayStyle.None;
                 }
                 // Or, if you want a clean slate, uncomment the next line:
@@ -292,7 +353,7 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
                     }
                     // Set rotation if present in tags
                     var rotTag = obj.tags?.FirstOrDefault(t => t.StartsWith("rotation:"));
-                    if (!string.IsNullOrEmpty(rotTag) && float.TryParse(rotTag.Substring(9), out float angle))
+                    if (!string.IsNullOrEmpty(rotTag) && float.TryParse(rotTag[9..], out float angle))
                     {
                         ve.style.rotate = new StyleRotate(new Rotate(new Angle(angle, AngleUnit.Degree)));
                     }
@@ -387,7 +448,7 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
                 }
                 // Set rotation if present in tags
                 var rotTag = objData.tags?.FirstOrDefault(t => t.StartsWith("rotation:"));
-                if (!string.IsNullOrEmpty(rotTag) && float.TryParse(rotTag.Substring(9), out float angle))
+                if (!string.IsNullOrEmpty(rotTag) && float.TryParse(rotTag[9..], out float angle))
                 {
                     playObj.style.rotate = new StyleRotate(new Rotate(new Angle(angle, AngleUnit.Degree)));
                 }
@@ -418,16 +479,22 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
             var toast = container.Q<VisualElement>("toast");
             if (toast != null)
             {
-                if (objData.foundToastSprite != null)
-                    toast.style.backgroundImage = new StyleBackground(objData.foundToastSprite);
+                // Use the new dynamic toast background system
+                var toastBg = objData.GetToastBackground(0);
+                if (toastBg != null)
+                    toast.style.backgroundImage = new StyleBackground(toastBg);
+                else
+                    toast.style.backgroundImage = null;
                 toast.style.display = showToast ? DisplayStyle.Flex : DisplayStyle.None;
             }
 
             var contents = container.Q<VisualElement>("contents");
             if (contents != null)
             {
-                if (objData.objectSprite != null)
-                    contents.style.backgroundImage = new StyleBackground(objData.objectSprite);
+                // Use the new dynamic object sprite system
+                var objSprite = objData.GetObjectSprite(0);
+                if (objSprite != null)
+                    contents.style.backgroundImage = new StyleBackground(objSprite);
                 else
                     contents.style.backgroundImage = null;
             }
@@ -439,8 +506,10 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
                 if (nameLabel == null)
                 {
                     // If the template doesn't have a label, add one
-                    nameLabel = new Label();
-                    nameLabel.name = "objectNameLabel";
+                    nameLabel = new()
+                    {
+                        name = "objectNameLabel"
+                    };
                     container.Add(nameLabel);
                 }
                 nameLabel.text = objData.objectName;
@@ -487,10 +556,10 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
             Debug.Log($"Item found: {foundObject.objectName}");
         }
 
-        public void PlaySparkleEffect(Vector3 position)
-        {
-            // TODO: Instantiate a sparkle particle effect at the given position (world to UI conversion if needed)
-        }
+        //public void PlaySparkleEffect(Vector3 position)
+        //{
+        //    // TODO: Instantiate a sparkle particle effect at the given position (world to UI conversion if needed)
+        //}
 
         public void PlayFoundSound()
         {
@@ -596,10 +665,147 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
             var sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
             if (sceneName.StartsWith("Level"))
             {
-                if (int.TryParse(sceneName.Substring(5), out int num))
+                if (int.TryParse(sceneName[5..], out int num))
                     return num;
             }
             return 1;
+        }
+
+        // Coroutine to get and set the current locale code from the UIRootManager
+        private IEnumerator GetAndSetCurrentLocaleCode()
+        {
+            // Wait for both UIRootManager and UI to be ready
+            while (UIRootManager.Instance == null || UIRootManager.Instance.CurrentLocaleCode() == null || uiDocument == null || uiDocument.rootVisualElement == null)
+                yield return null;
+            string localeCode = UIRootManager.Instance.CurrentLocaleCode();
+            // Only set locale if not already set
+            if (LocalizationHelper.GetCurrentLocaleCode() != localeCode)
+            {
+                LocalizationHelper.SetLocale(localeCode);
+                PlayerPrefs.SetString("selected_locale", localeCode);
+                PlayerPrefs.Save();
+                Debug.Log($"[LevelUIController] Current locale set to: {localeCode}");
+            }
+
+            // wait for fixed update to ensure the locale is set before refreshing UI
+            yield return new WaitForFixedUpdate();
+            RefreshLocalizedUI();
+        }
+
+        private void RefreshLocalizedUI()
+        {
+            if (uiDocument == null || LevelData == null)
+            {
+                Debug.LogWarning("[LevelUIController] Cannot refresh localized UI: missing UIDocument or LevelData.");
+                return;
+            }
+            var root = uiDocument.rootVisualElement;
+            if (root == null)
+            {
+                Debug.LogWarning("[LevelUIController] rootVisualElement is null.");
+                return;
+            }
+
+#if UNITY_WEBGL
+// Localize level name
+            string levelNameKey = LevelData.levelNameKey;
+            string localizedLevelName = !string.IsNullOrEmpty(levelNameKey)
+                ? LocalizationHelper.GetLocalizedString("ui", levelNameKey, LevelData.levelName)
+                : LevelData.levelName;
+            if (levelNameLabel != null)
+                levelNameLabel.text = localizedLevelName;
+
+            // Localize object names in the objects list
+            if (objectsList != null && LevelData.objectsToFind != null)
+            {
+                int i = 0;
+                foreach (var obj in LevelData.objectsToFind)
+                {
+                    if (obj == null) continue;
+                    string objNameKey = obj.objectNameKey;
+                    string localizedObjName = !string.IsNullOrEmpty(objNameKey)
+                        ? LocalizationHelper.GetLocalizedString("ui", objNameKey, obj.objectName)
+                        : obj.objectName;
+
+                    // Find the corresponding label in the UI (assuming order matches)
+                    var objElem = objectsList.ElementAt(i);
+                    var nameLabel = objElem.Q<Label>("objectNameLabel");
+                    if (nameLabel != null)
+                        nameLabel.text = localizedObjName;
+                    i++;
+                }
+            }
+#else
+            // Localize level name
+            string levelNameKey = LevelData.levelNameKey;
+            string localizedLevelName = !string.IsNullOrEmpty(levelNameKey)
+                ? LocalizationHelper.GetLocalizedString("HOTG_UI", levelNameKey, LevelData.levelName)
+                : LevelData.levelName;
+            if (levelNameLabel != null)
+                levelNameLabel.text = localizedLevelName;
+
+            // Localize object names in the objects list
+            if (objectsList != null && LevelData.objectsToFind != null)
+            {
+                int i = 0;
+                foreach (var obj in LevelData.objectsToFind)
+                {
+                    if (obj == null) continue;
+                    string objNameKey = obj.objectNameKey;
+                    string localizedObjName = !string.IsNullOrEmpty(objNameKey)
+                        ? LocalizationHelper.GetLocalizedString("HOTG_UI", objNameKey, obj.objectName)
+                        : obj.objectName;
+
+                    // Find the corresponding label in the UI (assuming order matches)
+                    var objElem = objectsList.ElementAt(i);
+                    var nameLabel = objElem.Q<Label>("objectNameLabel");
+                    if (nameLabel != null)
+                        nameLabel.text = localizedObjName;
+                    i++;
+                }
+            }
+#endif
+
+
+            // except for unimplemented dialogue, there is nothing else to localize here.
+            // placeholder for dialogue localization
+            // if (dialogueLabel != null)
+            // {
+            //     string dialogueKey = LevelData.dialogueKey;
+            //     string localizedDialogue = !string.IsNullOrEmpty(dialogueKey)
+            //         ? LocalizationHelper.GetLocalizedString("ui", dialogueKey, LevelData.dialogue)
+            //         : LevelData.dialogue;
+            //     dialogueLabel.text = localizedDialogue;
+            //  
+            //     Debug.Log($"[LevelUIController] Localized dialogue: {localizedDialogue}");
+            //  
+            //     // Optionally, you can also localize the button text if applicable
+            //     var button = root.Q<Button>("dialogueButton");
+            //     if (button != null)
+            //     {
+            //         string buttonKey = LevelData.dialogueButtonKey;
+            //         string localizedButtonText = !string.IsNullOrEmpty(buttonKey)
+            //             ? LocalizationHelper.GetLocalizedString("ui", buttonKey, "Next")
+            //             : "Next";
+            //         button.text = localizedButtonText;
+            //         Debug.Log($"[LevelUIController] Localized button text: {localizedButtonText}");
+            //      
+            //         button.RegisterCallback<ClickEvent>(evt => OnDialogueButtonClicked());
+            //      
+            //         Debug.Log("[LevelUIController] Registered click event for dialogue button.");
+            //      
+            //         // Ensure the button is visible
+            //         button.style.display = DisplayStyle.Flex;
+            //      
+            //      
+            //         Debug.Log("[LevelUIController] Dialogue button is visible.");
+            //      
+            //      }
+            //         else
+            //      {
+            //          Debug.LogWarning("[LevelUIController] Dialogue button not found in UI.");
+            //      }
+            // }
         }
     }
 }

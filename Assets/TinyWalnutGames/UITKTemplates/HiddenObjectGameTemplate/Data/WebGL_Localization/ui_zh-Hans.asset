@@ -89,7 +89,7 @@ MonoBehaviour:
     sourceText: 
     targetText: 
     localeCode: zh-Hans
-  - key: btn_close_settings_label
+  - key: button_close_settings
     sourceText: Close
     targetText: "\u5173\u4E0A"
     localeCode: zh-Hans

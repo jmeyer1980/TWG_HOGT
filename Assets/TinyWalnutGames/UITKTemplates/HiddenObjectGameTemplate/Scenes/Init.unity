@@ -344,6 +344,51 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &139953077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139953080}
+  - component: {fileID: 139953079}
+  m_Layer: 0
+  m_Name: UIRootManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &139953079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139953077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5640271f0a2068943b514151f70fc9ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: TinyWalnutGames.UITKTemplates.MainMenu::TinyWalnutGames.UITKTemplates.Tools.UIRootManager
+  RootUIDocument: {fileID: 1586959749}
+--- !u!4 &139953080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139953077}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 676.55566, y: 275.34067, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &270688082
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +421,53 @@ Transform:
   - {fileID: 1051817784}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &295054807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 295054808}
+  - component: {fileID: 295054809}
+  m_Layer: 0
+  m_Name: PreloadUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &295054808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295054807}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 641181403}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &295054809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295054807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7440d6ba1ed2a342bbb0fae5c0b3e23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: TinyWalnutGames::TinyWalnutGames.PreloadAssets
+  uiDocument: {fileID: 1586959749}
+  progressBarName: progressbar
+  tooltipManager: {fileID: 0}
 --- !u!1 &337982609
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +632,7 @@ Transform:
   m_Children:
   - {fileID: 69409612}
   - {fileID: 1372207070}
+  - {fileID: 295054808}
   - {fileID: 864076372}
   - {fileID: 2055119546}
   m_Father: {fileID: 0}
@@ -573,9 +666,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2137433054}
   - {fileID: 1586959748}
   - {fileID: 337982610}
-  - {fileID: 2137433054}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &864076371
@@ -1082,7 +1175,7 @@ GameObject:
   - component: {fileID: 1372207070}
   - component: {fileID: 1372207071}
   m_Layer: 0
-  m_Name: Initialization
+  m_Name: AssetPreloader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1112,11 +1205,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1372207069}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed4254ca20327f145a6dca52401750a8, type: 3}
+  m_Script: {fileID: 11500000, guid: b8fef3817846c1e4982f11d90b644a56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: TinyWalnutGames::TinyWalnutGames.PreloadAssets
-  uiDocument: {fileID: 1586959749}
-  tooltipTemplate: {fileID: 9197481963319205126, guid: 9cb608a2ca6b9a246881575cd89a55dc, type: 3}
   autoAdvanceSceneName: MainMenu
   nextSceneName: MainMenu
   nextSceneIndex: 1
@@ -1203,7 +1294,7 @@ GameObject:
   - component: {fileID: 1586959748}
   - component: {fileID: 1586959749}
   m_Layer: 5
-  m_Name: UIDocument
+  m_Name: PreloadUIDocumentObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1481,3 +1572,4 @@ SceneRoots:
   - {fileID: 641181403}
   - {fileID: 2104523373}
   - {fileID: 706262821}
+  - {fileID: 139953080}

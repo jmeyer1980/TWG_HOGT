@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using TinyWalnutGames.UITKTemplates.Tools;
+using System.Collections.Generic;
 
 namespace TinyWalnutGames.UITKTemplates.MainMenu
 {
@@ -20,9 +21,9 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
         // Add reference to LanguageDropdown component (should be on the same GameObject)
         public LanguageDropdown languageDropdown;
 
-        private VisualElement _settingsPanelRoot; // is this supposed to be set to settings_panel.xml?
-        private VisualElement _settingsBackground; // #settingsbackground, the background element for the settings panel, used to hide the play area when settings are open and positioned the panel correctly.
-        private VisualElement _settingsPanel; // The main settings panel container, where all settings UI elements are placed.
+        private VisualElement _settingsPanelRoot;
+        private VisualElement _settingsBackground;
+        private VisualElement _settingsPanel;
         private Button _closeSettingsButton;
         private Button _resetMinigameButton;
         private Toggle _musicToggle;
@@ -31,6 +32,12 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
         private Slider _sfxVolumeSlider;
 
         private bool _initialized = false;
+
+        // Add: Validation config for modular UI validation
+        private UIDocumentValidationConfig _validationConfig;
+
+        // Dummy UIDocument ref for validator compatibility (not used for template-based panels)
+        private static UIDocument UnsafeNullUIDocumentRef = null;
 
         private void Awake()
         {
@@ -48,12 +55,32 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
                 return;
             }
 
-            LocalizationHelper.LocaleChanged += RefreshLocalizedUI;
+            // Setup validation config for settings panel
+            _validationConfig = new UIDocumentValidationConfig
+            {
+                NamedElements = new Dictionary<string, System.Type>
+                {
+                    { "settingsbackground", typeof(VisualElement) },
+                    { "settings_panel", typeof(VisualElement) },
+                    { "button_close_settings", typeof(Button) },
+                    { "button_reset_minigame", typeof(Button) },
+                    { "toggle_music", typeof(Toggle) },
+                    { "toggle_sfx", typeof(Toggle) },
+                    { "m_vol", typeof(Slider) },
+                    { "sfx_vol", typeof(Slider) },
+                    { "dropdown_language", typeof(DropdownField) }
+                },
+                ProgressBarName = null // Not required in settings menu
+            };
+
+            LocalizationHelper.LocaleChanged += OnLocaleChanged;
+
+            RefreshLocalizedUI();
         }
 
         private void OnDestroy()
         {
-            LocalizationHelper.LocaleChanged -= RefreshLocalizedUI;
+            LocalizationHelper.LocaleChanged -= OnLocaleChanged;
         }
 
         /// <summary>
@@ -76,9 +103,12 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
             _settingsPanelRoot = settingsTemplate.CloneTree();
             parent.Add(_settingsPanelRoot);
 
-            // Assign the background element (ensure the name matches your UXML)
-            _settingsBackground = _settingsPanelRoot.Q<VisualElement>("settingsbackground"); // <-- fix: assign to background
-            _settingsPanel = _settingsPanelRoot.Q<VisualElement>("settings_panel"); // <-- fix: assign to panel inside background
+            // Validate the settings panel root using the modular validator
+            UIDocumentValidator.ValidateOrFixUIDocument(
+                this, ref UnsafeNullUIDocumentRef, null, _validationConfig, out _, out _, false);
+
+            _settingsBackground = _settingsPanelRoot.Q<VisualElement>("settingsbackground");
+            _settingsPanel = _settingsPanelRoot.Q<VisualElement>("settings_panel");
             _closeSettingsButton = _settingsPanelRoot.Q<Button>("button_close_settings");
             _resetMinigameButton = _settingsPanelRoot.Q<Button>("button_reset_minigame");
             _musicToggle = _settingsPanelRoot.Q<Toggle>("toggle_music");
@@ -135,6 +165,14 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
                 if (AudioManager.Instance != null)
                     AudioManager.Instance.SetSFXVolume(value);
             });
+            // Validate Locale
+            var localeCode = LocalizationHelper.GetCurrentLocaleCode();
+            if (localeCode == null)
+                LocalizationHelper.ResetLocaleToSystemDefault();
+            // Validate the initial state of the settings UI with the modular validator
+            // This ensures all elements are correctly initialized and localized
+            UIDocumentValidator.ValidateOrFixUIDocument(
+                this, ref UnsafeNullUIDocumentRef, null, _validationConfig, out _, out _, true);
 
             RefreshLocalizedUI();
             _initialized = true;
@@ -178,6 +216,7 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
 
         public void RefreshLocalizedUI()
         {
+#if UNITY_WEBGL
             if (_settingsPanelRoot == null) return;
             var closeSettingsButton = _settingsPanelRoot.Q<Button>("button_close_settings");
             var resetMinigameButton = _settingsPanelRoot.Q<Button>("button_reset_minigame");
@@ -194,6 +233,29 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
             if (sfxSlider != null) sfxSlider.label = LocalizationHelper.GetLocalizedString("ui", "label_sfx");
             if (musicToggle != null) musicToggle.tooltip = LocalizationHelper.GetLocalizedString("tooltips", "music_tooltip");
             if (sfxToggle != null) sfxToggle.tooltip = LocalizationHelper.GetLocalizedString("tooltips", "sfx_tooltip");
+#else       
+            if (_settingsPanelRoot == null) return;
+            // Refresh all localized UI elements in the settings panel
+            _initialized = true;
+            var closeSettingsButton = _settingsPanelRoot.Q<Button>("button_close_settings");
+            var resetMinigameButton = _settingsPanelRoot.Q<Button>("button_reset_minigame");
+            var settingsLabel = _settingsPanelRoot.Q<Label>("label_settings");
+            var musicSlider = _settingsPanelRoot.Q<Slider>("m_vol");
+            var sfxSlider = _settingsPanelRoot.Q<Slider>("sfx_vol");
+            var musicToggle = _settingsPanelRoot.Q<Toggle>("toggle_music");
+            var sfxToggle = _settingsPanelRoot.Q<Toggle>("toggle_sfx");
+            if (closeSettingsButton != null) closeSettingsButton.text = LocalizationHelper.GetLocalizedString("HOGT_UI", "btn_close_label");
+            if (resetMinigameButton != null) resetMinigameButton.text = LocalizationHelper.GetLocalizedString("HOGT_UI", "btn_reset_minigame_label");
+            if (settingsLabel != null) settingsLabel.text = LocalizationHelper.GetLocalizedString("HOGT_UI", "label_settings_title");
+            if (musicSlider != null) musicSlider.label = LocalizationHelper.GetLocalizedString("HOGT_UI", "label_music");
+            if (sfxSlider != null) sfxSlider.label = LocalizationHelper.GetLocalizedString("HOGT_UI", "label_sfx");
+            if (musicToggle != null) musicToggle.tooltip = LocalizationHelper.GetLocalizedString("tooltips", "music_tooltip");
+#endif
+            // Update tooltip font for settings tooltips
+            if (TooltipManager.Instance != null)
+            {
+                TooltipManager.Instance.SetFontAsset(LocalizationHelper.GetFontForCurrentLocale());
+            }
         }
 
         public void Show()
@@ -203,6 +265,19 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
                 _settingsBackground.style.display = DisplayStyle.Flex;
             if (_settingsPanel != null)
                 _settingsPanel.style.display = DisplayStyle.Flex;
+
+            // Ensure the settings panel is initialized
+            if (!_initialized)
+            {
+                Initialize(_settingsPanelRoot?.parent);
+                if (!_initialized)
+                    Debug.LogWarning("[SettingsMenu] SettingsMenu not initialized. Call Initialize() first.");                
+            }
+            if (languageDropdown != null)
+                languageDropdown.Initialize(_settingsPanelRoot);
+
+            // Refresh localized UI to ensure all text is up-to-date
+            RefreshLocalizedUI();
         }
 
         public void Hide()
@@ -211,6 +286,17 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
                 _settingsPanel.style.display = DisplayStyle.None;
             if (_settingsBackground != null)
                 _settingsBackground.style.display = DisplayStyle.None;
+        }
+
+        // Add: LocaleChanged handler to ensure all UI and tooltips update
+        private void OnLocaleChanged()
+        {
+            RefreshLocalizedUI();
+            if (TooltipManager.Instance != null)
+            {
+                TooltipManager.Instance.SetFontAsset(LocalizationHelper.GetFontForCurrentLocale());
+            }
+            MainMenuController.RaiseLocalizedUIRefresh();
         }
     }
 }

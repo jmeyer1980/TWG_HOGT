@@ -258,7 +258,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51326bc3ea11e544d9c99ebc84e30ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: TinyWalnutGames.HOGT::TinyWalnutGames.HOGT.LevelManager
-  UIDocument: {fileID: 1586959749}
+  uiDocument: {fileID: 1586959749}
+  expectedUIRoot: {fileID: 1586959749}
+  uiVisualTreeAsset: {fileID: 9197481963319205126, guid: 172c28c56c144c5458c12a696e881e19, type: 3}
+  expecteduiVisualTreeAsset: {fileID: 9197481963319205126, guid: 172c28c56c144c5458c12a696e881e19, type: 3}
   levelCardTemplate: {fileID: 9197481963319205126, guid: 6783d41c91acec74b9c1f0e3d89bd4bd, type: 3}
   currentLevelIndex: 0
   levelCards:
@@ -1142,7 +1145,7 @@ GameObject:
   - component: {fileID: 1586959748}
   - component: {fileID: 1586959749}
   m_Layer: 5
-  m_Name: UIDocument
+  m_Name: LevelSelectUIDocumentObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1235,8 +1238,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: TinyWalnutGames.Localization::TinyWalnutGames.Localization.LocalizationTableHolder
   tables:
-  - {fileID: 11400000, guid: 6da5379504b045641b7eef1971426e5f, type: 2}
-  - {fileID: 11400000, guid: ab1f1e3376ad6054fb3561bfd66a556c, type: 2}
+  - {fileID: 11400000, guid: f765c44ed51ea9640a21e8da9819cd71, type: 2}
+  - {fileID: 11400000, guid: a680f522d3fe67542bf40432a36d6686, type: 2}
+  - {fileID: 11400000, guid: 5a6843dba23274b4582865429a33ccd9, type: 2}
+  - {fileID: 11400000, guid: 36b384aceb589e44b80503f078beac71, type: 2}
   localeFonts:
   - localeCode: zh-Hans
     font: {fileID: 11400000, guid: c26157ffa228ab34884e26d2c6f492da, type: 2}
@@ -1510,7 +1515,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 270688083}
-  - {fileID: 641181403}
   - {fileID: 2104523373}
-  - {fileID: 706262821}
   - {fileID: 281273607}
+  - {fileID: 641181403}
+  - {fileID: 706262821}

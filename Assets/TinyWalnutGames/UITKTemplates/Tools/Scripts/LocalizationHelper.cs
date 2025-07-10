@@ -14,6 +14,7 @@ using UnityEngine.Localization.Settings;
 using Newtonsoft.Json;
 using UnityEngine.Localization.Tables;
 using NUnit.Framework;
+using UnityEngine.AddressableAssets;
 
 namespace TinyWalnutGames.UITKTemplates.Tools
 {
@@ -40,7 +41,7 @@ namespace TinyWalnutGames.UITKTemplates.Tools
         private static Dictionary<string, FontAsset> _fontByLocale = new(); // Optimized: font lookup by locale
         private static bool _isLoaded = false; // Tracks if tables are assigned
 
-        private const string PlayerPrefsLocaleKey = "SelectedLocale";
+        private const string PlayerPrefsLocaleKey = "selected_locale";
 
         public static List<LanguageChoice> GetLanguageChoices()
         {
@@ -93,6 +94,51 @@ namespace TinyWalnutGames.UITKTemplates.Tools
             LocalizationSettings.SelectedLocale = originalLocale;
             return !string.IsNullOrEmpty(localized) ? localized : fallback;
         }
+
+        public static Locale GetLocaleFromCode(string localeCode)
+        {
+            if (string.IsNullOrEmpty(localeCode))
+                return null;
+            var locales = LocalizationSettings.AvailableLocales.Locales;
+            foreach (var locale in locales)
+            {
+                if (locale.Identifier.Code == localeCode)
+                    return locale;
+            }
+            return null;
+        }
+
+        public static Locale GetLocaleFromCode(LocaleIdentifier localeId)
+        {
+            var locales = LocalizationSettings.AvailableLocales.Locales;
+            foreach (var locale in locales)
+            {
+                if (locale.Identifier == localeId)
+                    return locale;
+            }
+            return null;
+        }
+
+#if UNITY_WEBGL
+        public static string GetLocalizedStringForLocale(string table, string key, string locale, string fallback = "en")
+        {
+            if (string.IsNullOrEmpty(key))
+                return fallback;
+            var tbl = GetTableForLocale(table, locale);
+            if (tbl != null && tbl.TryGetValue(key, out var value) && !string.IsNullOrEmpty(value))
+                return value;
+            return fallback;
+        }
+
+        public static string GetLocaleFromCode(string localeCode)
+        {
+            if (LocalizationSettings.AvailableLocales.TryGetLocale(new LocaleIdentifier(localeCode), out var locale))
+            {
+                return locale.Identifier.Code;
+            }
+            return "en"; // Default to English if not found
+        }
+#endif
 
         public static IEnumerator PreloadAllLocalesAsync()
         {
@@ -264,21 +310,52 @@ namespace TinyWalnutGames.UITKTemplates.Tools
         }
 
         // UnityLocalization does not require manual sprite loading, but you can implement a similar method if needed.
-        public static Sprite LoadLocaleSprite(string fallbackLocale = "en")
+        public static Sprite LoadLocaleSprite(Locale locale)
         {
-            // Unity.Localization does not use Resources.Load for sprites, so this is a placeholder.
-            // You can implement your own logic if you have sprites stored in Resources.
-            return null; // Return null as Unity.Localization does not handle sprites this way
+            // Unity.Localization does not use Resources.Load for sprites, but we can make sure addressables
+            // are set up correctly to load sprites based on locale.
+            if (locale == null)
+            {
+                Debug.LogWarning("Locale is null, cannot load sprite.");
+                return null;
+            }
+            else if (string.IsNullOrEmpty(locale.Identifier.Code))
+            {
+                Debug.LogWarning("Locale code is empty, cannot load sprite.");
+                return null;
+            }
+            else
+            {
+                string localeCode = locale.Identifier.Code.ToLowerInvariant().Replace("-", "_"); // Normalize to match resource naming
+                string resourceName = $"Resources/{localeCode}.png"; // Example resource path, adjust as needed
+                // Use Addressables to load the sprite for the current locale
+                var handle = Addressables.LoadAssetAsync<Sprite>(resourceName);
+                if (handle.Status == UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationStatus.Succeeded)
+                {
+                    return handle.Result;
+                }
+                else
+                {
+                    Debug.LogWarning($"Failed to load sprite for locale '{localeCode}' from '{resourceName}'.");
+                    return null; // Return null if sprite not found
+                }
+            }
+        }
+
+        // Add: Helper to raise LocaleChanged for all UI scripts
+        public static void RaiseLocaleChanged()
+        {
+            LocaleChanged?.Invoke();
         }
     }
 
 #else // UNITY_WEBGL
-    /// <summary>
-    /// Helper class for localization.
-    /// Handles loading and retrieving localized strings from assigned LocalizationTable components.
-    /// Also manages font assignment per locale.
-    /// </summary>
-    public static class LocalizationHelper
+        /// <summary>
+        /// Helper class for localization.
+        /// Handles loading and retrieving localized strings from assigned LocalizationTable components.
+        /// Also manages font assignment per locale.
+        /// </summary>
+        public static class LocalizationHelper
     {
         [Serializable]
         public class LanguageChoice
@@ -296,7 +373,7 @@ namespace TinyWalnutGames.UITKTemplates.Tools
         public static event Action LocaleChanged;
         private static bool _isLoaded = false;
 
-        private const string PlayerPrefsLocaleKey = "SelectedLocale";
+        private const string PlayerPrefsLocaleKey = "selected_locale";
 
         public static IEnumerator PreloadAllLocalesAsync()
         {
@@ -617,6 +694,12 @@ namespace TinyWalnutGames.UITKTemplates.Tools
         public static string GetCurrentLocaleCode()
         {
             return _currentLocale;
+        }
+
+        // Add: Helper to raise LocaleChanged for all UI scripts
+        public static void RaiseLocaleChanged()
+        {
+            LocaleChanged?.Invoke();
         }
 
 #if UNITY_EDITOR

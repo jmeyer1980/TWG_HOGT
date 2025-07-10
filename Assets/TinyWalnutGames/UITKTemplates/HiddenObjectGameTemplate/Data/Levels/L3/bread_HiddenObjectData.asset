@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: bread_HiddenObjectData
   m_EditorClassIdentifier: TinyWalnutGames.UITKTemplates.HOGT::TinyWalnutGames.UITKTemplates.HOGT.HiddenObjectData
   objectName: bread
-  objectSprite: {fileID: 2800000, guid: a6da1f1fec5573f40a0fa444e7a5e625, type: 2}
-  objectID: 704864e1-e525-4ed7-9b24-4dc042008b16
+  objectNameKey: 
+  objectID: 7e403bd7-7f24-47e4-95d2-8244d54cb308
   position: {x: 0, y: 0}
   size: {x: 129, y: 205}
   description: 
+  descriptionKey: 
   tags: []
   isDraggable: 0
   isSecret: 0
-  templateElement: {fileID: 9197481963319205126, guid: 6be377f3d5fda864cbe3cc42a03dfc7d, type: 3}
-  foundToastSprite: {fileID: 2800000, guid: fdaf2fbabac805e4aabf9d6b7c59fb7f, type: 3}
+  templateElement: {fileID: 0}
+  objectSprites:
+  - {fileID: 2800000, guid: d100a7d9682b2f24dbd8d0ecf65c33d0, type: 2}
+  objectSpriteVariants: []
+  toastBackgrounds: []
+  toastBackgroundVariants: []

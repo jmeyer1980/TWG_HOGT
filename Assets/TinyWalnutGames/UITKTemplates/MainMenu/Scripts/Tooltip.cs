@@ -14,13 +14,14 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
     public partial class Tooltip : VisualElement
     {
         private Label _description;
+        private readonly Label _tooltipKey; // Optional: if you want to use a key for localization or other purposes
 
         // Placement constants (can be made public if you want to configure)
         private const float TooltipMargin = 16f;
         private const float TooltipSafeBound = 8f;
 
         // Addressable key for the tooltip template
-        private const string TooltipAddressablesDirectory = "tooltip_template"; // adderessables directory: "Assets\AddressableAssetsData\", streaming assets directory should be "StreamingAssets\aa\"? But I believe this should be set as the key in the addressables.
+        private const string TooltipAddressablesDirectory = "Assets/AddressableAssetsData"; // adderessables directory: "Assets\AddressableAssetsData\", streaming assets directory should be "StreamingAssets\aa\"? But I believe this should be set as the key in the addressables.
         private const string TooltipLocalResourcesDirectory = "Assets/TinyWalnutGames/HiddenObjectGameTemplate/Resources"; 
         public event System.Action OnTooltipReady;
 
@@ -41,23 +42,53 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
 
         public Tooltip()
         {
-            Debug.Log("[Tooltip] Constructor called. (Should only be called from code, not UXML)");
+            Debug.Log("[Tooltip] Constructor called in code. (Should only be called from code, not UXML)");
             TryInitializeTemplate();
+            TinyWalnutGames.UITKTemplates.Tools.LocalizationHelper.LocaleChanged += OnLocaleChanged;
+        }
+
+        ~Tooltip()
+        {
+            TinyWalnutGames.UITKTemplates.Tools.LocalizationHelper.LocaleChanged -= OnLocaleChanged;
         }
 
         private void TryInitializeTemplate()
         {
-            if (_sharedTooltipTemplate != null)
+            //ensure tooltip template is loaded from the addressables (true) and available
+            if (_sharedTooltipTemplate == null && !_isLoadingTemplate)
             {
-                Debug.Log("[Tooltip] Template already loaded. Initializing tooltip.");
-                Initialize(_sharedTooltipTemplate.CloneTree());
-            }
-            else if (!_isLoadingTemplate)
-            {
+                Debug.Log("[Tooltip] Tooltip template not loaded. Attempting to load from Addressables.");
+#if UNITY_WEBGL // && !UNITY_EDITOR
+                LoadTooltipTemplateWebGL();
+#else
+                // Load the tooltip template asynchronously
                 _isLoadingTemplate = true;
+                LoadTooltipTemplateAsync().ContinueWith(task =>
+                {
+                    if (task.IsCompleted && task.Exception == null)
+                    {
+                        Debug.Log("[Tooltip] Tooltip template loaded successfully.");
+                        OnTemplateLoaded();
+                    }
+                    else
+                    {
+                        Debug.LogError("[Tooltip] Failed to load tooltip template: " + task.Exception?.Message);
+                        _isLoadingTemplate = false;
+                    }
+                });
+#endif
+
+                if (_sharedTooltipTemplate != null)
+                {
+                    Debug.Log("[Tooltip] Template already loaded. Initializing tooltip.");
+                    Initialize(_sharedTooltipTemplate.CloneTree());
+                }
+                else if (!_isLoadingTemplate)
+                {
+                    _isLoadingTemplate = true;
+                }
             }
         }
-
         public void SetSharedTemplate(VisualTreeAsset visualTreeAsset)
         {
             if (visualTreeAsset == null)
@@ -104,12 +135,15 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
             };
         }
 #else
+        // Addressable key for the tooltip template (non-WebGL)
+        private const string TooltipTemplateAddress = "tooltip_template"; // or "tooltip" if that's the correct key
         /// <summary>
         /// Loads the tooltip template from Addressables asynchronously (non-WebGL).
         /// </summary>
+
         private async System.Threading.Tasks.Task LoadTooltipTemplateAsync()
         {
-            var handle = Addressables.LoadAssetAsync<VisualTreeAsset>(TooltipUxmlAddress);
+            var handle = Addressables.LoadAssetAsync<VisualTreeAsset>(TooltipTemplateAddress);
             await handle.Task;
             if (handle.Status == AsyncOperationStatus.Succeeded && handle.Result != null)
             {
@@ -128,6 +162,7 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
             }
             Addressables.Release(handle);
         }
+
 #endif
 
         // on template loaded, invoke the event and set up the tooltip
@@ -189,6 +224,11 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
                 Debug.LogWarning("[Tooltip] SetText called but _description is null.");
             }
 #else
+            if (_description == null && _sharedTooltipTemplate != null)
+            {
+                Debug.LogWarning("[Tooltip] _description was null in SetText, attempting to re-initialize.");
+                Initialize(_sharedTooltipTemplate.CloneTree());
+            }
             if (_description != null)
             {
                 Debug.Log($"[Tooltip] SetText: {text}");
@@ -196,7 +236,7 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
             }
             else
             {
-                Debug.LogWarning("[Tooltip] SetText called but _description is null.");
+                Debug.LogWarning("[Tooltip] SetText called but _description is still null after re-initialization.");
             }
 #endif
         }
@@ -273,6 +313,23 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
 
             this.style.left = left;
             this.style.top = top;
+        }
+
+        /// <summary>
+        /// Update tooltip text/font on locale change if visible.
+        /// </summary>
+        private void OnLocaleChanged()
+        {
+            // If tooltip is visible, refresh its text/font
+            if (this.style.display == DisplayStyle.Flex && _description != null)
+            {
+                // Optionally re-localize the text if using localization keys
+                // _description.text = ...;
+                // Always update font
+                var font = TinyWalnutGames.UITKTemplates.Tools.LocalizationHelper.GetFontForCurrentLocale();
+                if (font != null)
+                    _description.style.unityFontDefinition = new UnityEngine.UIElements.FontDefinition { fontAsset = font };
+            }
         }
     }
 }

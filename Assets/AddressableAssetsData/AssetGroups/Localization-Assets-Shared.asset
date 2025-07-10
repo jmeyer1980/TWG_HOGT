@@ -21,6 +21,12 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 773bfbad009c6ca489637fe0ca9f32ae
+    m_Address: Assets/TinyWalnutGames/UITKTemplates/HiddenObjectGameTemplate/Data/Unity_Localization/HOGT_Level_Cards
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bd071438877643b418828608ed8dfb7c
     m_Address: Assets/TinyWalnutGames/Data/Unity_Localization/textures Shared Data.asset
     m_ReadOnly: 1

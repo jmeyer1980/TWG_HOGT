@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 138478ebdd0948a429b5799d2a382b52, type: 3}
+  m_Name: LD01
+  m_EditorClassIdentifier: TinyWalnutGames.HOGT::TinyWalnutGames.HOGT.LevelData
+  levelName: Good Morning
+  levelNameKey: level1
+  levelDescription: Just waking up, we have a view of the bedroom.
+  levelDescriptionKey: level1description
+  levelNumber: 0
+  isUnlocked: 1
+  levelBackground: {fileID: 2800000, guid: 8bca0f7baf26b0545b5a14325d262a8a, type: 3}
+  levelForeground: {fileID: 2800000, guid: 87bc55ae050c4f447a7963aded3a3ab4, type: 3}
+  hasTimeLimit: 0
+  timeLimit: 0
+  objectsToFind:
+  - {fileID: 11400000, guid: a24a3f45ad24d9b49a54fa7284fdf1ee, type: 2}
+  - {fileID: 11400000, guid: 77c85c535c6621748bae616a3f32230b, type: 2}
+  - {fileID: 11400000, guid: 9e59caa231eb95e49a1ca865eb56cf59, type: 2}
+  - {fileID: 11400000, guid: a0301571f81db884dbca4bbf31d89ee4, type: 2}
+  - {fileID: 11400000, guid: b7a3d3dfab1a3e2418478f6e4ce7df98, type: 2}
+  - {fileID: 11400000, guid: 7e47cfc83b78698498a1f52f246044ef, type: 2}
+  - {fileID: 11400000, guid: 12f438ae67eb0ea4487a4e8f717741e8, type: 2}
+  - {fileID: 11400000, guid: 3d11d72c6488f724ca9d7cbea1a45e8b, type: 2}
+  - {fileID: 11400000, guid: e6821c87f6617ef44818233eb788f02c, type: 2}
+  - {fileID: 11400000, guid: 2a437044bd49e064e913ffda2a9ec81e, type: 2}
+  objectsFound: []
+  sceneName: Level01
+  uiDocument: {fileID: 9197481963319205126, guid: cddb3b15b4f66594e8a85d162c81c7b2, type: 3}

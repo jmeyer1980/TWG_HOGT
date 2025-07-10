@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: Bird1_HiddenObjectData
   m_EditorClassIdentifier: TinyWalnutGames.UITKTemplates.HOGT::TinyWalnutGames.UITKTemplates.HOGT.HiddenObjectData
   objectName: Bird1
-  objectSprite: {fileID: 2800000, guid: c6ce03b97f79a234681bc77df210602a, type: 2}
-  objectID: 81bb7d38-3d3e-4afd-8202-e6a52c4fae9e
+  objectNameKey: 
+  objectID: 0ad84780-42c7-4d2c-bdde-a7a3fc0f1d42
   position: {x: 0, y: 0}
   size: {x: 207, y: 118}
   description: 
+  descriptionKey: 
   tags: []
   isDraggable: 0
   isSecret: 0
-  templateElement: {fileID: 9197481963319205126, guid: 6be377f3d5fda864cbe3cc42a03dfc7d, type: 3}
-  foundToastSprite: {fileID: 2800000, guid: fdaf2fbabac805e4aabf9d6b7c59fb7f, type: 3}
+  templateElement: {fileID: 0}
+  objectSprites:
+  - {fileID: 2800000, guid: 1793107f0df51a94e8416abdd939d3d5, type: 2}
+  objectSpriteVariants: []
+  toastBackgrounds: []
+  toastBackgroundVariants: []

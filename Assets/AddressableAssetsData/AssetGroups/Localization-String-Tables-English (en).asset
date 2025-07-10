@@ -15,6 +15,13 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-English (en)
   m_GUID: 9d4da8c76033fa74a8831325d371b17f
   m_SerializeEntries:
+  - m_GUID: 05f01dbcacbedf046b737d735a48c7d4
+    m_Address: HOGT_Level_Cards_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7efd8aaa05c51dc40a9026493500aa40
     m_Address: HOGT_UI_en
     m_ReadOnly: 1

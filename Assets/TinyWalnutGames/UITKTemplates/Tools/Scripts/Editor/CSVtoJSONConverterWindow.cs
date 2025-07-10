@@ -113,7 +113,7 @@ namespace TinyWalnutGames.UITKTemplates.Tools.Editor
         }
 
         // Optional: Context menu for right-click in Project window
-        [MenuItem("Assets/Convert CSV to JSON", true)]
+        [MenuItem("Tools/Tiny Walnut Games/Convert CSV to JSON", true)]
         private static bool ValidateConvertCSV()
         {
             foreach (var obj in Selection.objects)

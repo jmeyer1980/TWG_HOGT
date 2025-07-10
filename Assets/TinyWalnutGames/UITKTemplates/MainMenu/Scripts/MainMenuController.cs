@@ -6,15 +6,24 @@ using UnityEngine.SceneManagement;
 using UnityEngine.TestRunner;
 using UnityEngine.TextCore.Text;
 #endif
+#if UNITY_LOCALIZATION
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
+using UnityEngine.Localization.Tables;
+using UnityEngine.Localization.SmartFormat.Core.Parsing;
+using UnityEngine.Localization.SmartFormat.Core.Formatting;
+#endif
 using System.Collections.Generic;
 using TinyWalnutGames.UITKTemplates.Tools;
 using System;
+using System.Collections;
 
 namespace TinyWalnutGames.UITKTemplates.MainMenu
 {
     public class MainMenuController : MonoBehaviour
     {
-        public UIDocument uiDocument;
+        [SerializeField] private UIDocument uiDocument; // Ensure this is assigned in the inspector
+        [SerializeField] private VisualTreeAsset uiVisualTreeAsset; // The UXML template for the main menu UI
 
         // Reference to SettingsMenu (template-based, not UIDocument)
         public SettingsMenu settingsMenu;
@@ -30,8 +39,8 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
         private const float TooltipMargin = 16f; // Space between mouse and tooltip
         private const float TooltipSafeBound = 8f; // Minimum space from screen edge
 
-        private VisualElement _languageDropdown;
-        private Label _labelLanguage;
+        private readonly VisualElement _languageDropdown;
+        private readonly Label _labelLanguage;
 
         private bool tooltipManagerInitialized = false;
         private bool _localizationReady = false;
@@ -42,17 +51,15 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
         private Button playButton;
         private Button settingsButton;
 
-        public MainMenuController(bool tooltipTemplateReady)
-        {
-            _tooltipTemplateReady = tooltipTemplateReady;
-        }
-
         private readonly string sfxToggleTooltip;
         private readonly string musicToggleTooltip;
         private readonly string languageDropdownTooltip;
         private readonly string resetMinigameButtonTooltip;
-        private readonly string openSettingsButtonTooltip;
-        private readonly string playButtonTooltip;
+        private string openSettingsButtonTooltip;
+        private string playButtonTooltip;
+
+        // Add this field to make config accessible throughout the class
+        private UIDocumentValidationConfig config;
 
         // --- UI Sound Effect Key Definitions ---
         // See documentation above for the meaning of each key.
@@ -66,79 +73,77 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
                 AudioManager.Instance.PlaySFX(key);
         }
 
+        // FIX: Remove 'yield return' from Awake (cannot use yield in void methods).
+        // Move all coroutine logic out of Awake and into the coroutine itself.
+
         private void Awake()
-        {       
+        {
             Debug.Log($"[MainMenuController] Awake: GameObject.activeSelf={gameObject.activeSelf}, enabled={enabled}, uiDocument={(uiDocument != null ? "assigned" : "null")}");
 
-            // Ensure uiDocument is assigned, try to find it in the scene if not
-            if (uiDocument == null)
+            // Initialize config as a field so it can be reused elsewhere
+            config = new UIDocumentValidationConfig
             {
-                uiDocument = GetComponent<UIDocument>();
-                if (uiDocument == null)
+                NamedElements = new Dictionary<string, System.Type>
                 {
-                    uiDocument = FindFirstObjectByType<UIDocument>();
-                    if (uiDocument != null)
-                        Debug.LogWarning("[MainMenuController] UIDocument was not assigned in Inspector, but was found in the scene and assigned.");
-                }
-            }
+                    { "button_play", typeof(Button) },
+                    { "button_open_settings", typeof(Button) }
+                },
+                ProgressBarName = null // Not required in main menu
+            };
+            UIDocumentValidator.ValidateOrFixUIDocument(this, ref uiDocument, uiVisualTreeAsset, config, out var root, out var progressBar, true);
 
-            if (uiDocument == null)
+            // Only proceed if rootVisualElement is valid
+            if (uiDocument.rootVisualElement == null)
             {
-                Debug.LogError("[MainMenuController] UIDocument is not assigned and could not be found in the scene. Please assign it in the Inspector.");
-                return;
+                Debug.LogError("[MainMenuController] UIDocument rootVisualElement is null. Ensure the UIDocument is set up correctly and MainMenu.uxml is assigned.");
+                return; // Exit early if rootVisualElement is not valid
             }
 
             // Debug: Print rootVisualElement children
-            if (uiDocument.rootVisualElement != null)
+            Debug.Log($"[MainMenuController] rootVisualElement child count: {uiDocument.rootVisualElement.childCount}");
+            foreach (var child in uiDocument.rootVisualElement.Children())
+                Debug.Log($"[MainMenuController] Child: {child.name} ({child.GetType()})");
+
+            // Start the coroutine to get and set the current locale code
+            StartCoroutine(GetAndSetCurrentLocaleCode());
+            Debug.Log("[MainMenuController] Left GetAndSetCurrentLocaleCode coroutine.");
+            Debug.Log("[MainMenuController] Entering ValidateOrFixLocale method.");
+            // Validate or fix the UIDocument and locale: ValidateOrFixLocale(MonoBehaviour context, bool showDevToast, out bool wasFixed)
+            UIDocumentValidator.ValidateOrFixLocale(this, true, out bool wasFixed);
+
+            if (settingsMenu == null)
             {
-                Debug.Log($"[MainMenuController] rootVisualElement child count: {uiDocument.rootVisualElement.childCount}");
-                foreach (var child in uiDocument.rootVisualElement.Children())
-                    Debug.Log($"[MainMenuController] Child: {child.name} ({child.GetType()})");
-            }
-            else
-            {
-                Debug.LogError("[MainMenuController] UIDocument rootVisualElement is null. Ensure the UIDocument is set up correctly and MainMenu.uxml is assigned.");
-                return;
-            }
-
-            LocalizationHelper.SetLocale("zh-hans"); // Default to English locale
-            LocalizationHelper.InitializeLocale();
-
-            LocalizationHelper.LocaleChanged += OnLocaleChanged;
-            LocalizationHelper.LocaleChanged += UpdateLanguageSprite;
-            string localeCode = LocalizationHelper.GetCurrentLocaleCode();
-            LocalizationHelper.SetLocale(localeCode);
-            LocalizedUIRefreshRequested += RefreshLocalizedUI;
-
-            Tooltip.TooltipTemplateLoaded += OnTooltipTemplateLoaded;
-            Debug.Log("[MainMenuController] Subscribed to TooltipTemplateLoaded.");
-
-            _localizationReady = LocalizationHelper.GetAvailableLocales().Count > 0;
-            if (_localizationReady)
-                OnLocalizationReady();
-
-            // Register tooltips and refresh UI, but do NOT assign playButton/settingsButton here
-            var root = uiDocument.rootVisualElement;
-            RegisterTooltipEvents(root);
-            RaiseLocalizedUIRefresh();
-
-            if (TooltipManager.Instance == null)
-            {
-                Debug.LogWarning("[MainMenuController] TooltipManager.Instance is null. Ensure TooltipManager is present in the scene.");
-#if UNITY_EDITOR
-                if (Application.isEditor && Application.isPlaying)
-                    return;
-#endif
-            }
-            else
-            {
-                TryInitTooltipManager();
+                settingsMenu = SettingsMenu.Instance;
+                if (settingsMenu == null)
+                {
+                    Debug.LogError("[MainMenuController] SettingsMenu.Instance is null. Settings menu will not function.");
+                }
             }
         }
 
         private void OnEnable()
         {
             Debug.Log($"[MainMenuController] MainMenu enabled. GameObject.activeSelf={gameObject.activeSelf}, enabled={enabled}");
+
+            // Subscribe to centralized locale change event
+            if (UIRootManager.Instance != null)
+                UIRootManager.Instance.LocaleChanged += RefreshLocalizedUI;
+            
+            if (settingsMenu == null)
+            {
+                settingsMenu = SettingsMenu.Instance;
+                if (settingsMenu == null)
+                {
+                    Debug.LogError("[MainMenuController] SettingsMenu.Instance is null. Settings menu will not function.");
+                }
+            }
+            // Initialize settings menu with the main UI root
+            if (settingsMenu != null && uiDocument != null && uiDocument.rootVisualElement != null)
+            {
+                settingsMenu.Initialize(uiDocument.rootVisualElement);
+            }
+
+            LocalizedUIRefreshRequested?.Invoke();
         }
 
         private void OnDisable()
@@ -147,9 +152,11 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
 #if UNITY_EDITOR
             Debug.Assert(false, "[MainMenuController] MainMenu was disabled unexpectedly.");
 #endif
-            LocalizationHelper.LocaleChanged -= OnLocaleChanged;
-            LocalizationHelper.LocaleChanged -= UpdateLanguageSprite;
-            LocalizationHelper.SetLocale("en");
+
+            // Unsubscribe from centralized locale change event
+            if (UIRootManager.Instance != null)
+                UIRootManager.Instance.LocaleChanged -= RefreshLocalizedUI;
+
             LocalizedUIRefreshRequested -= RefreshLocalizedUI;
             Tooltip.TooltipTemplateLoaded -= OnTooltipTemplateLoaded;
             Debug.Log("[MainMenuController] Unsubscribed from TooltipTemplateLoaded.");
@@ -158,7 +165,7 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
         private void OnDestroy()
         {
             if (_preloadSubscribed)
-                PreloadAssets.PreloadComplete -= OnPreloadComplete;
+                AssetPreloader.Instance.PreloadComplete -= OnPreloadComplete;
 
             if (playButton != null)
                 playButton.clicked -= OnPlayButtonClicked;
@@ -171,18 +178,84 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
             if (!tooltipManagerInitialized)
             {
                 tooltipManagerInitialized = true;
-                TryInitTooltipManager();
+                // TryInitTooltipManager();
             }
         }
 
         private void OnLocalizationReady()
         {
+            Debug.Log("[MainMenuController] OnLocalizationReady: Localization IS NOW READY.");
             _localizationReady = true;
+            Debug.Log("[MainMenuController] Localization is now ready.");
+
+            // Explicitly re-initialize tooltips with latest localization if possible
+            if (TooltipManager.Instance != null && Tooltip.IsTemplateReady)
+            {
+                var root = uiDocument.rootVisualElement;
+                TooltipManager.Instance.Initialize(root);
+                RegisterTooltipEvents(root);
+                Debug.Log("[MainMenuController] TooltipManager re-initialized after localization became ready.");
+            }
+
+            RefreshLocalizedUI(); // Ensure UI and tooltips use latest localization
+
+            // Fallback: still call TryInitTooltipManager for any additional logic
             TryInitTooltipManager();
+        }
+
+        // Coroutine to get and set the current locale code from the UIRootManager
+        private IEnumerator GetAndSetCurrentLocaleCode()
+        {
+            Debug.Log("[MainMenuController] GetAndSetCurrentLocaleCode coroutine started.");
+            
+            // Wait for both UIRootManager and UI to be ready
+            Debug.Log("[MainMenuController] Waiting for UIRootManager and UIDocument to be ready...");
+            while (UIRootManager.Instance == null || UIRootManager.Instance.CurrentLocaleCode() == null || uiDocument == null || uiDocument.rootVisualElement == null)
+            { 
+                Debug.Log("[MainMenuController] Waiting for UIRootManager and UIDocument to be ready...");
+                if (UIRootManager.Instance == null)
+                    Debug.LogWarning("[MainMenuController] UIRootManager is not initialized yet and never will be unless we exit the coroutine?");                   
+                if (uiDocument == null)
+                    Debug.LogWarning("[MainMenuController] UIDocument is not assigned or initialized yet.");
+                if (uiDocument.rootVisualElement == null)
+                    Debug.LogWarning("[MainMenuController] UIDocument rootVisualElement is not ready yet.");
+                if (LocalizationHelper.GetCurrentLocaleCode() == null)
+                    Debug.LogWarning("[MainMenuController] LocalizationHelper.GetCurrentLocaleCode() is null. Waiting for localization to be ready.");
+                else
+                    Debug.Log($"[MainMenuController] Current locale code: {LocalizationHelper.GetCurrentLocaleCode()}");
+                // Yield until the next frame to avoid blocking the main thread
+                yield return null;
+            }
+            
+            Debug.Log("[MainMenuController] UIRootManager and UIDocument are ready, proceeding to set locale.");
+            
+            string localeCode = UIRootManager.Instance.CurrentLocaleCode();
+            
+            Debug.Log($"[MainMenuController] Current locale code already set from UIRootManager: {localeCode}");
+            
+            // Only set locale if not already set
+            if (LocalizationHelper.GetCurrentLocaleCode() != localeCode)
+            {
+                Debug.Log($"[MainMenuController] Was not already set. Setting locale to: {localeCode}");
+                LocalizationHelper.SetLocale(localeCode);
+                PlayerPrefs.SetString("selected_locale", localeCode);
+                PlayerPrefs.Save();
+                Debug.Log($"[MainMenuController] Current locale set to: {localeCode}");
+            }
+            
+            Debug.Log("[MainMenuController] Locale set, now waiting for localization to be ready.");
+
+            // Wait for fixed update to ensure the locale is set before refreshing UI
+            yield return new WaitForFixedUpdate(); // this exits on the next frame, the next line does not fire?
+            OnLocalizationReady();
+            // Use shared validator for UIDocument and locale
+            UIDocumentValidator.ValidateOrFixUIDocument(this, ref uiDocument, uiVisualTreeAsset, config, out _, out _, true);
+            Debug.Log("[MainMenuController] GetAndSetCurrentLocaleCode coroutine completed.");
         }
 
         private void TryInitTooltipManager()
         {
+            Debug.Log("[MainMenuController] TryInitTooltipManager invoked.");
             // Debug: Log the current state of all relevant flags
             Debug.Log($"[MainMenuController] TryInitTooltipManager called. " +
                       $"TooltipManager.Instance: {(TooltipManager.Instance != null ? "present" : "null")}, " +
@@ -228,6 +301,13 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
         {
             Debug.Log($"[MainMenuController] Start: GameObject.activeSelf={gameObject.activeSelf}, enabled={enabled}");
 
+            // Subscribe to centralized locale change event
+            if (UIRootManager.Instance != null)
+                UIRootManager.Instance.LocaleChanged += RefreshLocalizedUI;
+
+            // Register tooltips and other UI only after root is valid
+            Tooltip.TooltipTemplateLoaded += OnTooltipTemplateLoaded;
+
             var root = uiDocument.rootVisualElement;
 
             // Play button: try direct, then via container
@@ -263,8 +343,11 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
 
             if (settingsMenu == null)
             {
-                Debug.LogError("[MainMenuController] settingsMenu is null in Start. Please assign it in the inspector or initialize it before use.");
-                return;
+                settingsMenu = SettingsMenu.Instance;
+                if (settingsMenu == null)
+                {
+                    Debug.LogError("[MainMenuController] SettingsMenu.Instance is null. Settings menu will not function.");
+                }
             }
 
             // Ensure settingsMenu is initialized with the main UI root
@@ -278,16 +361,33 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
             if (settingsButton != null)
                 settingsButton.clicked += OnSettingsButtonClicked;
 
-            if (PreloadAssets.Instance != null && !PreloadAssets.Instance.IsReady)
+            if (AssetPreloader.Instance != null && !AssetPreloader.Instance.IsReady)
             {
                 Debug.Log("[MainMenuController] Waiting for PreloadAssets to complete before initializing menu.");
-                PreloadAssets.PreloadComplete += OnPreloadComplete;
+                AssetPreloader.Instance.PreloadComplete += OnPreloadComplete;
                 _preloadSubscribed = true;
             }
             else
             {
                 OnPreloadComplete();
             }
+
+            // Start coroutine to attach UIDocument to UIRootManager when ready
+            StartCoroutine(AttachUIDocumentWhenReady());
+        }
+
+        // Add this coroutine to ensure UIDocument is attached only when ready
+        private IEnumerator AttachUIDocumentWhenReady()
+        {
+            // Wait for UIRootManager and UIDocument to be ready
+            while (UIRootManager.Instance == null ||
+                   uiDocument == null ||
+                   uiDocument.rootVisualElement == null)
+            {
+                yield return null;
+            }
+            Debug.Log("[MainMenuController] Assigning UIDocument to UIRootManager (no parenting, just assignment).");
+            // UIRootManager.Instance.AttachSceneUIDocument(uiDocument);
         }
 
         private void OnPreloadComplete()
@@ -296,7 +396,7 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
             // Only load MainMenu if we're not already in the MainMenu scene
             if (SceneManager.GetActiveScene().name != "MainMenu")
             {
-                PreloadAssets.LoadSceneWhenReady("MainMenu");
+                AssetPreloader.LoadSceneWhenReady("MainMenu");
             }
         }
 
@@ -319,9 +419,40 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
             {
                 if (element != null && !string.IsNullOrEmpty(element.tooltip))
                 {
-                    RegisterTooltipHandlers(element, element.tooltip);
+                    // For sliders, register value change to show tooltip with value
+                    if (element is Slider slider)
+                    {
+                        RegisterSliderTooltipHandlers(slider);
+                    }
+                    else
+                    {
+                        RegisterTooltipHandlers(element, element.tooltip);
+                    }
                 }
             }
+        }
+
+        // New: Register slider value change to show tooltip with value
+        private void RegisterSliderTooltipHandlers(Slider slider)
+        {
+            slider.RegisterCallback<PointerEnterEvent>(evt =>
+            {
+                ShowTooltip(slider, slider.value);
+                PlayUISound("focus");
+            });
+            slider.RegisterCallback<PointerLeaveEvent>(_ =>
+            {
+                HideTooltip();
+            });
+            slider.RegisterCallback<PointerMoveEvent>(evt =>
+            {
+                MoveTooltip(evt.position);
+            });
+            slider.RegisterValueChangedCallback(evt =>
+            {
+                ShowTooltip(slider, evt.newValue);
+                PlayUISound("drag");
+            });
         }
 
         private void RegisterTooltipHandlers(VisualElement element, string _)
@@ -349,7 +480,7 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
                 throw new ArgumentNullException(nameof(element));
             }
 
-            if (TooltipManager.Instance == null) return;
+            if (TooltipManager.Instance == null || !TooltipManager.Instance.IsInitialized) return;
             Vector2 mousePos = Mouse.current.position.ReadValue();
             TooltipManager.Instance.Show(tooltipText, mousePos);
         }
@@ -357,7 +488,7 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
         // Show tooltip for sliders with value
         private void ShowTooltip(VisualElement element, float value)
         {
-            if (TooltipManager.Instance == null) return;
+            if (TooltipManager.Instance == null || !TooltipManager.Instance.IsInitialized) return;
             Vector2 mousePos = Mouse.current.position.ReadValue();
             TooltipManager.Instance.ShowWithValue(element.name, value, mousePos);
             PlayUISound("drag"); // Play 'drag' sound when adjusting volume
@@ -365,18 +496,19 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
 
         private void MoveTooltip(Vector2 mousePosition)
         {
-            if (TooltipManager.Instance == null) return;
+            if (TooltipManager.Instance == null || !TooltipManager.Instance.IsInitialized) return;
             TooltipManager.Instance.Move(mousePosition);
         }
 
         private void HideTooltip()
         {
-            if (TooltipManager.Instance == null) return;
+            if (TooltipManager.Instance == null || !TooltipManager.Instance.IsInitialized) return;
             TooltipManager.Instance.Hide();
         }
 
         private void RefreshLocalizedUI()
         {
+#if UNITY_LOCALIZATION
             var root = uiDocument.rootVisualElement;
             var playButton = root.Q<UnityEngine.UIElements.Button>("button_play");
             var openSettingsButton = root.Q<UnityEngine.UIElements.Button>("button_open_settings");
@@ -385,26 +517,33 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
             var labelsubtitle = root.Q<UnityEngine.UIElements.Label>("label_subtitle");
 
             // Use LocalizationHelper to get localized strings
-            if (playButton != null) playButton.text = LocalizationHelper.GetLocalizedString("ui", "btn_play_label");
-            if (openSettingsButton != null) openSettingsButton.text = LocalizationHelper.GetLocalizedString("ui", "btn_settings_label");
-            if (labeltitle != null) labeltitle.text = LocalizationHelper.GetLocalizedString("ui", "label_title");
-            if (labelsubtitle != null) labelsubtitle.text = LocalizationHelper.GetLocalizedString("ui", "label_subtitle");
+            if (playButton != null) playButton.text = LocalizationHelper.GetLocalizedString("HOGT_UI", "btn_play_label");
+            if (openSettingsButton != null) openSettingsButton.text = LocalizationHelper.GetLocalizedString("HOGT_UI", "btn_settings_label");
+            if (labeltitle != null) labeltitle.text = LocalizationHelper.GetLocalizedString("HOGT_UI", "label_title");
+            if (labelsubtitle != null) labelsubtitle.text = LocalizationHelper.GetLocalizedString("HOGT_UI", "label_subtitle");
+            // Assign tooltips using the correct table
+            if (playButton != null) playButton.tooltip = LocalizationHelper.GetLocalizedString("tooltips", "play_tooltip");
+            if (openSettingsButton != null) openSettingsButton.tooltip = LocalizationHelper.GetLocalizedString("tooltips", "settings_tooltip");
+            // Assign the correct font for the current locale using LocalizationHelper
+            var font = LocalizationHelper.GetFontForCurrentLocale();
+            if (font != null)
+            {
+                if (playButton != null) playButton.style.unityFontDefinition = new FontDefinition { fontAsset = font };
+                if (openSettingsButton != null) openSettingsButton.style.unityFontDefinition = new FontDefinition { fontAsset = font };
 
-#if UNITY_LOCALIZATION
+                var playButtonElem = root.Q<Button>("button_play");
+                var openSettingsButtonElem = root.Q<Button>("button_open_settings");
+                if (playButtonElem != null) playButtonTooltip = playButtonElem.tooltip;
+                if (openSettingsButtonElem != null) openSettingsButtonTooltip = openSettingsButtonElem.tooltip;
 
-            var playButtonElem = root.Q<Button>("button_play");
-            var openSettingsButtonElem = root.Q<Button>("button_open_settings");
-            if (playButtonElem != null) playButtonTooltip = playButtonElem.tooltip;
-            if (openSettingsButtonElem != null) openSettingsButtonTooltip = openSettingsButtonElem.tooltip;
-
-            // Only assign the tooltip key, not the localized string
-            if (playButton != null) playButton.tooltip = "play_tooltip";
-            if (openSettingsButton != null) openSettingsButton.tooltip = "settings_tooltip";
-            if (playButton != null && playButtonTooltip != null) playButton.tooltip = LocalizationHelper.GetLocalizedString("tooltips", "play_tooltip");
-            if (openSettingsButton != null && openSettingsButtonTooltip != null) openSettingsButton.tooltip = LocalizationHelper.GetLocalizedString("tooltips", "settings_tooltip");
+                // Only assign the tooltip key, not the localized string
+                if (playButton != null) playButton.tooltip = "play_tooltip";
+                if (openSettingsButton != null) openSettingsButton.tooltip = "settings_tooltip";
+                if (playButton != null && playButtonTooltip != null) playButton.tooltip = LocalizationHelper.GetLocalizedString("tooltips", "play_tooltip");
+                if (openSettingsButton != null && openSettingsButtonTooltip != null) openSettingsButton.tooltip = LocalizationHelper.GetLocalizedString("tooltips", "settings_tooltip");
 #endif
 
-#if UNITY_WEBGL // && !UNITY_LOCALIZATION, // WebGL builds use the localization table approach
+#if UNITY_WEBGL && !UNITY_LOCALIZATION // WebGL builds use the localization table approach
             string localeCode = LocalizationHelper.GetCurrentLocaleCode();
 
             string T(string table, string key)
@@ -436,39 +575,8 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
             {
                 TooltipManager.Instance.SetFontAsset(LocalizationHelper.GetFontForCurrentLocale());
             }
+            
 #endif
-        }
-
-        private void UpdateLanguageSprite()
-        {
-            if (_labelLanguage == null)
-                return;
-
-            // Load the sprite for the current locale
-            var sprite = LocalizationHelper.LoadLocaleSprite();
-            if (sprite != null)
-            {
-                // Convert Sprite to Texture2D
-                var texture = sprite.texture;
-                if (texture != null)
-                {
-                    _labelLanguage.style.backgroundImage = new StyleBackground(texture);
-                }
-            }
-            else
-            {
-                // Optionally clear or set a default background
-                _labelLanguage.style.backgroundImage = new StyleBackground(); // Clear the background image
-            }
-        }
-
-        private void OnLocaleChanged()
-        {
-            RefreshLocalizedUI();
-            RegisterTooltipEvents(uiDocument.rootVisualElement);
-            if (TooltipManager.Instance != null)
-            {
-                TooltipManager.Instance.SetFontAsset(LocalizationHelper.GetFontForCurrentLocale());
             }
         }
 
@@ -498,17 +606,17 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
         private void OnPlayButtonClicked()
         {
             Debug.Log("[MainMenuController] Play button clicked.");
-            if (!PreloadAssets.CanLoadScenes)
+            if (!AssetPreloader.Instance.CanLoadScenes)
             {
                 Debug.LogWarning("[MainMenuController] Cannot load scene: PreloadAssets not ready.");
                 return;
             }
             // Only load if not already auto-advancing
-            if (!string.IsNullOrEmpty(PreloadAssets.Instance.autoAdvanceSceneName))
+            if (!string.IsNullOrEmpty(AssetPreloader.Instance.autoAdvanceSceneName))
             {
                 Debug.LogWarning("[MainMenuController] autoAdvanceSceneName is set. Manual scene load may conflict.");
             }
-            PreloadAssets.LoadSceneWhenReady("LevelSelection");
+            AssetPreloader.LoadSceneWhenReady("LevelSelection");
         }
 
         private void OnSettingsButtonClicked()
