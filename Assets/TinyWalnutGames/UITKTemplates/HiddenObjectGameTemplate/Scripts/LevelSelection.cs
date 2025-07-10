@@ -563,6 +563,17 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
             {
                 LevelCard cardData = levelCards[i];
                 VisualElement levelCard = levelCardTemplate.CloneTree();
+                
+                var levelCardTooltipHolder = levelCard.Q<VisualElement>("LevelCardTemplate");
+                if (levelCardTooltipHolder != null)
+                {
+                    levelCardTooltipHolder.tooltip = cardData.levelDescription;
+                    Debug.Log($"[LevelSelection][LoadLevelCardsCoroutine] Level card {i} tooltip set to: {cardData.levelName}");
+                }
+                else
+                {
+                    Debug.LogWarning($"[LevelSelection][LoadLevelCardsCoroutine] Level card {i} tooltip holder not found.");
+                }
 
                 var levelIndexLabel = levelCard.Q<Label>("lvl_int");
                 if (levelIndexLabel != null)
@@ -617,9 +628,9 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
 #else
                     var localeObj = LocalizationHelper.GetLocaleFromCode(locale);
                     string localizedName = LocalizationHelper.GetLocalizedStringForLocale(
-                        "LevelNames", cardData.levelNameKey, localeObj, cardData.levelName);
+                        "HOGT_Level_Cards", cardData.levelNameKey, localeObj, cardData.levelName);
                     string localizedDescription = LocalizationHelper.GetLocalizedStringForLocale(
-                        "LevelDescriptions", cardData.levelDescriptionKey, localeObj, cardData.levelDescription);
+                        "HOGT_Level_Cards", cardData.levelDescriptionKey, localeObj, cardData.levelDescription);
 #endif
                     levelNameLabel.text = localizedName;
                     var descriptionLabel = levelCard.Q<Label>("lvl_description");

@@ -29,14 +29,14 @@ namespace TinyWalnutGames.UITKTemplates.HOGT
             {
                 config ??= new UIDocumentValidationConfig
                 {
-                    RequiredElementNames = new string[] { "level_card" },
+                    RequiredElementNames = new string[] { "LevelCardTemplate" },
                     RequiredElementTypes = new System.Type[] { typeof(VisualElement) },
                     NamedElements = new System.Collections.Generic.Dictionary<string, System.Type>
                         {
                             { "level_card_thumbnail", typeof(VisualElement) },
                             { "lvl_int", typeof (Label) },
                             { "lvl_name", typeof(Label) },
-                            { "lvl_description", typeof(Label) }
+                            { "LevelCardTemplate", typeof(VisualElement) } // contains the tooltip we need to display
                         },
                     ProgressBarName = "level_progress_bar"
                 };

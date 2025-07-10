@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: LC05
   m_EditorClassIdentifier: TinyWalnutGames.HOGT:TinyWalnutGames.HOGT:LevelCard
   levelName: Beautiful Day
-  levelNameKey: level5
+  levelNameKey: lvl_05_name_key
   levelIndex: 4
   levelDescription: It is such a nice, warm day today.
-  levelDescriptionKey: level5description
+  levelDescriptionKey: lvl_05_description_key
   thumbnail: {fileID: 2800000, guid: 7025d27ec6b1b164498e9e1058c89c5c, type: 3}
   isUnlocked: 0
   isCompleted: 0

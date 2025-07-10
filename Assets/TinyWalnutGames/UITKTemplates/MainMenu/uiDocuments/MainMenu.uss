@@ -255,4 +255,6 @@ TemplateContainer > #settingsbackground > #settings_panel > #organize_panel > #s
 }
 
 #settingsbackground > #settings_panel > #organize_panel > #settings_buttons_organizer > #button_reset_minigame > .unity-text-element {
+    display: none;
+    visibility: hidden;
 }

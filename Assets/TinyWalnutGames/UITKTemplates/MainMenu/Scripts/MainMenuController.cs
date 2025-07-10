@@ -119,6 +119,13 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
                     Debug.LogError("[MainMenuController] SettingsMenu.Instance is null. Settings menu will not function.");
                 }
             }
+            // Initialize settings menu with the main UI root
+            if (settingsMenu != null && uiDocument != null && uiDocument.rootVisualElement != null)
+            {
+                Debug.Log("[MainMenuController] Initializing SettingsMenu with rootVisualElement from UIDocument.");
+                // Initialize settings menu with the root VisualElement
+                SettingsMenu.Instance.Initialize(uiDocument.rootVisualElement);
+            }
         }
 
         private void OnEnable()
@@ -627,12 +634,20 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
 
         private void ShowSettingsPanel()
         {
+            // Ensure settingsMenu is initialized
+            if (settingsMenu == null)
+                settingsMenu = SettingsMenu.Instance;
+            SettingsMenu.Instance.Initialize(uiDocument.rootVisualElement);
+            // is it still null?
             if (settingsMenu == null)
             {
-                Debug.LogError("[MainMenuController] settingsMenu is null. Cannot show settings panel.");
+                Debug.LogError("[MainMenuController] SettingsMenu is not initialized. Cannot show settings panel.");
                 return;
             }
-            settingsMenu.Show();
+            else // show the settings menu
+            {
+                settingsMenu.Show();
+            }
         }
     }
 }

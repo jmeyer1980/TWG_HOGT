@@ -103,9 +103,14 @@ namespace TinyWalnutGames.UITKTemplates.MainMenu
             _settingsPanelRoot = settingsTemplate.CloneTree();
             parent.Add(_settingsPanelRoot);
 
-            // Validate the settings panel root using the modular validator
-            UIDocumentValidator.ValidateOrFixUIDocument(
-                this, ref UnsafeNullUIDocumentRef, null, _validationConfig, out _, out _, false);
+            // Validate the settings panel root using the modular validator for VisualElements
+            if (_settingsPanelRoot != null)
+            {
+                bool valid = UIDocumentValidator.ValidateVisualElementTree(
+                    _settingsPanelRoot, _validationConfig, out var msg);
+                if (!valid)
+                    Debug.LogWarning($"[SettingsMenu] Settings panel validation failed: {msg}");
+            }
 
             _settingsBackground = _settingsPanelRoot.Q<VisualElement>("settingsbackground");
             _settingsPanel = _settingsPanelRoot.Q<VisualElement>("settings_panel");

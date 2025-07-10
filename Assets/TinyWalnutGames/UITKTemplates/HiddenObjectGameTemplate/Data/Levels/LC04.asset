@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: LC04
   m_EditorClassIdentifier: TinyWalnutGames.HOGT:TinyWalnutGames.HOGT:LevelCard
   levelName: Landing
-  levelNameKey: level4
+  levelNameKey: lvl_04_name_key
   levelIndex: 3
   levelDescription: Preparing to leave.
-  levelDescriptionKey: level4description
+  levelDescriptionKey: lvl_04_description_key
   thumbnail: {fileID: 2800000, guid: 9e6756699b146d34e8bf154b0ba36938, type: 3}
   isUnlocked: 0
   isCompleted: 0

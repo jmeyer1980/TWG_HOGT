@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: LC03
   m_EditorClassIdentifier: TinyWalnutGames.HOGT:TinyWalnutGames.HOGT:LevelCard
   levelName: Bento
-  levelNameKey: level3
+  levelNameKey: lvl_03_name_key
   levelIndex: 2
   levelDescription: Don't forget your bento.
-  levelDescriptionKey: level3description
+  levelDescriptionKey: lvl_03_description_key
   thumbnail: {fileID: 2800000, guid: a256318127ba7c142bc01577d76e3d4a, type: 3}
   isUnlocked: 0
   isCompleted: 0
